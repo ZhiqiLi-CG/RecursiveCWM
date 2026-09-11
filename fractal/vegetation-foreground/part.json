@@ -1,0 +1,313 @@
+{
+  "name": "vegetation-foreground",
+  "status": "complete",
+  "module": "forest.js",
+  "export": "build",
+  "children": [],
+  "count": 151,
+  "counts": {
+    "conifers": 151
+  },
+  "height_range_world": [
+    0.17788459122180938,
+    1.0941957062482834
+  ],
+  "style": "Warm-green faceted miniature conifers with irregular layered crown silhouettes and complete trunks",
+  "camera_contract": "../../camera-contract.json",
+  "view": "view.json",
+  "planting_notes": [
+    "Measured root anchors are converted from the 3x target window to ROOT pixels before unprojection.",
+    "Explicit heights solved against the inherited perspective camera from measured tip-to-base distances.",
+    "Roots sample ctx.heightAt(x,z) minus 0.025; fallback height 0.035.",
+    "Root layout forms dense northwest knots, river-bank clusters, central open lanes and a broken southern fringe.",
+    "No submerged roots in current ground sampler; all roots remain within immutable tile bounds.",
+    "Use ctx.worldToPixel and ctx.pixelToWorld from the root context. forest.js is synchronous and contains no terrain or lighting."
+  ],
+  "ground_floor_polygons": [
+    {
+      "name": "northwest",
+      "root_pixels": [
+        [
+          624.67,
+          500.33
+        ],
+        [
+          638.67,
+          497.33
+        ],
+        [
+          661.67,
+          504.33
+        ],
+        [
+          686.67,
+          510.33
+        ],
+        [
+          709.0,
+          514.0
+        ],
+        [
+          730.0,
+          509.33
+        ],
+        [
+          757.67,
+          498.33
+        ],
+        [
+          781.67,
+          512.67
+        ],
+        [
+          790.0,
+          528.33
+        ],
+        [
+          767.0,
+          549.33
+        ],
+        [
+          762.33,
+          568.33
+        ],
+        [
+          748.67,
+          594.0
+        ],
+        [
+          698.67,
+          602.33
+        ],
+        [
+          689.0,
+          582.0
+        ],
+        [
+          676.33,
+          574.0
+        ],
+        [
+          636.33,
+          569.0
+        ],
+        [
+          630.0,
+          551.0
+        ],
+        [
+          616.33,
+          545.67
+        ],
+        [
+          625.33,
+          529.33
+        ]
+      ]
+    },
+    {
+      "name": "river-and-east",
+      "root_pixels": [
+        [
+          762.33,
+          517.0
+        ],
+        [
+          792.0,
+          507.0
+        ],
+        [
+          817.33,
+          514.67
+        ],
+        [
+          845.67,
+          522.0
+        ],
+        [
+          865.33,
+          529.67
+        ],
+        [
+          884.67,
+          541.0
+        ],
+        [
+          906.0,
+          545.67
+        ],
+        [
+          934.67,
+          552.33
+        ],
+        [
+          939.0,
+          573.0
+        ],
+        [
+          935.33,
+          586.0
+        ],
+        [
+          945.33,
+          600.67
+        ],
+        [
+          925.33,
+          618.33
+        ],
+        [
+          910.33,
+          635.0
+        ],
+        [
+          884.33,
+          649.33
+        ],
+        [
+          865.33,
+          653.33
+        ],
+        [
+          835.33,
+          627.67
+        ],
+        [
+          813.33,
+          609.33
+        ],
+        [
+          800.67,
+          575.33
+        ],
+        [
+          784.67,
+          561.33
+        ]
+      ]
+    },
+    {
+      "name": "southern-fringe",
+      "root_pixels": [
+        [
+          750.67,
+          589.67
+        ],
+        [
+          772.67,
+          594.0
+        ],
+        [
+          791.67,
+          586.67
+        ],
+        [
+          808.0,
+          594.33
+        ],
+        [
+          833.67,
+          606.0
+        ],
+        [
+          852.33,
+          618.33
+        ],
+        [
+          878.33,
+          629.67
+        ],
+        [
+          882.67,
+          646.33
+        ],
+        [
+          867.67,
+          662.67
+        ],
+        [
+          844.33,
+          673.67
+        ],
+        [
+          827.33,
+          687.33
+        ],
+        [
+          807.0,
+          696.67
+        ],
+        [
+          801.33,
+          681.33
+        ],
+        [
+          778.67,
+          682.67
+        ],
+        [
+          766.33,
+          674.67
+        ],
+        [
+          749.33,
+          672.67
+        ],
+        [
+          753.0,
+          656.33
+        ],
+        [
+          732.0,
+          648.67
+        ],
+        [
+          735.33,
+          630.0
+        ],
+        [
+          747.33,
+          627.67
+        ],
+        [
+          750.33,
+          610.33
+        ]
+      ]
+    }
+  ],
+  "ground_floor_instructions": "Terrain-ground may union and softly break up these overlapping root-pixel footprints into warm ochre/brown forest soil. Keep grass clearings and feather edges; apply to terrain surface, never floating disks. Preserve dry river-bank margin.",
+  "integration_residuals": [
+    "Brown forest floor is deliberately deferred to terrain-ground per ownership contract; its absence is conspicuous in the comparison.",
+    "Inherited lighting produces shorter and softer tree shadows than the target; parent may reconcile light globally.",
+    "Architecture visible at southwest is contextual blockout owned elsewhere."
+  ],
+  "verification": {
+    "matched_magnification": 3,
+    "visual_rounds": 4,
+    "compass_directions": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "submerged_roots": 0,
+    "max_root_height_error": 6.938893903907228e-18
+  },
+  "evidence": [
+    "evidence/baseline-pair.png",
+    "evidence/round1-pair.png",
+    "evidence/round2-pair.png",
+    "evidence/round3-pair.png",
+    "evidence/detail-north-cluster.png",
+    "evidence/detail-south-fringe.png",
+    "evidence/final-pair.png",
+    "evidence/final-full.png",
+    "evidence/final-compass-0.png",
+    "evidence/final-compass-1.png",
+    "evidence/final-compass-2.png",
+    "evidence/final-compass-3.png",
+    "evidence/final-compass-contact.png",
+    "evidence/geometry-check.json"
+  ]
+}

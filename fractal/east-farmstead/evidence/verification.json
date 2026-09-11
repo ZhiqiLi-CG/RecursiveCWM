@@ -1,0 +1,34 @@
+{
+  "name": "east-farmstead",
+  "children": [
+    "east-farmyard",
+    "east-blue-mill",
+    "east-tile-house",
+    "east-farmstead-lower-thatch-barn"
+  ],
+  "meshes": 1974,
+  "invalidPositions": 0,
+  "seatedSupportMeshes": 175,
+  "bounds": {
+    "min": [
+      1.695511437842154,
+      -0.06200001178268433,
+      -2.2889800366867092
+    ],
+    "max": [
+      4.877178693748362,
+      1.8801767013070998,
+      3.62944818854449
+    ]
+  },
+  "immutable_inputs": {
+    "target": "e46058aaef61ad443cbd07b479249733e6326094bbacf092a47d5bfd08579848",
+    "manifest": "daf2baca84906106437f3cbbaf06cc95f423c31feba8d70ade574404a479e5f9",
+    "camera": "3406d985d8c27b0077a95f5e6da6d638bae3b9457aaaf23046cefc15ed949f72"
+  },
+  "child_parts": {
+    "east-farmyard": "component.js",
+    "east-blue-mill": "component.js",
+    "east-tile-house": "component.js"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "counts": {
+    "conifers": 545,
+    "cacti": 30,
+    "rocks": 22,
+    "shrubs": 3
+  },
+  "treeCount": 545,
+  "waterRoots": [],
+  "outsideRoots": [],
+  "maxRootError": 1.3877787807814457e-17,
+  "nonfinite": 0,
+  "groundOutside": 0,
+  "mountain": {
+    "openEdges": 0,
+    "nonmanifoldEdges": 0,
+    "inconsistentWinding": 0,
+    "min": [
+      1.4860031604766846,
+      0.014999999664723873,
+      -9.949999809265137
+    ],
+    "max": [
+      12.380000114440918,
+      3.968447208404541,
+      -0.2576709985733032
+    ]
+  },
+  "cascade": {
+    "openEdges": 0,
+    "nonmanifoldEdges": 0,
+    "inconsistentWinding": 0,
+    "min": [
+      2.1730127334594727,
+      -0.07199999690055847,
+      -7.948480606079102
+    ],
+    "max": [
+      2.8295705318450928,
+      0.8799999952316284,
+      -6.706348419189453
+    ]
+  },
+  "forestFloorPatches": 17,
+  "renderTriangles": 718290,
+  "browserErrors": []
+}

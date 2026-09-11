@@ -1,0 +1,150 @@
+{
+  "errors": [],
+  "views": [
+    {
+      "direction": 0,
+      "meshes": 3858,
+      "minimumY": -0.03499999731779098,
+      "bounds": [
+        271,
+        232,
+        560,
+        412
+      ],
+      "children": [
+        {
+          "name": "west-north-houses",
+          "objects": 3
+        },
+        {
+          "name": "west-south-houses",
+          "objects": 4
+        },
+        {
+          "name": "west-east-houses",
+          "objects": 4
+        },
+        {
+          "name": "west-market",
+          "objects": 34
+        }
+      ]
+    },
+    {
+      "direction": 1,
+      "meshes": 3858,
+      "minimumY": -0.03499999731779098,
+      "bounds": [
+        646,
+        121,
+        892,
+        315
+      ],
+      "children": [
+        {
+          "name": "west-north-houses",
+          "objects": 3
+        },
+        {
+          "name": "west-south-houses",
+          "objects": 4
+        },
+        {
+          "name": "west-east-houses",
+          "objects": 4
+        },
+        {
+          "name": "west-market",
+          "objects": 34
+        }
+      ]
+    },
+    {
+      "direction": 2,
+      "meshes": 3858,
+      "minimumY": -0.03499999731779098,
+      "bounds": [
+        815,
+        330,
+        1151,
+        550
+      ],
+      "children": [
+        {
+          "name": "west-north-houses",
+          "objects": 3
+        },
+        {
+          "name": "west-south-houses",
+          "objects": 4
+        },
+        {
+          "name": "west-east-houses",
+          "objects": 4
+        },
+        {
+          "name": "west-market",
+          "objects": 34
+        }
+      ]
+    },
+    {
+      "direction": 3,
+      "meshes": 3858,
+      "minimumY": -0.03499999731779098,
+      "bounds": [
+        398,
+        435,
+        729,
+        708
+      ],
+      "children": [
+        {
+          "name": "west-north-houses",
+          "objects": 3
+        },
+        {
+          "name": "west-south-houses",
+          "objects": 4
+        },
+        {
+          "name": "west-east-houses",
+          "objects": 4
+        },
+        {
+          "name": "west-market",
+          "objects": 34
+        }
+      ]
+    },
+    {
+      "direction": "reference",
+      "meshes": 3858,
+      "minimumY": -0.03499999731779098,
+      "bounds": [
+        186,
+        360,
+        544,
+        566
+      ],
+      "children": [
+        {
+          "name": "west-north-houses",
+          "objects": 3
+        },
+        {
+          "name": "west-south-houses",
+          "objects": 4
+        },
+        {
+          "name": "west-east-houses",
+          "objects": 4
+        },
+        {
+          "name": "west-market",
+          "objects": 34
+        }
+      ]
+    }
+  ]
+}

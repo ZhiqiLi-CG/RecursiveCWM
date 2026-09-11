@@ -1,0 +1,25 @@
+{
+  "count": 229,
+  "requested": 230,
+  "regions": {
+    "sourceIslands": 45,
+    "cliffFront": 65,
+    "cliffShoulder": 26,
+    "roadGrove": 26,
+    "easternRidge": 38,
+    "southeastFingers": 30
+  },
+  "grounding": "heightAt(x,z) minus .025",
+  "children": [],
+  "finiteGeometry": true,
+  "crownTriangles": 36182,
+  "nonManifoldEdges": 0,
+  "maxSamplerGroundingError": 0,
+  "allRootsInsideTile": true,
+  "heightRange": [
+    0.22559999999999997,
+    1.128
+  ],
+  "duplicateAnchors": 0,
+  "browserErrors": []
+}

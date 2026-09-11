@@ -1,0 +1,21 @@
+{
+  "name": "west-north-houses",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "ground_y": 0.06,
+  "coordinate_system": "Inherited world coordinates, Y up; root-pixel ground anchors projected using ctx.pixelToWorld.",
+  "objects": ["moss-timber-house", "straw-gable-cottage", "slate-cottage-under-pin"],
+  "notes": [
+    "Three detached, fully enclosed houses with solid roof slopes and gables, stone foundations, framed openings and entrance steps.",
+    "The straw cottage includes its attached slate-covered entry; the slate cottage is completed beneath the graphic pin.",
+    "No changes to shared roads; no market objects, trees, terrain or graphics included.",
+    "Synchronous browser build; procedural thatch texture requires document.createElement('canvas').",
+    "Reference and four-compass render evidence is in evidence/; visual limitations and integration details are documented in account.md."
+  ],
+  "evidence": {
+    "reference_comparison": "evidence/final-paired.png",
+    "compass_views": "evidence/compass-contact.png",
+    "render_errors": "evidence/render-errors.json"
+  }
+}

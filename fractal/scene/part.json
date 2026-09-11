@@ -1,0 +1,110 @@
+{
+  "interface_version": 1,
+  "name": "scene",
+  "status": "complete",
+  "type": "threejs-scene",
+  "module": "component.js",
+  "export": "build",
+  "children": [
+    "terrain",
+    "settlements"
+  ],
+  "child_parts": [
+    "../terrain/part.json",
+    "../settlements/part.json"
+  ],
+  "local_components": [
+    "continuity.js",
+    "common.js",
+    "graphics.js"
+  ],
+  "presentation": {
+    "entrypoint": "index.html",
+    "program": "app.js",
+    "graphics": "graphics.js",
+    "camera_contract": "../../camera-contract.json",
+    "resolution": [
+      1400,
+      963
+    ],
+    "renderer": "render.cjs",
+    "readme": "README.md"
+  },
+  "interface": {
+    "build": "Synchronous build(ctx) => THREE.Group; identity transform, no lights/camera/UI. Construct with locked camera before rotating.",
+    "context": "common.js context(makeCamera(contract), contract) supplies THREE, contract, pixelToWorld and worldToPixel.",
+    "samplers": "Returned group.userData exposes low-ground heightAt and surfaceAt."
+  },
+  "ownership": [
+    "Complete recursive natural landscape",
+    "All three completed architectural districts and road network",
+    "Root lighting and graphic plate presentation",
+    "Final forest scale/material reconciliation",
+    "Rear mountain volume refinement"
+  ],
+  "camera_sha256": "3406d985d8c27b0077a95f5e6da6d638bae3b9457aaaf23046cefc15ed949f72",
+  "reference_sha256": "bfcdc380cc2a3f34f1a07dc66aa393e2d6dd9851162808f5ce02e23deb1b8737",
+  "evidence": {
+    "final_render": "final.png",
+    "locked_render": "final.png",
+    "matched_reference": "evidence/final-paired.png",
+    "overlay": "evidence/final-overlay.png",
+    "four_compass": "evidence/final-compass-sheet.png",
+    "low_side": "evidence/final-low-side.png",
+    "geometry_audit": "evidence/final-audit.json",
+    "delivery_check": "evidence/delivery-check.json"
+  },
+  "validation": {
+    "mountainTopology": {
+      "openEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentWinding": 0,
+      "min": [
+        1.4860031604766846,
+        0.014999999664723873,
+        -9.949999809265137
+      ],
+      "max": [
+        12.380000114440918,
+        3.968447208404541,
+        -0.2576709985733032
+      ]
+    },
+    "meshes": 9768,
+    "instances": 3200,
+    "invalid": 0,
+    "trees": 545,
+    "waterRoots": 0,
+    "outsideRoots": 0,
+    "maxRootError": 0,
+    "bounds": {
+      "min": [
+        -12.433302879333496,
+        -0.3400000035762787,
+        -10.136655411720277
+      ],
+      "max": [
+        12.553623124401398,
+        3.968447208404541,
+        10.138635815722154
+      ]
+    },
+    "components": [
+      "terrain",
+      "settlements"
+    ],
+    "drawCalls": 9768,
+    "triangles": 860969,
+    "browserErrors": [],
+    "cameraRestored": true
+  },
+  "account": "account.md",
+  "further_descent": false,
+  "remaining_visual_approximations": [
+    "Fine crag contours and snow tongues",
+    "Exact crown shapes/spacing and some house proportions/orientations",
+    "Facade and roof weathering, some route contours and road shoulder sharpness",
+    "Source softness and illumination character",
+    "Tiny neighboring-panel sliver and legend illustration"
+  ]
+}

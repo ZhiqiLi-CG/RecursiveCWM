@@ -1,0 +1,5 @@
+import {THREE,mat,box} from '../scene/common.js';
+// District-owned roadside lamps. Coordinates are reference ground feet in root pixels.
+export const anchors=[[867,335],[909,357],[940,374],[962,398],[971,437],[943,456],[925,463],[955,467],[981,450],[930,476],[1035,494],[1048,453],[1057,439],[1115,466],[1123,451],[1206,420],[1242,404],[751,496]];
+export function build(ctx){const g=new THREE.Group();g.name='east-roadside-lamps';const wood=mat('#615a47'),stone=mat('#766f58'),metal=mat('#4d514a'),glass=mat('#afa383');
+for(const [x,y] of anchors){const p=ctx.pixelToWorld(x,y,.06),a=new THREE.Group();a.position.copy(p);g.add(a);const h=.53;box(a,0,.025,0,.07,.05,.07,stone);box(a,0,h/2,0,.02,h,.02,wood);box(a,0,h-.025,0,.065,.016,.065,metal);box(a,0,h+.012,0,.036,.048,.036,glass);for(const dx of [-1,1])for(const dz of [-1,1])box(a,dx*.021,h+.012,dz*.021,.008,.056,.008,metal);const cap=new THREE.Mesh(new THREE.ConeGeometry(.047,.035,4),metal);cap.rotation.y=Math.PI/4;cap.position.y=h+.053;cap.castShadow=true;a.add(cap);}return g;}

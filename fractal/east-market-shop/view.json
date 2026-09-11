@@ -1,0 +1,29 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "parent": "east-market",
+  "root_target_size": [
+    1400,
+    963
+  ],
+  "crop_root_px": [
+    864,
+    417,
+    913,
+    460
+  ],
+  "target_size": [
+    588,
+    516
+  ],
+  "magnification": 12,
+  "source_target": "../east-market/target.png",
+  "source_crop_px": [
+    0,
+    414,
+    294,
+    672
+  ],
+  "mapping": "root_x = 864 + local_x / 12; root_y = 417 + local_y / 12",
+  "parent_snapshot": "../east-market/snapshot.js",
+  "rendering": "Use locked 1400x963 root camera; crop and magnify, never reframe."
+}

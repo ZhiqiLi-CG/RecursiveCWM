@@ -1,0 +1,32 @@
+{
+  "name": "east-market",
+  "style": "faceted medieval miniature",
+  "ground_y": 0.06,
+  "assets": [
+    "round blue-grey well with hollow masonry and supported pitched blue roof",
+    "three white canvas market counters",
+    "west canvas backing rack",
+    "two pale cloth display tables",
+    "uphill bench and goods",
+    "east roadside goods",
+    "court crates",
+    "two villagers",
+    "integrated joined-roof shop and complete porch from east-market-shop"
+  ],
+  "relations": [
+    "well northeast of west cloth stall",
+    "low shop occupies southwest corner",
+    "open irregular space separates well and shop",
+    "stalls face the court with different orientations"
+  ],
+  "excluded": [
+    "roads",
+    "lamps",
+    "terrain",
+    "UI pins",
+    "lakeside buildings"
+  ],
+  "children": [
+    "east-market-shop"
+  ]
+}

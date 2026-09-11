@@ -1,0 +1,28 @@
+{
+  "counts": {
+    "conifers": 545,
+    "cacti": 30,
+    "rocks": 22,
+    "shrubs": 3
+  },
+  "forestCounts": [
+    {
+      "name": "western-conifer-grove",
+      "count": 165
+    },
+    {
+      "name": "vegetation-belt",
+      "count": 229
+    },
+    {
+      "name": "foreground-pine-grove",
+      "count": 151
+    }
+  ],
+  "waterRoots": [],
+  "outsideTile": [],
+  "maxRootError": 1.3877787807814457e-17,
+  "nonfinite": 0,
+  "cactusWater": [],
+  "browserErrors": []
+}

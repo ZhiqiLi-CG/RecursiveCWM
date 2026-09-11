@@ -1,0 +1,12 @@
+{
+  "kind":"Four complete medieval timber and plaster cottages on stone foundations",
+  "style":"Faceted strategy-map miniature; subdued weathered materials",
+  "assets":[
+    {"id":"rust-tile","ridge_local_px":[[53,65],[148,21]],"roof":"dark rust tile","walls":"warm plaster and exposed timber"},
+    {"id":"brown-tile","ridge_local_px":[[145,159],[246,103]],"roof":"dark brown tile","chimney":"near right roof slope"},
+    {"id":"red-gable","ridge_local_px":[[288,250],[348,166]],"roof":"red tile","walls":"ornate pale timber gable over dark lower story"},
+    {"id":"pale-thatch","ridge_local_px":[[494,316],[464,228]],"roof":"thick pale gray straw","walls":"pale plaster gable and blue-gray stone foundation"}
+  ],
+  "relations":"Staggered diagonal arc, each foundation south of the market lane. First two ridges run across the frame; third turns toward the viewer; fourth turns clockwise again. Keep alleys open.",
+  "completion":"Closed walls and gables, two solid roof slopes, ridge caps, end boards, rear doors/windows and masonry chimneys. Only attached steps; no through-road changes."
+}

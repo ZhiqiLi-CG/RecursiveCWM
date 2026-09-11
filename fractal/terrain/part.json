@@ -1,0 +1,127 @@
+{
+  "name": "terrain",
+  "parent": "scene",
+  "status": "complete",
+  "type": "threejs-component",
+  "module": "./terrain.js",
+  "build_export": "build",
+  "export": "build",
+  "children": [
+    "terrain-mountain",
+    "terrain-ground",
+    "terrain-vegetation"
+  ],
+  "child_parts": [
+    "../terrain-mountain/part.json",
+    "../terrain-ground/part.json",
+    "../terrain-vegetation/part.json"
+  ],
+  "dependencies": [
+    "./continuity.js",
+    "../scene/common.js",
+    "../terrain-ground/ground.js",
+    "../terrain-mountain/mountain.js",
+    "../terrain-mountain/topology.js",
+    "../terrain-vegetation/vegetation.js",
+    "../terrain-vegetation/forest-floor.js"
+  ],
+  "interface": {
+    "build": "Synchronous build(ctx) => THREE.Group; construct with the locked reference camera before rotating views",
+    "heightAt": "heightAt(x,z): low-ground/riverbed height; does not include the mountain top",
+    "surfaceAt": "surfaceAt(x,z): grass | sand | water for low ground",
+    "userData": "heightAt and surfaceAt also available on returned group.userData"
+  },
+  "camera_contract": "../../camera-contract.json",
+  "view": "./view.json",
+  "account": "./account.md",
+  "specification": "./specification.json",
+  "ownership": [
+    "Closed terrain and banks",
+    "Grass/sand biome relief and materials",
+    "Connected river/lake/pond network",
+    "Eastern source cascade",
+    "Complete snow/rock mountain",
+    "All forests, cacti, shrubs and natural rocks"
+  ],
+  "bounds_world": [
+    -12.433303297545562,
+    12.433303297545562,
+    -10,
+    10
+  ],
+  "integration_notes": [
+    "Replace the entire root terrain blockout once with this build(ctx).",
+    "All descendants are already assembled: do not separately add their groups.",
+    "Forest floors are blended into the ground vertex colors; vegetation uses the ground samplers.",
+    "Child files, camera, manifest and parent scene files were not edited.",
+    "The contextual settlements shown in terrain evidence are inherited blockouts; final architecture/roads/bridges are owned by settlements and root.",
+    "Global lighting is inherited unchanged; root may reconcile remaining shadow softness."
+  ],
+  "validation": {
+    "counts": {
+      "conifers": 545,
+      "cacti": 30,
+      "rocks": 22,
+      "shrubs": 3
+    },
+    "treeCount": 545,
+    "waterRoots": [],
+    "outsideRoots": [],
+    "maxRootError": 1.3877787807814457e-17,
+    "nonfinite": 0,
+    "groundOutside": 0,
+    "mountain": {
+      "openEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentWinding": 0,
+      "min": [
+        1.4860031604766846,
+        0.014999999664723873,
+        -9.949999809265137
+      ],
+      "max": [
+        12.380000114440918,
+        3.968447208404541,
+        -0.2576709985733032
+      ]
+    },
+    "cascade": {
+      "openEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentWinding": 0,
+      "min": [
+        2.1730127334594727,
+        -0.07199999690055847,
+        -7.948480606079102
+      ],
+      "max": [
+        2.8295705318450928,
+        0.8799999952316284,
+        -6.706348419189453
+      ]
+    },
+    "forestFloorPatches": 17,
+    "renderTriangles": 718290,
+    "browserErrors": []
+  },
+  "evidence": [
+    "./evidence/final-root.png",
+    "./evidence/final-matched.png",
+    "./evidence/final-paired.png",
+    "./evidence/final-detail-sources.png",
+    "./evidence/final-detail-mountain-front.png",
+    "./evidence/final-detail-sand.png",
+    "./evidence/final-detail-banks.png",
+    "./evidence/final-compass-contact.png",
+    "./evidence/final-audit.json",
+    "./evidence/final-compass-0.png",
+    "./evidence/final-compass-1.png",
+    "./evidence/final-compass-2.png",
+    "./evidence/final-compass-3.png"
+  ],
+  "remaining_visual_approximations": [
+    "Individual crown/crag contours and tree spacing",
+    "Angular snow tongues and fine shoreline scalloping",
+    "Softer inherited illumination and shadows"
+  ]
+}

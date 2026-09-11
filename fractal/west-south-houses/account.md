@@ -1,0 +1,24 @@
+# West south houses — depth 3
+
+## Calibrated mental image
+This is a four-cottage arc in a detailed, faceted medieval strategy-map miniature: two squat brown/rust tiled houses, a taller red front-gabled timber house, and a pale straw-roof cottage turning at the southern end. Complete buildings have stone footings, four plaster-and-timber walls, enclosed gables, two thick roof slopes, ridge caps, working entrances and masonry chimneys; the unseen elevations use the same restrained vocabulary. The reference calibrates their staggered spacing, alternating ridge directions, dark structural timber, subdued red-brown tile and the final roof's warm straw/light gray planes.
+
+## Round 1 — inherited whole
+Read the brief, viewport, immutable manifest and camera contract, scene interface and worldgen-techniques skill. Wrote specification.json before constructing geometry. Rendered the inherited west-village preview, cropped root [262,449,408,559], and enlarged to exactly 584×440; evidence/round1-paired.png compares target left with inherited render right at 4× magnification. The arc had three anonymous boxes instead of four houses, shallow pyramid roofs, no wall articulation or chimneys, wrong roof orientations and misplaced footprints. Magnified the southern thatch reference separately in evidence/thatch-detail.png.
+
+## Round 2 — complete four-house assembly
+Implemented component.js with synchronous build(ctx), using ridge endpoints traced in the supplied target and intersected through the locked camera. Each building has a closed box wall body, full-depth triangular gable prism, two solid pitched roof slabs with overhangs, ridge timber, surface courses, masonry chimney, wraparound stone foundation, timber framing, windows and doors on both gable elevations. Foundations extend below zero, and attached solid steps contact the terrain. No billboards or one-sided wall geometry are used.
+
+Rendered evidence/round2.png and round2-paired.png. By eye the first two roof pitches were too tall, the red cottage extended too far down the image, and the pale roof was too wide. Those were simple dimensional residuals within this assembly, not additional groups requiring another target/solve.
+
+## Round 3 — silhouette and material correction
+Kept traced ridge positions fixed while reducing roof rise and building width, with individually adjusted wall heights. The comparison in evidence/round3-paired.png shows the corrected diagonal spacing, distinct ridge axes and four roof colors. Relocated the first chimney, shortened the masonry stacks and reduced the steps. Warmed the pale roof's left slope while retaining the gray right slope; reduced excessive tile contrast and adjusted door/window proportions to expose more plaster between structural timbers.
+
+Rendered the four compass directions and inspected both full frames and magnified architecture. All houses retain full backs, enclosed end gables, dimensional chimneys and supported foundations. The gap between the first two remains open; the red and thatched houses also remain separate volumes. There are no paper walls, unsupported roofs, empty backs or floating owned objects. The previews include inherited terrain and roads, whose own completion belongs to their parent branches.
+
+## Final verification and handoff
+After the last surface and facade edits, rerendered evidence/final.png with the immutable camera and rechecked evidence/final-paired.png at the original 4× window. Also rerendered all four compass images and inspected evidence/compass-montage.png at 4×. The owned four-house assembly now has the reference's broad silhouettes, ordering, orientation and material distinctions. The reference is painterly and blurred; individual tile/stone marks and fine facade ornament are approximated with volumetric miniature details rather than exact texture replicas. No numeric image score was used to decide completion.
+
+The conspicuous pale ground beneath the assembly is the inherited terrain blockout, where the reference is grassy. Missing stalls, lamps, plants and adjacent buildings are explicitly outside this node's ownership. Parent integration should compare against final terrain and sibling modules. No through-road routes were changed; only small attached entrance steps were added. Some parent lane edges currently form a wedge behind the first two houses, as already recorded at west-village; settle that at the road-owning parent, without moving these roof anchors.
+
+No further descent is needed: after magnifying the remaining owned differences, they are small facade/material approximations rather than missing object groups or internally complex subassemblies. children.json is empty. Only this node directory was written; camera, manifest, parent and sibling sources were not changed, and no git commands were used.

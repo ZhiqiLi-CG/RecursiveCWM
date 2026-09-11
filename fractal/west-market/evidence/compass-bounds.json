@@ -1,0 +1,250 @@
+{
+  "0": {
+    "west-market": [
+      277,
+      238,
+      542,
+      403
+    ],
+    "western-cream-tent": [
+      313,
+      239,
+      348,
+      273
+    ],
+    "northern-ivory-stall": [
+      445,
+      298,
+      473,
+      326
+    ],
+    "northern-goods-cart": [
+      430,
+      308,
+      461,
+      339
+    ],
+    "courtyard-covered-cart": [
+      359,
+      300,
+      387,
+      331
+    ],
+    "cream-market-canopy-west": [
+      358,
+      314,
+      389,
+      347
+    ],
+    "gray-canvas-stall": [
+      362,
+      331,
+      395,
+      363
+    ],
+    "cream-market-canopy-east": [
+      388,
+      340,
+      416,
+      368
+    ],
+    "eastern-covered-wagon": [
+      438,
+      334,
+      464,
+      365
+    ],
+    "blue-striped-display": [
+      409,
+      325,
+      435,
+      355
+    ]
+  },
+  "1": {
+    "west-market": [
+      658,
+      158,
+      903,
+      298
+    ],
+    "western-cream-tent": [
+      854,
+      159,
+      886,
+      191
+    ],
+    "northern-ivory-stall": [
+      775,
+      236,
+      802,
+      262
+    ],
+    "northern-goods-cart": [
+      755,
+      228,
+      783,
+      257
+    ],
+    "courtyard-covered-cart": [
+      764,
+      190,
+      790,
+      218
+    ],
+    "cream-market-canopy-west": [
+      739,
+      190,
+      767,
+      220
+    ],
+    "gray-canvas-stall": [
+      715,
+      196,
+      744,
+      225
+    ],
+    "cream-market-canopy-east": [
+      708,
+      209,
+      729,
+      236
+    ],
+    "eastern-covered-wagon": [
+      713,
+      233,
+      740,
+      260
+    ],
+    "blue-striped-display": [
+      729,
+      217,
+      752,
+      245
+    ]
+  },
+  "2": {
+    "west-market": [
+      837,
+      351,
+      1128,
+      544
+    ],
+    "western-cream-tent": [
+      1087,
+      504,
+      1128,
+      543
+    ],
+    "northern-ivory-stall": [
+      915,
+      439,
+      946,
+      468
+    ],
+    "northern-goods-cart": [
+      925,
+      424,
+      958,
+      456
+    ],
+    "courtyard-covered-cart": [
+      1007,
+      430,
+      1038,
+      463
+    ],
+    "cream-market-canopy-west": [
+      998,
+      410,
+      1031,
+      445
+    ],
+    "gray-canvas-stall": [
+      985,
+      394,
+      1019,
+      428
+    ],
+    "cream-market-canopy-east": [
+      960,
+      389,
+      988,
+      417
+    ],
+    "eastern-covered-wagon": [
+      911,
+      392,
+      939,
+      424
+    ],
+    "blue-striped-display": [
+      945,
+      402,
+      972,
+      433
+    ]
+  },
+  "3": {
+    "west-market": [
+      403,
+      469,
+      714,
+      680
+    ],
+    "western-cream-tent": [
+      403,
+      637,
+      444,
+      679
+    ],
+    "northern-ivory-stall": [
+      540,
+      523,
+      570,
+      554
+    ],
+    "northern-goods-cart": [
+      561,
+      531,
+      593,
+      565
+    ],
+    "courtyard-covered-cart": [
+      544,
+      590,
+      576,
+      624
+    ],
+    "cream-market-canopy-west": [
+      575,
+      584,
+      609,
+      621
+    ],
+    "gray-canvas-stall": [
+      606,
+      579,
+      640,
+      615
+    ],
+    "cream-market-canopy-east": [
+      626,
+      560,
+      650,
+      593
+    ],
+    "eastern-covered-wagon": [
+      615,
+      523,
+      645,
+      555
+    ],
+    "blue-striped-display": [
+      598,
+      545,
+      625,
+      578
+    ]
+  }
+}

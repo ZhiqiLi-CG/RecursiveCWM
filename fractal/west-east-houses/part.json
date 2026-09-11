@@ -1,0 +1,24 @@
+{
+  "name": "west-east-houses",
+  "status": "complete",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "ground_y": 0.06,
+  "building_count": 4,
+  "components": ["market-red-house", "pond-cottage", "lane-barn", "northern-red-house"],
+  "camera_contract": "../../camera-contract.json",
+  "evidence": {
+    "reference_comparison": "evidence/final-pair.png",
+    "part_comparisons": "evidence/part-details.png",
+    "compass_views": "evidence/compass-sheet.png",
+    "browser_check": "evidence/browser-check.json"
+  },
+  "integration_notes": [
+    "Synchronous build(ctx) returns a THREE.Group; local houses.js is required beside component.js.",
+    "Buildings and attached stone entrance steps only; parent network is included exclusively by preview.js.",
+    "Footings extend below the ground datum for terrain contact.",
+    "Complete backs, gables, two-sided solid roof assemblies and embedded masonry chimneys verified from four compass directions.",
+    "No road changes and no writes to inherited camera, manifest, parents or siblings."
+  ]
+}

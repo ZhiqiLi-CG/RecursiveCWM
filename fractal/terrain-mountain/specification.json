@@ -1,0 +1,9 @@
+{
+  "identity": "Broad snow-covered alpine massif in a miniature medieval strategy-map landscape",
+  "regions": ["serrated rear crest", "connected branching snow ridges and gullies", "steep front escarpment", "rear snow slopes and rock exposures", "closed buried rock base"],
+  "assets": {"massifs":1,"snow_surfaces":1,"rock_foundations":1,"trees":0,"water_meshes":0},
+  "materials": {"snow":"warm pale highlights, cool blue-gray recesses, subtly varied matte surface","rock":"dark earthy brown, faceted"},
+  "relations": ["Behind the conifer belt", "Above both western drainage sources", "Clear of the central village and road corridor", "Rear slopes finish within the tile perimeter"],
+  "root_controls": {"summit":[799,17],"west_shoulder":[590,95],"west_cliff":[526,131],"east_shoulder":[990,133],"eastern_source_notch":[593,180]},
+  "geometry": "Irregular triangulated world-space snow surface, jagged cliff snow boundary, rock foundation, fully modeled rear slopes and end caps. No image texture or camera-facing plane."
+}

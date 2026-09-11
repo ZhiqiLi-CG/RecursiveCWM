@@ -1,0 +1,9 @@
+{
+  "kind": "faceted medieval village market furnishings",
+  "ground_y": 0.06,
+  "regions": ["western lane tent", "northern lane sellers", "southern arc of courtyard stalls", "lane lighting"],
+  "assets": {"ridge_tents": 1, "small_northern_stalls": 1, "open_goods_carts": 1, "covered_carts": 2, "cream_canopy_stalls": 2, "gray_canopy_stalls": 1, "blue_display_stalls": 1, "barrel_clusters": 6, "people": 3, "lamps": 16},
+  "materials": ["weathered dark timber", "warm ivory canvas", "gray canvas", "faded blue canvas", "dull iron", "muted grain sacks"],
+  "relations": ["stalls form the south edge of the green", "keep the center of the green open", "western tent sits behind the tall western house", "lamps follow lane edges", "cart wheels contact ground and support bodies", "canopies attach to timber posts and crossbars"],
+  "ownership": "Market props only; architecture, terrain, roads, vegetation, and graphics are context supplied elsewhere."
+}

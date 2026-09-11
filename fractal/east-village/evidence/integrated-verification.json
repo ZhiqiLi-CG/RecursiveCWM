@@ -1,0 +1,24 @@
+{
+  "meshes": 3624,
+  "invalid": 0,
+  "bounds": {
+    "min": [
+      -1.3237599438517733,
+      -0.07020000332594048,
+      -2.2889800366867092
+    ],
+    "max": [
+      12.021554207798738,
+      1.8801767013070998,
+      9.380758613552064
+    ]
+  },
+  "groups": [
+    "east-farmstead",
+    "east-market",
+    "east-lakeside",
+    "east-windmills",
+    "east-roadside-lamps"
+  ],
+  "pageErrors": []
+}

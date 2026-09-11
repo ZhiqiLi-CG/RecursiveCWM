@@ -1,0 +1,23 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "parent": "scene",
+  "root_target_size": [
+    1400,
+    963
+  ],
+  "crop_root_px": [
+    181,
+    269,
+    1284,
+    814
+  ],
+  "target_size": [
+    1654,
+    818
+  ],
+  "magnification": 1.5,
+  "mapping": "root_x = crop_root_px[0] + local_x / magnification; root_y = crop_root_px[1] + local_y / magnification",
+  "world_coordinates": "Use ctx.pixelToWorld(rootX, rootY, desiredHeight) from scene/common.js. This is perspective ray/plane intersection with locked camera.",
+  "parent_snapshot": "../scene/blockout.js",
+  "rendering": "Render root full frame using the locked camera, then crop this box and resize to target_size for matched comparison. Do not change camera to reframe."
+}

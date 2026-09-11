@@ -1,0 +1,59 @@
+{
+  "name": "terrain-ground",
+  "status": "complete",
+  "type": "threejs-component",
+  "module": "./ground.js",
+  "build_export": "build",
+  "children": [],
+  "dependencies": [
+    "./field.js",
+    "../scene/common.js"
+  ],
+  "exports": {
+    "build": "Synchronous build(ctx) => THREE.Group",
+    "heightAt": "Deterministic heightAt(x,z), valid before/after build; returns riverbed in water",
+    "surfaceAt": "surfaceAt(x,z) => grass | sand | water"
+  },
+  "sampler_setup": "None. The same samplers are also returned on group.userData.",
+  "bounds": [
+    -12.433303297545562,
+    12.433303297545562,
+    -10,
+    10
+  ],
+  "water_y": -0.035,
+  "max_ground_y": 0.38,
+  "ownership": [
+    "closed terrain volume",
+    "grass and sandy relief",
+    "material transitions and soil specks",
+    "recessed riverbeds and graded banks",
+    "connected streams and lakes",
+    "small puddles",
+    "clipped boundary outlets"
+  ],
+  "camera_contract": "../../camera-contract.json",
+  "view": "./view.json",
+  "account": "./account.md",
+  "specification": "./specification.json",
+  "evidence": {
+    "matched_comparison": "./evidence/final-paired.png",
+    "magnified_water": "./evidence/final-detail-water.png",
+    "magnified_sand": "./evidence/final-detail-sand.png",
+    "magnified_east": "./evidence/final-detail-east.png",
+    "compass_views": [
+      "./evidence/final-compass-0.png",
+      "./evidence/final-compass-1.png",
+      "./evidence/final-compass-2.png",
+      "./evidence/final-compass-3.png"
+    ],
+    "verification": "./evidence/verification.json"
+  },
+  "integration_notes": [
+    "Build ground first; pass heightAt and surfaceAt to vegetation.",
+    "The preview includes inherited settlement and mountain placeholders.",
+    "Mountain sibling should overlap source openings around root (500,200) and (594,192).",
+    "Road and house pads are protected near the shared baseline.",
+    "No reference image texture, lights, cameras, buildings, bridges, trees, cacti or discrete boulders are delivered."
+  ]
+}

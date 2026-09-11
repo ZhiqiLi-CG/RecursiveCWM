@@ -1,0 +1,71 @@
+{
+  "style": "Faceted miniature natural vegetation; irregular full-round whorled conifers, sparse branched cacti, buried stones",
+  "camera_contract": "../../camera-contract.json",
+  "status": "complete",
+  "local_module": "vegetation.js",
+  "local_counts": {
+    "cacti": 30,
+    "rocks": 22,
+    "shrubs": 3
+  },
+  "children": [
+    {
+      "name": "vegetation-west",
+      "ownership": "Conifer roots x < 493, y < 430 in root pixels",
+      "module": "../vegetation-west/forest.js"
+    },
+    {
+      "name": "vegetation-belt",
+      "ownership": "Conifer roots x >= 493, y < 430 in root pixels; mountain front and eastern groves",
+      "module": "../vegetation-belt/forest.js"
+    },
+    {
+      "name": "vegetation-foreground",
+      "ownership": "Southern grove conifer roots y >= 480 in root pixels",
+      "module": "../vegetation-foreground/forest.js"
+    }
+  ],
+  "materials": {
+    "cacti": [
+      "#174b20",
+      "#245625",
+      "#2c5b29",
+      "#355f2d"
+    ],
+    "rocks": [
+      "#63695f",
+      "#7d8072",
+      "#969786",
+      "#aaa995"
+    ],
+    "forest": "Tune each child's green palette under inherited lights; reconcile at integration"
+  },
+  "planting": {
+    "screen_anchors": "Tree and cactus bases",
+    "sample": "ctx.heightAt(x,z) when provided",
+    "preview_y": 0.035,
+    "root_burial": 0.025
+  },
+  "integration": [
+    "Import all child synchronous build functions",
+    "Preserve local cactus/stone/shrub details",
+    "Use final ground sampler",
+    "Reconcile crown heights and material palettes",
+    "Merge forest-floor footprint requests for terrain parent",
+    "Recheck source/water/road/tile clearances",
+    "Render matched main and south crops and all four compass views before part.json"
+  ],
+  "counts": {
+    "conifers": 545,
+    "cacti": 30,
+    "rocks": 22,
+    "shrubs": 3
+  },
+  "forest_floor": {
+    "polygons": 17,
+    "data": "forest-floor.json",
+    "optional_adapter": "forest-floor.js",
+    "export": "applyForestFloor",
+    "owner": "terrain"
+  }
+}

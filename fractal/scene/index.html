@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RCWM · interactive delivered scene</title><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff}canvas{display:block;width:100%;height:100%;touch-action:none}#message{font:13px system-ui;color:#56685b;padding:20px}canvas:focus-visible{outline:2px solid #2b624c;outline-offset:-3px}</style><script type="importmap">{"imports":{"three":"./three.module.js"}}</script></head><body><p id="message">Loading the delivered scene…</p><script type="module">
+import { init } from '../../viewer.js';
+init().catch(error => {
+  document.getElementById('message').textContent = 'The live scene could not load. Saved views are available on the project page.';
+  parent.postMessage({type:'rcwm-error', message:error.message}, location.origin);
+});
+</script></body></html>

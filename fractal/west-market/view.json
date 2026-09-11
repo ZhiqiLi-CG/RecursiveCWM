@@ -1,0 +1,22 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "parent": "west-village",
+  "root_target_size": [
+    1400,
+    963
+  ],
+  "crop_root_px": [
+    200,
+    398,
+    461,
+    542
+  ],
+  "target_size": [
+    1044,
+    576
+  ],
+  "magnification": 4,
+  "mapping": "root_x = 200 + local_x / 4; root_y = 398 + local_y / 4",
+  "parent_snapshot": "../west-village/preview.js",
+  "rendering": "Use immutable root camera at 1400x963. Crop crop_root_px then enlarge to target_size. Do not reframe."
+}

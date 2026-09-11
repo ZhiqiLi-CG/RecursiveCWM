@@ -1,0 +1,59 @@
+{
+  "camera_mapping": {
+    "root": [
+      [
+        70.00003,
+        372.999926
+      ],
+      [
+        486.999987,
+        900.000067
+      ],
+      [
+        1305.00001,
+        393.999937
+      ],
+      [
+        802.999972,
+        68.00007
+      ]
+    ],
+    "world": [
+      [
+        -12.433303304007971,
+        -9.999999985453123
+      ],
+      [
+        -12.433303300697073,
+        9.99999999903628
+      ],
+      [
+        12.433303296806482,
+        9.999999980528763
+      ],
+      [
+        12.433303294424025,
+        -10.000000006312177
+      ]
+    ],
+    "method": "ctx.pixelToWorld(rootX,rootY,0)"
+  },
+  "synchronous_build": true,
+  "prebuild_sampler_identical": true,
+  "finite": true,
+  "all_mesh_vertices_in_bounds": true,
+  "height_range": [
+    -0.255,
+    0.3799596140572776
+  ],
+  "vertex_counts": {
+    "continuous-carved-ground": 129523,
+    "closed-soil-perimeter": 8664,
+    "closed-tapered-underside": 129523,
+    "connected-recessed-water": 98214,
+    "outflow-cross-sections": 504,
+    "tiny-earth-specks": 12
+  },
+  "scene_triangles": 566161,
+  "page_errors": []
+}

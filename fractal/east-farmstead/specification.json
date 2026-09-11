@@ -1,0 +1,56 @@
+{
+  "name": "east-farmstead",
+  "style": "Faceted medieval miniature; timber and plaster, tile, bundled thatch, white canvas, vivid blue mill roof",
+  "ground_y": 0.06,
+  "local_assets": [
+    {
+      "module": "barn.js",
+      "name": "lower thatched barn and feed sack",
+      "foot_root_px": [
+        833.5,
+        409
+      ],
+      "note": "anchor is footprint center; visible front base falls near root 831,423"
+    }
+  ],
+  "children": [
+    {
+      "name": "east-farmyard",
+      "crop_root_px": [
+        681,
+        278,
+        829,
+        359
+      ],
+      "owns": "Own the northern working farmyard as one irregular arrangement: upper dark timber barn (ground foot near root 714,320), roughly ten small white/grey sheep in the grass behind it around 753,298, the warm timber gable shed at 764,353, and the small ivory canvas-roofed building at 804,328. These are three separate buildings with distinct ridge directions and open lawn between; sheep have a scattered nonuniform layout. The upper barn has a tall dark roof, warm left gable and shaded timber side; complete the clipped roof and rear beyond the top crop. The central timber shed has a pale warm grey two-slope roof, timber boarded gable and broad black doorway. The ivory building has an off-white pitched canvas roof with warm ridge/shaded return, dark windows and brown supports/walls. Build the associated sparse farm fences, goods, carts or small items only when supported by the crop; a minimal plausible hidden boundary is enough. Sheep must have wool bodies, small heads and four legs, not white blobs on the ground. All roofs need real thickness, gables and full backs. Own no blue mill or tiled house visible at the lower/right edge, and no lower thatch barn. Calibrate exact feet and proportions by eye: supplied feet are approximate. This is a layout subproblem: finish its arrangement and simple buildings within your loop if possible."
+    },
+    {
+      "name": "east-blue-mill",
+      "crop_root_px": [
+        785,
+        326,
+        838,
+        394
+      ],
+      "owns": "Own only the distinctive blue-roofed farm mill. Reference body is ivory plaster with dark irregular timber framing; a nearly face-on front gable has a central square loft window and a lower small grey roofed projection at the right. Its blue roof has two steep substantial slopes and a deep ridge extending behind the rotor. Four warm timber sail arms meet at a hub above/in front of the front gable: one up, one down, and long left/right arms, almost horizontal in this camera. Root ground foot is approximately (808,386), NOT the roof ridge. Carefully distinguish the timber cross and blue roof; do not invent giant opaque sail sheets where the reference shows roof. Build a real axle attachment, hub, full-thickness sail members, roof slopes, back gable and four walls. The upper rear roof is partly occluded by the ivory shed/tiled house; the lower-right corner is partly overlapped by the lower thatched barn. Those buildings are context and owned elsewhere. Leave their geometry untouched and solve only the mill and its attached small projection. A tree, terrain or pin is never yours. This is the single complex internal assembly selected for its own solve loop; use the crop to calibrate framing, roof shape and rotor position, and inspect side views for attachments and thickness."
+    },
+    {
+      "name": "east-tile-house",
+      "crop_root_px": [
+        819,
+        306,
+        865,
+        361
+      ],
+      "owns": "Own only the larger two-story farmhouse with intersecting warm tiled roofs at root ground foot around (838,358). The reference has a long reddish brown main pitched roof running up-right, a smaller pale salmon gable projecting upper-left, another pale salmon triangular gable toward the right/front, ivory plaster panels and dark timber framing, roundish dark upper windows along the lit left side, and a recessed dark ground-floor opening. This is a joined multi-gable house, not three separate huts or one pyramid. Calibrate the footprint, wall height, main ridge and cross-gable attachment from the image; complete the clipped right face and hidden back plausibly in the same miniature style. Give all roof slopes eave thickness, real roof junctions, ridge caps and restrained tile relief; give all walls full volume and lower framing. Avoid large invented attachments. The ivory shed behind/left and blue mill in front/left are context owned by siblings; the lower thatched barn belongs to parent. Own no road, lamps, pins, greenery, or water."
+    }
+  ],
+  "relations": [
+    "Farmyard northern barn, sheep, wood shed and canvas building separated by lawn",
+    "Tile house behind and to right of blue mill",
+    "Lower thatch barn overlaps mill lower-right projection",
+    "All landscape, roads, lamps and pins externally owned"
+  ],
+  "status": "complete",
+  "integration": "component.js imports all three child builders plus barn.js; seats low support vertices into ground without altering calibrated upper geometry."
+}

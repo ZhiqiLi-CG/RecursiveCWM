@@ -1,0 +1,9 @@
+{
+  "identity": "Faceted miniature adobe riverside hamlet",
+  "regions": ["west-bank home and awning", "tower goods court", "four east-bank lane houses"],
+  "assets": {"houses":6,"attached_west_awning":1,"shade_cart":1,"crossing_and_lane_lamps":11,"barrels_pots_packs":"small authored clusters","pedestrians":1},
+  "materials": ["warm gray adobe", "cool gray tower stone", "cream roof coping", "recessed dark wood", "muted mauve cloth", "weathered wood and iron"],
+  "relations": ["one home west of river", "tower north of crossing", "four houses around southern lane", "west awning physically attached to house", "goods resting beside walls", "roofs enclosed on all sides"],
+  "construction": "Six individually traced roof footprints projected through the immutable camera at physical roof elevation, thick four-sided wall assemblies with inset openings, full roof slabs and coping; props fully volumetric.",
+  "children": []
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore a real recursive reconstruction: one reference image, 24 scene programs, and a world you can view from any camera.">
+  <meta name="theme-color" content="#f7f8f4">
+  <title>Recursive Code World Models</title>
+  <link rel="icon" href="images/delivered.webp">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#explore">Skip to the recursion</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top" aria-label="Recursive Code World Models home">RCWM<span class="mark-dot"></span></a>
+    <nav aria-label="Page sections"><a href="#explore">Recursion</a><a href="#build">The run</a><a href="#world">Live world <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="title">
+      <p class="eyebrow"><span class="small-line"></span> ONE IMAGE · ONE RECORDED RUN</p>
+      <h1 id="title">Recursive Code<br>World Models</h1>
+      <p class="subtitle">Reconstruct a world by solving its parts, then returning to the whole.</p>
+      <figure class="hero-figure">
+        <div class="comparison" id="comparison" style="--split:50%">
+          <img class="compare-image" src="images/delivered.webp" width="1400" height="963" alt="The delivered program's rendered medieval village, with mountain, forests, rivers and buildings" fetchpriority="high">
+          <div class="compare-before"><img class="compare-image" src="images/reference.webp" width="1400" height="963" alt="Input reference: an illustrated medieval village from WorldClaw Figure 9" fetchpriority="high"></div>
+          <span class="image-tag reference-tag">REFERENCE</span><span class="image-tag result-tag">OUR RECONSTRUCTION</span>
+          <div class="compare-divider" aria-hidden="true"><span>‹ ›</span></div>
+          <input id="compare-slider" class="compare-slider" type="range" min="0" max="100" value="50" aria-label="Reference image reveal" aria-valuetext="50% reference, 50% reconstruction">
+        </div>
+        <figcaption><span>From a single image to an executable 3D scene.</span><span>Drag to compare · same camera</span></figcaption>
+      </figure>
+      <div class="run-summary"><p>The solver reconstructs a scene, delegates unresolved regions to the same solver, and integrates the returned programs. Follow one medieval village through every level of that recursion.</p><div class="stats"><div><strong>24</strong><span>scene programs</span></div><div><strong>5</strong><span>recursion levels</span></div><div><strong id="run-minutes">77<span class="unit">m</span> 23<span class="unit">s</span></strong><span>recorded wall time</span></div></div></div>
+    </section>
+
+    <section class="section wrap" id="explore" aria-labelledby="explore-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / WHOLE → PARTS → WHOLE</p><h2 id="explore-title">Explore the recursion</h2></div><p>Every node is a program.<br> Select one to see what it was asked to build.</p></div>
+      <div class="explorer-surface">
+        <div class="tree-toolbar"><span class="micro-label">THE DELIVERED TREE</span><div class="depth-legend" aria-label="Depth colors"><span>Depth</span><i class="depth-0">0</i><i class="depth-1">1</i><i class="depth-2">2</i><i class="depth-3">3</i><i class="depth-4">4</i></div></div>
+        <div class="tree-scroll" id="explore-tree" aria-label="Recursion tree"></div>
+        <div class="tree-foot"><span><span class="key">↑</span> parent <span class="key">↓</span> child <span class="key">← →</span> previous / next node</span><span>24 nodes · 23 connections</span></div>
+      </div>
+      <article class="node-detail" id="node-detail" aria-labelledby="node-name" aria-busy="true">
+        <div class="detail-heading"><div><p class="breadcrumb" id="breadcrumb">scene</p><h3 id="node-name">scene</h3></div><div class="detail-metrics"><span id="node-depth">Depth 0</span><span><strong id="node-tokens">—</strong> tokens</span></div></div>
+        <div class="detail-grid">
+          <div>
+            <div class="matched-pair"><figure><figcaption>TARGET CROP</figcaption><a id="target-link" target="_blank" rel="noopener"><img id="node-target" alt="" width="1400" height="963"></a></figure><figure><figcaption>DELIVERED RENDER</figcaption><a id="final-link" target="_blank" rel="noopener"><img id="node-final" alt="" width="1400" height="963"></a></figure></div>
+            <p class="image-note" id="image-note"></p>
+            <div class="parent-context" id="parent-context"><figure><div class="parent-image"><img id="parent-render" alt="" width="1400" height="963"><div class="crop-outline" id="crop-outline"></div></div></figure><div><p class="micro-label">WITHIN THE PARENT</p><p id="parent-caption"></p><p class="mono" id="crop-coordinates"></p></div></div>
+            <div class="root-context" id="root-context"><span class="context-symbol" aria-hidden="true">↳</span><p>The root sees the entire reference. Its children reconstruct the terrain and settlements, then return their programs for integration.</p></div>
+          </div>
+          <div class="node-text">
+            <div class="brief-heading"><h4>The brief</h4><a id="brief-link" target="_blank" rel="noopener">Full brief ↗</a></div><p id="node-brief"></p>
+            <details class="account"><summary>What this node did</summary><blockquote id="node-account"></blockquote><a id="account-link" target="_blank" rel="noopener">Read the node’s account ↗</a></details>
+            <div class="code-heading"><h4>The program</h4><a id="module-link" target="_blank" rel="noopener"></a></div>
+            <pre class="code-excerpt" tabindex="0" aria-label="First 25 lines of the delivered module"><code id="node-code"></code></pre>
+          </div>
+        </div>
+        <nav class="node-jumps" id="node-jumps" aria-label="Related nodes"></nav>
+      </article>
+      <p id="load-error" class="error" role="alert" hidden></p>
+    </section>
+
+    <section class="section build-section" id="build" aria-labelledby="build-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">02 / THE RECORDED PROCESS</p><h2 id="build-title">Watch it build</h2></div><p>Calls branch out. Programs come back.<br> The parent sees the whole again.</p></div>
+      <div class="playback-panel">
+        <div class="playback-top"><div><span class="status-dot" aria-hidden="true"></span><span class="micro-label" id="playback-status">READY TO REPLAY</span></div><div class="playback-clock"><span id="elapsed">00:00:00</span><span class="muted">/ 01:17:23</span><span id="playback-tokens">0 tokens</span></div></div>
+        <div class="playback-tree-scroll tree-scroll" id="playback-tree" aria-label="Tree as it develops"></div>
+        <div class="current-event" aria-live="off"><span id="event-number">000 / 199</span><p id="event-description">Press play to follow the recorded run.</p><a href="#explore" id="inspect-event" hidden>Inspect node ↑</a></div>
+        <div class="timeline-wrap"><div id="event-ticks" aria-hidden="true"></div><input id="timeline" type="range" min="0" max="4643000" step="1" value="0" aria-label="Elapsed run time"><div class="timeline-labels"><span>00:00</span><span>19:21</span><span>38:42</span><span>58:02</span><span>77:23</span></div></div>
+        <div class="playback-controls"><div><button id="play" class="button primary" type="button">▶ Play</button><button id="step" class="button" type="button">Step →</button><button id="restart" class="text-button" type="button">↺ Restart</button></div><label class="speed-control" for="speed">Speed <input id="speed" type="range" min="0.25" max="4" step="0.25" value="1"><output id="speed-label" for="speed">1×</output></label></div>
+      </div>
+      <div class="playback-notes"><p><span class="legend-dot active"></span> Solving <span class="legend-dot waiting"></span> Waiting / recovering <span class="legend-dot delivered"></span> Delivered</p><p>199 trace events · 60 seconds at 1× · <a href="data/events.jsonl">Download trace ↗</a></p></div>
+      <p class="fine-print">Timing, retries and unsuccessful returns come from the original trace. The retained final render is revealed at each recorded delivery; intermediate renders were not saved in this dataset. Token counts sum recorded session usage.</p>
+    </div></section>
+
+    <section class="section wrap" id="world" aria-labelledby="world-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / BEYOND THE REFERENCE CAMERA</p><h2 id="world-title">The world is a program</h2></div><p>The same delivered geometry,<br> seen from a camera you control.</p></div>
+      <div class="viewer-shell"><div class="viewer-toolbar"><span class="viewer-state"><span class="status-dot" aria-hidden="true"></span><span id="viewer-status">Loading the scene…</span></span><button id="reset-camera" class="button" type="button" disabled>↺ Reset to reference camera</button></div><div id="viewer-frame"><iframe id="world-viewer" title="Interactive 3D reconstruction of the medieval village" src="fractal/scene/index.html" loading="lazy" allow="fullscreen"></iframe><div id="viewer-loading"><span class="loader"></span><p>Building the delivered scene…</p></div></div></div>
+      <div class="viewer-caption"><p id="viewer-gestures">Drag to orbit · Scroll or pinch to zoom</p><a href="fractal/scene/component.js" target="_blank" rel="noopener">Open the root program ↗</a></div>
+      <div class="fallback" id="viewer-fallback" hidden><p id="fallback-caption" role="status">The live viewer could not load in this browser. These five saved renders show the delivered scene from other cameras.</p><div class="novel-grid"><figure><img src="images/view-L35.webp" alt="Delivered village from a camera rotated left" loading="lazy"><figcaption>Left view</figcaption></figure><figure><img src="images/view-R35.webp" alt="Delivered village from a camera rotated right" loading="lazy"><figcaption>Right view</figcaption></figure><figure><img src="images/view-orbit.webp" alt="Delivered village from an orbit camera" loading="lazy"><figcaption>Orbit view</figcaption></figure><figure><img src="images/view-close1.webp" alt="Close view of the delivered village" loading="lazy"><figcaption>Close view 01</figcaption></figure><figure><img src="images/view-close2.webp" alt="Second close view of the delivered village" loading="lazy"><figcaption>Close view 02</figcaption></figure></div></div>
+    </section>
+  </main>
+  <footer class="wrap footer">
+    <div class="footer-top"><div class="wordmark">RCWM<span class="mark-dot"></span></div><p>Recursive Code World Models</p><div class="resource-links"><span aria-label="Paper link coming soon">Paper <small>coming soon</small></span><span aria-label="Code link coming soon">Code <small>coming soon</small></span></div></div>
+    <details class="instruction"><summary>The recursive solver instruction <span>Read the exact prompt ↗</span></summary><pre id="solver-instruction">Loading instruction…</pre><a href="data/solver-instruction.md">Download instruction</a></details>
+    <div class="footer-bottom"><p>Reference image: <em>WorldClaw</em>, Fig. 9. Used only as input to the reconstruction.</p><a href="#top">Back to top ↑</a></div>
+  </footer>
+  <noscript><p class="wrap error">Enable JavaScript to explore the recursion, play the trace, and interact with the 3D scene.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+  "interface_version": 1,
+  "name": "settlements",
+  "status": "complete",
+  "module": "component.js",
+  "export": "build",
+  "children": [
+    "west-village",
+    "east-village",
+    "adobe-village"
+  ],
+  "child_parts": [
+    "../west-village/part.json",
+    "../east-village/part.json",
+    "../adobe-village/part.json"
+  ],
+  "local_components": [
+    "network.js",
+    "lamps.js"
+  ],
+  "dependencies": [
+    "../terrain-ground/ground.js",
+    "../scene/common.js"
+  ],
+  "coordinate_system": "Inherited root world coordinates, Y up. Add group with identity transform; build using locked camera before any diagnostic rotations.",
+  "camera_contract": "../../camera-contract.json",
+  "view": "view.json",
+  "account": "account.md",
+  "ownership": [
+    "All three architectural districts and their descendants",
+    "Eight connected road routes with thick supported water crossings",
+    "Broadened eastern market junction",
+    "Seven connecting-route lamps in addition to delivered district lamps"
+  ],
+  "integration_notes": [
+    "Use component.js directly, not preview.js. Do not separately add district descendants.",
+    "Roads and connecting lamps sample completed terrain-ground heightAt/surfaceAt without emitting terrain. Pair with terrain/terrain.js.",
+    "Preserves delivered district transforms; no global placement correction or camera change.",
+    "No map pins, labels, lights or natural vegetation included.",
+    "Some road edge sharpness, facade weathering and fine roof silhouettes remain reference-style approximations."
+  ],
+  "validation": {
+    "meshes": 8403,
+    "invalid": 0,
+    "bounds": {
+      "min": [
+        -12.433302879333496,
+        -0.0855175256729126,
+        -10
+      ],
+      "max": [
+        12.433302879333496,
+        1.8801767013070998,
+        10
+      ]
+    },
+    "groups": [
+      "settlement-road-network",
+      "west-village",
+      "east-village",
+      "adobe-village",
+      "connecting-lane-lamps"
+    ],
+    "pageErrors": []
+  },
+  "evidence": {
+    "locked_render": "evidence/final.png",
+    "matched_reference": "evidence/final-paired.png",
+    "matched_crop": "evidence/final-matched.png",
+    "four_compass": "evidence/final-compass-sheet.png",
+    "browser_audit": "evidence/final-audit.json"
+  }
+}

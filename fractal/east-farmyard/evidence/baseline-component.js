@@ -1,0 +1,2 @@
+import {THREE,box,mat} from '../scene/common.js';
+export function build(ctx){const g=new THREE.Group();g.name='east-farmyard';for(const [x,y,color] of [[712,310,'#6f7460'],[764,344,'#765446']]){const p=ctx.pixelToWorld(x,y);box(g,p.x,.24,p.z,.62,.48,.78,'#c4bea0');const roof=new THREE.Mesh(new THREE.CylinderGeometry(0,.56,.40,4),mat(color));roof.scale.z=1.28;roof.rotation.y=Math.PI/4;roof.position.set(p.x,.66,p.z);roof.castShadow=true;g.add(roof);}return g;}

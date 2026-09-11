@@ -1,0 +1,126 @@
+[
+  {
+    "compass": 0,
+    "bounds": [
+      [
+        2.513918204149988,
+        0.05999998927116268,
+        5.5131922392665285
+      ],
+      [
+        9.00583643584357,
+        1.2658000000521528,
+        9.273733920977767
+      ]
+    ],
+    "clip": {
+      "x": 773,
+      "y": 469,
+      "width": 321,
+      "height": 172
+    },
+    "assets": [
+      "dark-thatch-cottage",
+      "blue-slate-house",
+      "pale-thatch-house",
+      "canvas-shelter",
+      "covered-pondside-cart",
+      "upright-covered-goods",
+      "barrel-and-crate-stack"
+    ],
+    "meshes": 944
+  },
+  {
+    "compass": 1,
+    "bounds": [
+      [
+        2.513918204149988,
+        0.05999998927116268,
+        5.5131922392665285
+      ],
+      [
+        9.00583643584357,
+        1.2658000000521528,
+        9.273733920977767
+      ]
+    ],
+    "clip": {
+      "x": 263,
+      "y": 392,
+      "width": 220,
+      "height": 240
+    },
+    "assets": [
+      "dark-thatch-cottage",
+      "blue-slate-house",
+      "pale-thatch-house",
+      "canvas-shelter",
+      "covered-pondside-cart",
+      "upright-covered-goods",
+      "barrel-and-crate-stack"
+    ],
+    "meshes": 944
+  },
+  {
+    "compass": 2,
+    "bounds": [
+      [
+        2.513918204149988,
+        0.05999998927116268,
+        5.5131922392665285
+      ],
+      [
+        9.00583643584357,
+        1.2658000000521528,
+        9.273733920977767
+      ]
+    ],
+    "clip": {
+      "x": 359,
+      "y": 151,
+      "width": 255,
+      "height": 128
+    },
+    "assets": [
+      "dark-thatch-cottage",
+      "blue-slate-house",
+      "pale-thatch-house",
+      "canvas-shelter",
+      "covered-pondside-cart",
+      "upright-covered-goods",
+      "barrel-and-crate-stack"
+    ],
+    "meshes": 944
+  },
+  {
+    "compass": 3,
+    "bounds": [
+      [
+        2.513918204149988,
+        0.05999998927116268,
+        5.5131922392665285
+      ],
+      [
+        9.00583643584357,
+        1.2658000000521528,
+        9.273733920977767
+      ]
+    ],
+    "clip": {
+      "x": 850,
+      "y": 156,
+      "width": 182,
+      "height": 183
+    },
+    "assets": [
+      "dark-thatch-cottage",
+      "blue-slate-house",
+      "pale-thatch-house",
+      "canvas-shelter",
+      "covered-pondside-cart",
+      "upright-covered-goods",
+      "barrel-and-crate-stack"
+    ],
+    "meshes": 944
+  }
+]

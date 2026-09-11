@@ -1,0 +1,22 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "parent": "settlements",
+  "root_target_size": [
+    1400,
+    963
+  ],
+  "crop_root_px": [
+    372,
+    571,
+    708,
+    811
+  ],
+  "target_size": [
+    1008,
+    720
+  ],
+  "magnification": 3,
+  "mapping": "root_x = crop_root_px[0] + local_x / 3; root_y = crop_root_px[1] + local_y / 3",
+  "parent_snapshot": "../settlements/preview.js",
+  "rendering": "Use immutable root camera; render 1400x963, crop crop_root_px, enlarge to target_size. Never reframe camera."
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "western temperate conifer grove on a low-poly miniature village tile",
+  "style": "faceted dark and yellow-green foliage, tapered irregular layered crowns, slender brown trunks",
+  "regions": ["rear diagonal ridge", "dense central stand", "western young-tree fringe", "lower village fingers", "open eastern clearing"],
+  "geometry": "closed radial crown meshes with uneven branch whorls, complete tapered trunks and low branch structure",
+  "layout": "individually measured root anchors; no rectangular scatter; preserve village and river clearances",
+  "materials": ["deep green foliage", "olive lit foliage", "brown trunks"],
+  "completion": "continue concealed trees beneath the map marker; full radial crowns and embedded root ends",
+  "ownership": "trees only, root x <493 and y <430; soil polygons supplied as metadata"
+}

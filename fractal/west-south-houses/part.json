@@ -1,0 +1,25 @@
+{
+  "interface_version": 1,
+  "id": "west-south-houses",
+  "status": "complete",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "ground_y": 0.06,
+  "foundation_bottom_y": -0.035,
+  "objects": ["rust-tile", "brown-tile", "red-gable", "pale-thatch"],
+  "camera_contract": "../../camera-contract.json",
+  "integration_notes": [
+    "Synchronous build(ctx) returns one THREE.Group containing exactly four full-volume cottages.",
+    "Uses inherited root pixel mapping and immutable camera; add directly to the parent without additional transformation.",
+    "Includes stone foundations, timber/plaster walls, full gables and roofs, chimneys, windows, doors and small attached steps.",
+    "Does not include roads, terrain, lamps, stalls, vegetation or neighboring buildings. No through-road changes.",
+    "Preview's broad pale ground and lane wedge are inherited context; parent should integrate against final grass terrain and settle route continuity."
+  ],
+  "evidence": {
+    "reference_comparison": "evidence/final-paired.png",
+    "locked_render": "evidence/final.png",
+    "compass": "evidence/compass-montage.png",
+    "account": "account.md"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "inconsistent_winding_edges": 0,
+  "open_edge_count": 0,
+  "nonmanifold_edge_count": 0,
+  "degenerate_edge_count": 0,
+  "open_edge_sample": [],
+  "min": [
+    1.4860031604766846,
+    0.014999999664723873,
+    -9.949999809265137
+  ],
+  "max": [
+    12.380000114440918,
+    3.968447208404541,
+    -0.2576709985733032
+  ],
+  "meshes": [
+    {
+      "name": "connected snow ridges and cliffs",
+      "vertices": 11358,
+      "triangles": 19854
+    },
+    {
+      "name": "closed rock foundation",
+      "vertices": 9984,
+      "triangles": 3328
+    }
+  ]
+}

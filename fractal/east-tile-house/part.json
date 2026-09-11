@@ -1,0 +1,18 @@
+{
+  "name": "east-tile-house",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "ground_y": 0.06,
+  "notes": [
+    "Complete joined two-story farmhouse with dark hipped main tile roof, two salmon cross-roofs, timber/plaster walls, arched windows and recessed lower bay.",
+    "Closed rear facade, boarded rear entrance, thick roof panels and full opposing slopes verified from four compass directions.",
+    "Locked reference crop checked at 10x; visual limitations and upper roof-opening interpretation recorded in account.md.",
+    "Owns only the farmhouse; no terrain, roads, lamps, greenery or sibling geometry."
+  ],
+  "evidence": {
+    "comparison": "evidence/final-paired.png",
+    "compass": "evidence/four-compass.png",
+    "validation": "evidence/validation.json"
+  }
+}
