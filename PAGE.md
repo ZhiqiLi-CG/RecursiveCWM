@@ -2,6 +2,23 @@
 
 A static project page for the supplied medieval-village reconstruction. Open `index.html` through an HTTP server. There is no build step, package installation, external CDN, or server-side application.
 
+## Academic-page follow-up
+
+Applied `../FOLLOWUP.md`: centered paper title, linked author placeholders, Georgia Tech affiliation, icon resource pills, the supplied teaser, abstract, BibTeX with a copy button, Nerfies credit, and Open Graph/Twitter metadata. Change **`ARXIV_URL` near the top of `index.html`** to set the paper destination; author links remain `#` and Code is marked `Code (TODO)` with disabled behavior.
+
+`images/teaser.webp` is a 1400 × 530, approximately 137 KiB derivative of `../assets/teaser.png`. The abstract is embedded in the HTML from `../assets/abstract.tex`, with LaTeX commands removed, RCWM/RSP substitutions, and en dashes. Metadata descriptions use its first sentence. Existing comparison, recursion, playback, viewer, and instruction sections remain. Clipboard denial selects the citation for manual copying.
+
+**Follow-up verification:** static content/resource checks, JavaScript syntax checks, and the existing run tests pass. Fresh Chromium verification and screenshots are **blocked** in this session: socket restrictions prevent both the Python HTTP server and Chromium itself from starting (`Operation not permitted`). The existing screenshots and original browser reports below predate this revision. See `../checks/followup-report.json` and `followup-browser-attempt.log` for the current status.
+
+With a permitted local server running, verify the revised page using:
+
+```bash
+python3 site/tools/check-followup-static.py
+/data/zhiqi/CodeWorld2/.render-tools/node/bin/node site/tools/check-followup.mjs http://127.0.0.1:8000/
+```
+
+The follow-up browser script checks desktop/phone layout, metadata, exact abstract text, BibTeX navigation and clipboard success/denial, local requests, and the live viewer; it saves `followup-*.png` screenshots into `../checks/` when it can run.
+
 ## Serve locally
 
 ```bash
@@ -29,13 +46,15 @@ Visit **http://localhost:8000/**. JavaScript modules and data loading require HT
 | `data/tree.json`, `data/events.jsonl` | Unchanged source topology and chronological runner trace. |
 | `data/nodes.json` | Prepared node index: parent/children, crop frames, image dimensions, brief, account excerpt, module name, and first 25 source lines (or the entire module if shorter). |
 | `data/solver-instruction.md` | Exact supplied recursive-solver instruction, displayed in the footer disclosure. |
-| `images/` | WebP derivatives of the supplied clean reference, clean final render, and five saved novel views. |
+| `images/` | WebP derivatives of the supplied teaser, clean reference, clean final render, and five saved novel views. |
 | `matched/` | Full-size delivered comparisons aligned to each node's target dimensions using the recorded crop when necessary. |
 | `thumbs/` | Thumbnail derivatives of the delivered comparisons, at most 320 × 240 pixels. |
 | `tools/prepare_assets.py` | Optional asset-packaging script using Pillow. Recreates image derivatives and the node index from `../assets/`; preserves the adapted viewer entry. Not needed to serve the page. |
 | `run.test.mjs` | Node tests of real trace totals, delivery/recovery transitions, and nested crop mapping. Requires the adjacent original `assets/` directory. |
 | `tools/check-browser.mjs` | Desktop/mobile Chromium checks and screenshots, using the task's supplied Playwright installation. |
 | `tools/check-edge-cases.mjs` | All-node checks, nested-path hosting, keyboard behavior, a complete real-time 1× replay, and an actual WebGL-disabled fallback test. |
+| `tools/check-followup.mjs` | Desktop/phone checks and screenshots for the academic header, teaser, abstract, metadata, and BibTeX behavior. |
+| `tools/check-followup-static.py` | Browser-independent follow-up content, ordering, and local-resource checks. |
 | `IMPLEMENTATION.md` | Completed implementation checklist. |
 | `README.md` | Serving, file, provenance, interaction, and verification notes. |
 
@@ -65,7 +84,7 @@ Reference-image acknowledgement: **WorldClaw paper, Fig. 9, used only as input**
 - Playback supports **Play/Pause**, **Step**, **Restart**, a scrubber, and **0.25×–4×** speed. Its arrow keys keep focus within the playback tree; activating a node opens its details. Playback pauses when the browser tab is hidden.
 - In the live scene, drag to orbit and scroll/pinch to zoom. The toolbar restores the reference camera. With the canvas focused, arrow keys orbit, **+/−** zoom, and **R** resets.
 
-## Verification
+## Original verification (before the academic-page follow-up)
 
 Verified with the task's Node executable and Playwright in headless Chromium, served by Python `http.server`. Desktop viewports were 1440 × 1050 and 1280 × 900; the phone viewport was 390 × 844. Screenshots were saved to **`../checks/` and visually inspected**.
 

@@ -2,6 +2,23 @@ import { prepareRun, cropInParent } from './run.js';
 import { RecursionTree } from './tree.js';
 import { setupPlayback } from './playback.js';
 const $ = id => document.getElementById(id);
+$('arxiv-link').setAttribute('href', ARXIV_URL);
+$('code-link').addEventListener('click', event => event.preventDefault());
+$('copy-bibtex').addEventListener('click', async () => {
+  const citation = $('bibtex-code');
+  try {
+    await navigator.clipboard.writeText(citation.textContent);
+    $('copy-status').textContent = 'Copied to clipboard.';
+  } catch {
+    citation.parentElement.focus({preventScroll: true});
+    const range = document.createRange();
+    range.selectNodeContents(citation);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    $('copy-status').textContent = 'Citation selected. Use your device’s Copy command.';
+  }
+});
 $('compare-slider').addEventListener('input', event => {
   const value = event.target.value;
   $('comparison').style.setProperty('--split', `${value}%`);

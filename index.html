@@ -3,24 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore a real recursive reconstruction: one reference image, 24 scene programs, and a world you can view from any camera.">
+  <meta name="description" content="Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world.">
   <meta name="theme-color" content="#f7f8f4">
-  <title>Recursive Code World Models</title>
+  <title>Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs</title>
+  <!-- Set the paper URL here when the arXiv page is available. -->
+  <script>const ARXIV_URL = "#";</script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs">
+  <meta property="og:description" content="Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world.">
+  <meta property="og:image" content="images/teaser.webp">
+  <meta property="og:image:alt" content="Recursive reconstruction from whole scene to village, house cluster, and house, with the delivered 3D program viewed from multiple cameras.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs">
+  <meta name="twitter:description" content="Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world.">
+  <meta name="twitter:image" content="images/teaser.webp">
+  <meta name="twitter:image:alt" content="Recursive reconstruction from whole scene to village, house cluster, and house, with the delivered 3D program viewed from multiple cameras.">
   <link rel="icon" href="images/delivered.webp">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#explore">Skip to the recursion</a>
-  <header class="site-header wrap">
-    <a class="wordmark" href="#top" aria-label="Recursive Code World Models home">RCWM<span class="mark-dot"></span></a>
-    <nav aria-label="Page sections"><a href="#explore">Recursion</a><a href="#build">The run</a><a href="#world">Live world <span aria-hidden="true">↗</span></a></nav>
-  </header>
   <main id="top">
-    <section class="hero wrap" aria-labelledby="title">
-      <p class="eyebrow"><span class="small-line"></span> ONE IMAGE · ONE RECORDED RUN</p>
-      <h1 id="title">Recursive Code<br>World Models</h1>
-      <p class="subtitle">Reconstruct a world by solving its parts, then returning to the whole.</p>
+    <header class="paper-header wrap" id="paper-header">
+      <h1 id="title"><span>Recursive Code World Models:</span> Building Complex Worlds through Recursive Scene Programs</h1>
+      <p class="authors"><a href="#">Zhiqi Li</a><a href="#">Yuxuan Liao</a><a href="#">Bo Zhu</a></p>
+      <p class="affiliation">Georgia Institute of Technology</p>
+      <nav class="paper-links" aria-label="Paper resources">
+        <a class="resource-pill" id="arxiv-link" href="#"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z M14 3v5h4 M9 12h6 M9 16h6"/></svg><span>arXiv</span></a>
+        <a class="resource-pill disabled" id="code-link" href="#" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 6-6 6 6 6 M16 6l6 6-6 6 M14 3l-4 18"/></svg><span>Code (TODO)</span></a>
+        <a class="resource-pill" id="bibtex-link" href="#bibtex"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 3H6v6l-3 3 3 3v6h2 M16 3h2v6l3 3-3 3v6h-2 M11 9h2 M11 15h2"/></svg><span>BibTeX</span></a>
+      </nav>
+    </header>
+    <figure class="teaser wrap" id="teaser">
+      <a href="images/teaser.webp" target="_blank" rel="noopener" aria-label="Open the teaser at full size"><img id="teaser-image" src="images/teaser.webp" width="1400" height="530" alt="The same recursive solver reconstructs the whole scene, a village, a house cluster, and a house; the resulting scene program renders from several cameras." fetchpriority="high"></a>
+      <figcaption>One recursive solver reconstructs the whole, its parts, and an executable 3D world.</figcaption>
+    </figure>
+    <section class="hero wrap" aria-label="Reference and reconstruction comparison">
       <figure class="hero-figure">
         <div class="comparison" id="comparison" style="--split:50%">
           <img class="compare-image" src="images/delivered.webp" width="1400" height="963" alt="The delivered program's rendered medieval village, with mountain, forests, rivers and buildings" fetchpriority="high">
@@ -31,6 +50,14 @@
         </div>
         <figcaption><span>From a single image to an executable 3D scene.</span><span>Drag to compare · same camera</span></figcaption>
       </figure>
+
+    </section>
+
+    <section class="abstract-section wrap" id="abstract" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p id="abstract-text">Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world. We introduce Recursive Code World Models (RCWM), a framework for reconstructing complex 3D worlds in code from a single reference image. RCWM couples a Recursive Scene Program (RSP) representation with a construction solver that recursively calls itself. An RSP represents the executable world as compositional scene code, while each solver call follows the same complete process: establish the whole, recursively reconstruct unresolved parts, and revisit the whole to refine their composition. This global–local–global recursion gives fine-scale structures their own perception-and-editing loops while preserving scene-wide geometry and relationships. Reference-aligned views propagate a shared camera projection across levels, while parent revisitation addresses boundaries, spatial relations, and shared errors that emerge after local refinement. A vision-language coding agent directly compares reference images with scene renders to guide refinement, recursive descent, and return. Across complex scenes, RCWM outperforms prior code-based image-to-scene reconstruction methods. Ablation studies further support the benefits of recursive construction and suggest that deeper calls can improve finer-scale reconstruction. RCWM provides a recursive construction principle for building complex executable worlds from visual evidence.</p>
+    </section>
+    <section class="wrap" aria-label="The recorded run">
       <div class="run-summary"><p>The solver reconstructs a scene, delegates unresolved regions to the same solver, and integrates the returned programs. Follow one medieval village through every level of that recursion.</p><div class="stats"><div><strong>24</strong><span>scene programs</span></div><div><strong>5</strong><span>recursion levels</span></div><div><strong id="run-minutes">77<span class="unit">m</span> 23<span class="unit">s</span></strong><span>recorded wall time</span></div></div></div>
     </section>
 
@@ -81,11 +108,22 @@
       <div class="viewer-caption"><p id="viewer-gestures">Drag to orbit · Scroll or pinch to zoom</p><a href="fractal/scene/component.js" target="_blank" rel="noopener">Open the root program ↗</a></div>
       <div class="fallback" id="viewer-fallback" hidden><p id="fallback-caption" role="status">The live viewer could not load in this browser. These five saved renders show the delivered scene from other cameras.</p><div class="novel-grid"><figure><img src="images/view-L35.webp" alt="Delivered village from a camera rotated left" loading="lazy"><figcaption>Left view</figcaption></figure><figure><img src="images/view-R35.webp" alt="Delivered village from a camera rotated right" loading="lazy"><figcaption>Right view</figcaption></figure><figure><img src="images/view-orbit.webp" alt="Delivered village from an orbit camera" loading="lazy"><figcaption>Orbit view</figcaption></figure><figure><img src="images/view-close1.webp" alt="Close view of the delivered village" loading="lazy"><figcaption>Close view 01</figcaption></figure><figure><img src="images/view-close2.webp" alt="Second close view of the delivered village" loading="lazy"><figcaption>Close view 02</figcaption></figure></div></div>
     </section>
+    <section class="bibtex-section wrap" id="bibtex" aria-labelledby="bibtex-title">
+      <div class="bibtex-heading"><h2 id="bibtex-title">BibTeX</h2><button class="button copy-button" id="copy-bibtex" type="button"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 8h11v13H9z M15 8V3H4v13h5"/></svg><span>Copy BibTeX</span></button></div>
+      <pre class="bibtex-code" tabindex="0" aria-label="BibTeX citation"><code id="bibtex-code">@article{li2026rcwm,
+  title={Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs},
+  author={Li, Zhiqi and Liao, Yuxuan and Zhu, Bo},
+  journal={arXiv preprint},
+  year={2026}
+}</code></pre>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+    </section>
   </main>
   <footer class="wrap footer">
     <div class="footer-top"><div class="wordmark">RCWM<span class="mark-dot"></span></div><p>Recursive Code World Models</p><div class="resource-links"><span aria-label="Paper link coming soon">Paper <small>coming soon</small></span><span aria-label="Code link coming soon">Code <small>coming soon</small></span></div></div>
     <details class="instruction"><summary>The recursive solver instruction <span>Read the exact prompt ↗</span></summary><pre id="solver-instruction">Loading instruction…</pre><a href="data/solver-instruction.md">Download instruction</a></details>
     <div class="footer-bottom"><p>Reference image: <em>WorldClaw</em>, Fig. 9. Used only as input to the reconstruction.</p><a href="#top">Back to top ↑</a></div>
+    <p class="template-credit">Page template inspired by the Nerfies project page</p>
   </footer>
   <noscript><p class="wrap error">Enable JavaScript to explore the recursion, play the trace, and interact with the 3D scene.</p></noscript>
 </body>
