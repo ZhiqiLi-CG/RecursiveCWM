@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zhiqili-cg.github.io/RecursiveCWM/sitemap.xml
