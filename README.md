@@ -1,5 +1,5 @@
 # Recursive Code World Models — project page
 
-Interactive page for one real run of the method: explore the recursion tree, replay the construction from the runner trace, and orbit the delivered scene program live.
+https://zhiqili-cg.github.io/RecursiveCWM/
 
-Serve locally: `python3 -m http.server 8000` then open http://localhost:8000/. See PAGE.md for file descriptions.
+Overview (index.html), Explore a run (explore.html), Results (results.html). Static files only; serve locally with `python3 -m http.server 8000`. See PAGE.md for details.

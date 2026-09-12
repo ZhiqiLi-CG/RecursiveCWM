@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Results · Recursive Code World Models</title>
+  <!-- Set ARXIV_URL in config.js when the arXiv page is available. -->
+  <script src="config.js">
+</script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs">
+  <meta property="og:description" content="Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world.">
+  <meta property="og:image" content="images/teaser.webp">
+  <meta property="og:image:alt" content="Recursive reconstruction from whole scene to village, house cluster, and house, with the delivered 3D program viewed from multiple cameras.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs">
+  <meta name="twitter:description" content="Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world.">
+  <meta name="twitter:image" content="images/teaser.webp">
+  <meta name="twitter:image:alt" content="Recursive reconstruction from whole scene to village, house cluster, and house, with the delivered 3D program viewed from multiple cameras.">
+  <link rel="icon" href="images/delivered.webp">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js">
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+<a href="index.html">Overview</a>
+<a href="explore.html">Explore a run</a>
+<a href="results.html" aria-current="page">Results</a>
+<a href="index.html#paper-header" data-paper-link>Paper</a>
+</nav>
+<main id="top">
+<header class="paper-header secondary-header text-column" id="main-content">
+<a class="project-name" href="index.html">Recursive Code World Models</a>
+<h1>Results</h1>
+<p>Comparisons, novel views, and the recursive construction behind them.</p>
+</header>
+<nav class="section-nav text-column" aria-label="Results sections">
+<a href="#comparisons">Comparisons</a>
+<a href="#novel-views">Novel views</a>
+<a href="#quantitative">Metrics</a>
+<a href="#method">Method</a>
+</nav>
+<section class="section media-column" id="comparisons">
+<h2>Reconstructing the whole and the details</h2>
+<p class="section-intro">Reference images and delivered scenes, with close-ups of their parts. Open any figure to inspect it at full size.</p>
+<div class="comparison-grid">
+<figure class="paper-figure ">
+<a href="images/paper/case-medieval-village.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: Medieval village. Full scene and local details across reconstruction methods.">
+<img src="images/paper/case-medieval-village.webp" width="1800" height="1724" alt="Medieval village. Full scene and local details across reconstruction methods." loading="lazy">
+</a>
+<figcaption>Medieval village. Full scene and local details across reconstruction methods.</figcaption>
+</figure>
+<figure class="paper-figure ">
+<a href="images/paper/case-city-full.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: City. Full scene and local details across reconstruction methods.">
+<img src="images/paper/case-city-full.webp" width="1800" height="1396" alt="City. Full scene and local details across reconstruction methods." loading="lazy">
+</a>
+<figcaption>City. Full scene and local details across reconstruction methods.</figcaption>
+</figure>
+</div>
+<h3 class="gallery-heading">More reconstructed worlds</h3>
+<p class="gallery-intro">Each sheet pairs the reference with our reconstruction, from the whole scene to close-up details.</p>
+<div class="case-gallery">
+<figure class="paper-figure ">
+<a href="images/paper/case-ours-island-harbor.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: Island harbor. Reference and our reconstruction.">
+<img src="images/paper/case-ours-island-harbor-thumb.webp" width="506" height="850" alt="Island harbor. Reference and our reconstruction." loading="lazy">
+</a>
+<figcaption>Island harbor. Reference and our reconstruction.</figcaption>
+</figure>
+<figure class="paper-figure ">
+<a href="images/paper/case-ours-japan-island.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: Japan island. Reference and our reconstruction.">
+<img src="images/paper/case-ours-japan-island-thumb.webp" width="506" height="850" alt="Japan island. Reference and our reconstruction." loading="lazy">
+</a>
+<figcaption>Japan island. Reference and our reconstruction.</figcaption>
+</figure>
+<figure class="paper-figure ">
+<a href="images/paper/case-ours-park-lake.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: Park lake. Reference and our reconstruction.">
+<img src="images/paper/case-ours-park-lake-thumb.webp" width="506" height="850" alt="Park lake. Reference and our reconstruction." loading="lazy">
+</a>
+<figcaption>Park lake. Reference and our reconstruction.</figcaption>
+</figure>
+<figure class="paper-figure ">
+<a href="images/paper/case-ours-police-corner.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: Police corner. Reference and our reconstruction.">
+<img src="images/paper/case-ours-police-corner-thumb.webp" width="506" height="850" alt="Police corner. Reference and our reconstruction." loading="lazy">
+</a>
+<figcaption>Police corner. Reference and our reconstruction.</figcaption>
+</figure>
+<figure class="paper-figure ">
+<a href="images/paper/case-ours-school-block.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: School block. Reference and our reconstruction.">
+<img src="images/paper/case-ours-school-block-thumb.webp" width="506" height="850" alt="School block. Reference and our reconstruction." loading="lazy">
+</a>
+<figcaption>School block. Reference and our reconstruction.</figcaption>
+</figure>
+<figure class="paper-figure ">
+<a href="images/paper/case-ours-shop-row.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: Shop row. Reference and our reconstruction.">
+<img src="images/paper/case-ours-shop-row-thumb.webp" width="506" height="850" alt="Shop row. Reference and our reconstruction." loading="lazy">
+</a>
+<figcaption>Shop row. Reference and our reconstruction.</figcaption>
+</figure>
+<figure class="paper-figure ">
+<a href="images/paper/case-ours-snow-village.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: Snow village. Reference and our reconstruction.">
+<img src="images/paper/case-ours-snow-village-thumb.webp" width="506" height="850" alt="Snow village. Reference and our reconstruction." loading="lazy">
+</a>
+<figcaption>Snow village. Reference and our reconstruction.</figcaption>
+</figure>
+<figure class="paper-figure ">
+<a href="images/paper/case-ours-valley-village.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: Valley village. Reference and our reconstruction.">
+<img src="images/paper/case-ours-valley-village-thumb.webp" width="506" height="850" alt="Valley village. Reference and our reconstruction." loading="lazy">
+</a>
+<figcaption>Valley village. Reference and our reconstruction.</figcaption>
+</figure>
+</div>
+</section>
+<section class="section text-column" id="novel-views">
+<h2>Beyond the reference view</h2>
+<p class="section-intro">The delivered scene programs can be rendered from new cameras.</p>
+<figure class="paper-figure ">
+<a href="images/paper/novel-views-grid.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: Novel views of the reconstructed worlds across the paper’s scenes.">
+<img src="images/paper/novel-views-grid.webp" width="1800" height="1944" alt="Novel views of the reconstructed worlds across the paper’s scenes." loading="lazy">
+</a>
+<figcaption>Novel views of the reconstructed worlds across the paper’s scenes.</figcaption>
+</figure>
+<p class="section-action">
+<a class="text-link" href="index.html#world">Try the live world →</a>
+</p>
+</section>
+<section class="section text-column" id="quantitative">
+<h2>Quantitative comparisons</h2>
+<p class="table-hint">Scroll sideways to see all metrics →</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Reconstruction metrics; scroll horizontally to see all columns">
+<table id="metrics">
+<caption>Reconstruction quality across ten scenes. ↑ higher is better; ↓ lower is better. Bold values follow the paper.</caption>
+<thead>
+<tr>
+<th scope="col">Scene</th>
+<th scope="col">Method</th>
+<th scope="col">PSNR↑</th>
+<th scope="col">SSIM↑</th>
+<th scope="col">Edge F1↑</th>
+<th scope="col">LPIPS↓</th>
+<th scope="col">CLIP↑</th>
+</tr>
+</thead>
+<tbody>
+<tr class="ours">
+<th scope="rowgroup" rowspan="4">city-full</th>
+<th scope="row">Ours</th>
+<td>
+<strong>18.2</strong>
+</td>
+<td>
+<strong>0.66</strong>
+</td>
+<td>
+<strong>0.94</strong>
+</td>
+<td>
+<strong>0.158</strong>
+</td>
+<td>
+<strong>0.95</strong>
+</td>
+</tr>
+<tr>
+<th scope="row">SEIG</th>
+<td>14.5</td>
+<td>0.51</td>
+<td>0.83</td>
+<td>0.339</td>
+<td>0.90</td>
+</tr>
+<tr>
+<th scope="row">VIGA</th>
+<td>9.5</td>
+<td>0.48</td>
+<td>0.58</td>
+<td>0.670</td>
+<td>0.83</td>
+</tr>
+<tr>
+<th scope="row">img2threejs</th>
+<td>15.5</td>
+<td>0.55</td>
+<td>0.91</td>
+<td>0.243</td>
+<td>0.93</td>
+</tr>
+</tbody>
+<tbody>
+<tr class="ours">
+<th scope="rowgroup" rowspan="4">snow-village</th>
+<th scope="row">Ours</th>
+<td>
+<strong>17.9</strong>
+</td>
+<td>
+<strong>0.73</strong>
+</td>
+<td>
+<strong>0.85</strong>
+</td>
+<td>
+<strong>0.237</strong>
+</td>
+<td>
+<strong>0.83</strong>
+</td>
+</tr>
+<tr>
+<th scope="row">SEIG</th>
+<td>13.4</td>
+<td>0.64</td>
+<td>0.37</td>
+<td>0.520</td>
+<td>0.77</td>
+</tr>
+<tr>
+<th scope="row">VIGA</th>
+<td>13.5</td>
+<td>0.61</td>
+<td>0.40</td>
+<td>0.541</td>
+<td>0.75</td>
+</tr>
+<tr>
+<th scope="row">img2threejs</th>
+<td>15.4</td>
+<td>0.64</td>
+<td>0.65</td>
+<td>0.351</td>
+<td>0.81</td>
+</tr>
+</tbody>
+<tbody>
+<tr class="ours">
+<th scope="rowgroup" rowspan="4">island-harbor</th>
+<th scope="row">Ours</th>
+<td>
+<strong>17.4</strong>
+</td>
+<td>
+<strong>0.74</strong>
+</td>
+<td>
+<strong>0.90</strong>
+</td>
+<td>
+<strong>0.186</strong>
+</td>
+<td>
+<strong>0.93</strong>
+</td>
+</tr>
+<tr>
+<th scope="row">SEIG</th>
+<td>11.7</td>
+<td>0.63</td>
+<td>0.57</td>
+<td>0.516</td>
+<td>0.80</td>
+</tr>
+<tr>
+<th scope="row">VIGA</th>
+<td>10.6</td>
+<td>0.65</td>
+<td>0.48</td>
+<td>0.526</td>
+<td>0.83</td>
+</tr>
+<tr>
+<th scope="row">img2threejs</th>
+<td>15.0</td>
+<td>0.68</td>
+<td>0.81</td>
+<td>0.272</td>
+<td>0.91</td>
+</tr>
+</tbody>
+<tbody>
+<tr class="ours">
+<th scope="rowgroup" rowspan="4">medieval-village</th>
+<th scope="row">Ours</th>
+<td>
+<strong>18.7</strong>
+</td>
+<td>
+<strong>0.71</strong>
+</td>
+<td>
+<strong>0.89</strong>
+</td>
+<td>
+<strong>0.200</strong>
+</td>
+<td>
+<strong>0.93</strong>
+</td>
+</tr>
+<tr>
+<th scope="row">SEIG</th>
+<td>10.9</td>
+<td>0.60</td>
+<td>0.50</td>
+<td>0.541</td>
+<td>0.85</td>
+</tr>
+<tr>
+<th scope="row">VIGA</th>
+<td>10.5</td>
+<td>0.58</td>
+<td>0.37</td>
+<td>0.601</td>
+<td>0.83</td>
+</tr>
+<tr>
+<th scope="row">img2threejs</th>
+<td>15.4</td>
+<td>0.62</td>
+<td>0.77</td>
+<td>0.325</td>
+<td>0.89</td>
+</tr>
+</tbody>
+<tbody>
+<tr class="ours">
+<th scope="rowgroup" rowspan="4">japan-island</th>
+<th scope="row">Ours</th>
+<td>
+<strong>19.3</strong>
+</td>
+<td>
+<strong>0.73</strong>
+</td>
+<td>
+<strong>0.87</strong>
+</td>
+<td>
+<strong>0.201</strong>
+</td>
+<td>
+<strong>0.96</strong>
+</td>
+</tr>
+<tr>
+<th scope="row">SEIG</th>
+<td>13.3</td>
+<td>0.64</td>
+<td>0.47</td>
+<td>0.513</td>
+<td>0.93</td>
+</tr>
+<tr>
+<th scope="row">VIGA</th>
+<td>12.9</td>
+<td>0.65</td>
+<td>0.43</td>
+<td>0.534</td>
+<td>0.80</td>
+</tr>
+<tr>
+<th scope="row">img2threejs</th>
+<td>16.6</td>
+<td>0.66</td>
+<td>0.76</td>
+<td>0.302</td>
+<td>0.95</td>
+</tr>
+</tbody>
+<tbody>
+<tr class="ours">
+<th scope="rowgroup" rowspan="4">school-block</th>
+<th scope="row">Ours</th>
+<td>
+<strong>16.4</strong>
+</td>
+<td>
+<strong>0.56</strong>
+</td>
+<td>
+<strong>0.97</strong>
+</td>
+<td>
+<strong>0.171</strong>
+</td>
+<td>
+<strong>0.94</strong>
+</td>
+</tr>
+<tr>
+<th scope="row">SEIG</th>
+<td>11.8</td>
+<td>0.23</td>
+<td>0.80</td>
+<td>0.448</td>
+<td>0.88</td>
+</tr>
+<tr>
+<th scope="row">VIGA</th>
+<td>11.2</td>
+<td>0.19</td>
+<td>0.77</td>
+<td>0.587</td>
+<td>0.85</td>
+</tr>
+<tr>
+<th scope="row">img2threejs</th>
+<td>12.8</td>
+<td>0.26</td>
+<td>0.88</td>
+<td>0.310</td>
+<td>0.91</td>
+</tr>
+</tbody>
+<tbody>
+<tr class="ours">
+<th scope="rowgroup" rowspan="4">police-corner</th>
+<th scope="row">Ours</th>
+<td>
+<strong>16.6</strong>
+</td>
+<td>
+<strong>0.44</strong>
+</td>
+<td>
+<strong>0.97</strong>
+</td>
+<td>
+<strong>0.159</strong>
+</td>
+<td>
+<strong>0.91</strong>
+</td>
+</tr>
+<tr>
+<th scope="row">SEIG</th>
+<td>12.7</td>
+<td>0.24</td>
+<td>0.75</td>
+<td>0.415</td>
+<td>0.90</td>
+</tr>
+<tr>
+<th scope="row">VIGA</th>
+<td>12.4</td>
+<td>0.27</td>
+<td>0.82</td>
+<td>0.473</td>
+<td>0.91</td>
+</tr>
+<tr>
+<th scope="row">img2threejs</th>
+<td>13.7</td>
+<td>0.30</td>
+<td>0.86</td>
+<td>0.285</td>
+<td>0.90</td>
+</tr>
+</tbody>
+<tbody>
+<tr class="ours">
+<th scope="rowgroup" rowspan="4">park-lake</th>
+<th scope="row">Ours</th>
+<td>
+<strong>23.3</strong>
+</td>
+<td>
+<strong>0.83</strong>
+</td>
+<td>
+<strong>0.99</strong>
+</td>
+<td>
+<strong>0.075</strong>
+</td>
+<td>
+<strong>0.95</strong>
+</td>
+</tr>
+<tr>
+<th scope="row">SEIG</th>
+<td>12.3</td>
+<td>0.48</td>
+<td>0.61</td>
+<td>0.490</td>
+<td>0.90</td>
+</tr>
+<tr>
+<th scope="row">VIGA</th>
+<td>15.1</td>
+<td>0.54</td>
+<td>0.74</td>
+<td>0.330</td>
+<td>0.92</td>
+</tr>
+<tr>
+<th scope="row">img2threejs</th>
+<td>18.4</td>
+<td>0.66</td>
+<td>0.92</td>
+<td>0.169</td>
+<td>0.93</td>
+</tr>
+</tbody>
+<tbody>
+<tr class="ours">
+<th scope="rowgroup" rowspan="4">shop-row</th>
+<th scope="row">Ours</th>
+<td>
+<strong>17.4</strong>
+</td>
+<td>
+<strong>0.65</strong>
+</td>
+<td>
+<strong>0.96</strong>
+</td>
+<td>
+<strong>0.120</strong>
+</td>
+<td>
+<strong>0.96</strong>
+</td>
+</tr>
+<tr>
+<th scope="row">SEIG</th>
+<td>12.5</td>
+<td>0.50</td>
+<td>0.79</td>
+<td>0.400</td>
+<td>0.89</td>
+</tr>
+<tr>
+<th scope="row">VIGA</th>
+<td>15.2</td>
+<td>0.54</td>
+<td>0.91</td>
+<td>0.249</td>
+<td>0.91</td>
+</tr>
+<tr>
+<th scope="row">img2threejs</th>
+<td>16.9</td>
+<td>0.59</td>
+<td>0.94</td>
+<td>0.145</td>
+<td>0.95</td>
+</tr>
+</tbody>
+<tbody>
+<tr class="ours">
+<th scope="rowgroup" rowspan="4">valley-village</th>
+<th scope="row">Ours</th>
+<td>
+<strong>14.1</strong>
+</td>
+<td>0.38</td>
+<td>
+<strong>0.48</strong>
+</td>
+<td>
+<strong>0.583</strong>
+</td>
+<td>
+<strong>0.87</strong>
+</td>
+</tr>
+<tr>
+<th scope="row">SEIG</th>
+<td>9.7</td>
+<td>0.39</td>
+<td>0.22</td>
+<td>0.742</td>
+<td>0.64</td>
+</tr>
+<tr>
+<th scope="row">VIGA</th>
+<td>10.2</td>
+<td>
+<strong>0.41</strong>
+</td>
+<td>0.20</td>
+<td>0.743</td>
+<td>0.68</td>
+</tr>
+<tr>
+<th scope="row">img2threejs</th>
+<td>11.3</td>
+<td>0.34</td>
+<td>0.41</td>
+<td>0.726</td>
+<td>0.70</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="source-note">
+<a href="data/results-table.md">Download the source table ↗</a>
+</p>
+</section>
+<section class="section text-column" id="method">
+<h2>A recursive construction process</h2>
+<p class="section-intro">Establish the whole, reconstruct unresolved parts, then revisit their composition. The same solver repeats this process at each level.</p>
+<figure class="paper-figure method-figure">
+<a href="images/paper/figure1-method.png" target="_blank" rel="noopener" aria-label="Open full-size figure: The global–local–global solver and its compositional scene programs.">
+<img src="images/paper/figure1-method.webp" width="1210" height="1192" alt="The global–local–global solver and its compositional scene programs." loading="lazy">
+</a>
+<figcaption>The global–local–global solver and its compositional scene programs.</figcaption>
+</figure>
+<details class="tree-figure-disclosure">
+<summary>Recursion trees across scenes</summary>
+<figure class="paper-figure ">
+<a href="images/paper/recursion-trees-panel.png" target="_blank" rel="noopener" aria-label="Open full-size figure: The recursive scene-program trees for the paper’s reconstructed scenes.">
+<img src="images/paper/recursion-trees-panel.webp" width="1790" height="2400" alt="The recursive scene-program trees for the paper’s reconstructed scenes." loading="lazy">
+</a>
+<figcaption>The recursive scene-program trees for the paper’s reconstructed scenes.</figcaption>
+</figure>
+</details>
+<p class="section-action">
+<a class="text-link" href="explore.html">Explore one of these runs →</a>
+</p>
+</section>
+</main>
+<footer class="footer text-column">
+  <details class="instruction">
+<summary>The recursive solver instruction</summary>
+<pre id="solver-instruction">The complete instruction is available below.</pre>
+<a href="data/solver-instruction.md">Download the instruction ↗</a>
+</details>
+  <p>Reference image: <em>WorldClaw</em>, Fig. 9. Used only as input to the reconstruction.</p>
+  <p class="template-credit">Page template inspired by the <a href="https://nerfies.github.io/">Nerfies project page</a>.</p>
+  <a class="back-top" href="#top">Back to top ↑</a>
+</footer>
+<noscript>
+<p class="text-column">Enable JavaScript to explore the run and interact with the live world. Figures, results, and the citation are available without JavaScript.</p>
+</noscript>
+</body>
+</html>

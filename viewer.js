@@ -1,11 +1,11 @@
 // Build the exact delivered component with its locked camera before enabling orbit.
 export async function init() {
-  const [{THREE, makeCamera, context}, {build}, {OrbitControls}] = await Promise.all([
-    import('./fractal/scene/common.js'), import('./fractal/scene/component.js'), import('./vendor/OrbitControls.js')
+  const [{THREE, makeCamera, context}, {build}, {OrbitControls}, {setupRecursionDisplay}] = await Promise.all([
+    import('./fractal/scene/common.js'), import('./fractal/scene/component.js'), import('./vendor/OrbitControls.js'), import('./recursion-display.js')
   ]);
-  const response = await fetch(new URL('./camera-contract.json', import.meta.url));
-  if (!response.ok) throw new Error(`Camera contract: HTTP ${response.status}`);
-  const contract = await response.json();
+  const [response, treeResponse] = await Promise.all([fetch(new URL('./camera-contract.json', import.meta.url)), fetch(new URL('./data/tree.json', import.meta.url))]);
+  if (!response.ok || !treeResponse.ok) throw new Error('The camera or recursion tree could not load.');
+  const contract = await response.json(), tree = await treeResponse.json();
   const camera = makeCamera(contract), ctx = context(camera, contract), scene = new THREE.Scene();
   scene.background = new THREE.Color('#ffffff');
   scene.add(new THREE.HemisphereLight('#f4f9ff','#625840',1.8));
@@ -13,7 +13,7 @@ export async function init() {
   sun.shadow.mapSize.set(2048,2048); Object.assign(sun.shadow.camera,{left:-24,right:24,top:24,bottom:-24});
   sun.shadow.bias = -.0005; sun.shadow.normalBias = .015; scene.add(sun);
   // Some geometry is calibrated with pixelToWorld, so build before resizing or orbiting.
-  scene.add(build(ctx));
+  const root = build(ctx); scene.add(root);
   const renderer = new THREE.WebGLRenderer({antialias:true, preserveDrawingBuffer:true});
   renderer.setPixelRatio(Math.min(devicePixelRatio,1.5)); renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap; renderer.shadowMap.autoUpdate = false;
@@ -64,9 +64,16 @@ export async function init() {
     }
   });
   renderer.domElement.addEventListener('webglcontextlost', event => { event.preventDefault(); parent.postMessage({type:'rcwm-error',message:'WebGL context lost'}, location.origin); });
+  const publishState = state => parent.postMessage({type:'rcwm-state',...state},location.origin);
+  const recursion = setupRecursionDisplay({THREE,root,scene,tree,renderer,render,onChange:publishState});
+  addEventListener('message', event => {
+    if (event.source !== parent || event.origin !== location.origin) return;
+    if (event.data?.type === 'rcwm-depth') recursion.setDepth(event.data.level);
+    if (event.data?.type === 'rcwm-highlight') recursion.highlight(event.data.nodeId, event.data.reveal === true);
+  });
   renderer.setSize(innerWidth,innerHeight); reset();
   renderer.render(scene,camera);
   document.getElementById('message').hidden = true;
-  window.sceneReady = true; window.sceneContext = {scene,camera,ctx,renderer,controls,reset};
-  parent.postMessage({type:'rcwm-ready'},location.origin);
+  window.sceneReady = true; window.sceneContext = {scene,camera,ctx,renderer,controls,reset,recursion};
+  parent.postMessage({type:'rcwm-ready',...recursion.getState()},location.origin);
 }

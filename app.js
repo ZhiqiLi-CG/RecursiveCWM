@@ -1,129 +1,138 @@
-import { prepareRun, cropInParent } from './run.js';
-import { RecursionTree } from './tree.js';
-import { setupPlayback } from './playback.js';
+import {setupWorld} from './world-ui.js';
+const world = setupWorld();
 const $ = id => document.getElementById(id);
-$('arxiv-link').setAttribute('href', ARXIV_URL);
-$('code-link').addEventListener('click', event => event.preventDefault());
-$('copy-bibtex').addEventListener('click', async () => {
+const paperURL = typeof ARXIV_URL === 'string' ? ARXIV_URL : '#';
+document.querySelectorAll('[data-paper-link]').forEach(link => {
+  if (paperURL !== '#') link.href = paperURL;
+});
+if ($('arxiv-link')) $('arxiv-link').href = paperURL;
+$('code-link')?.addEventListener('click', event => event.preventDefault());
+$('copy-bibtex')?.addEventListener('click', async () => {
   const citation = $('bibtex-code');
   try {
     await navigator.clipboard.writeText(citation.textContent);
     $('copy-status').textContent = 'Copied to clipboard.';
   } catch {
-    citation.parentElement.focus({preventScroll: true});
-    const range = document.createRange();
-    range.selectNodeContents(citation);
-    const selection = window.getSelection();
-    selection.removeAllRanges();
-    selection.addRange(range);
+    citation.parentElement.focus({preventScroll:true});
+    const range = document.createRange(); range.selectNodeContents(citation);
+    const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
     $('copy-status').textContent = 'Citation selected. Use your device’s Copy command.';
   }
 });
-$('compare-slider').addEventListener('input', event => {
-  const value = event.target.value;
+$('compare-slider')?.addEventListener('input', event => {
+  const value = Number(event.target.value);
   $('comparison').style.setProperty('--split', `${value}%`);
-  event.target.setAttribute('aria-valuetext', `${value}% reference, ${100 - value}% reconstruction`);
+  event.target.setAttribute('aria-valuetext', `${value}% reference, ${100-value}% reconstruction`);
 });
-
 async function get(url, type = 'json') {
   const response = await fetch(url);
   if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
   return response[type]();
 }
-
-async function start() {
-  const [treeData, nodes, traceText, instruction] = await Promise.all([
-    get('data/tree.json'), get('data/nodes.json'), get('data/events.jsonl', 'text'), get('data/solver-instruction.md','text')
-  ]);
-  const run = prepareRun(traceText.trim().split('\n').map(JSON.parse), treeData);
+// Load the long instruction only when its disclosure is opened.
+const instruction = document.querySelector('.instruction');
+instruction?.addEventListener('toggle', async () => {
+  if (!instruction.open || instruction.dataset.loaded) return;
+  try {
+    $('solver-instruction').textContent = await get('data/solver-instruction.md','text');
+    instruction.dataset.loaded = 'true';
+  } catch {
+    $('solver-instruction').textContent = 'The instruction could not load. Use the download link below.';
+  }
+});
+function fail(error) {
+  if ($('load-error')) {
+    $('load-error').hidden = false;
+    $('load-error').textContent = 'The run data could not load. Please reload the page.';
+  }
+  console.error(error);
+}
+async function preview() {
+  const nodes = await get('data/nodes.json');
+  const buttons = [...document.querySelectorAll('[data-preview-node]')];
+  const select = (button, notify = true) => {
+    const id = button.dataset.previewNode, node = nodes[id];
+    buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    $('preview-node-name').textContent = button.textContent;
+    $('preview-depth').textContent = `Depth ${node.depth}`;
+    $('preview-target').src = `fractal/${id}/target.png`;
+    $('preview-target').alt = `Reference target received by ${id}`;
+    $('preview-render').src = `matched/${id}.png`;
+    $('preview-render').alt = `Delivered render of ${id}, matched to its target crop`;
+    $('preview-target-link').href = `fractal/${id}/target.png`;
+    $('preview-render-link').href = `fractal/${id}/FINAL.png`;
+    $('full-run-link').href = `explore.html?node=${encodeURIComponent(id)}`;
+    $('recursion-preview').dataset.node = id;
+    if (notify) world.select(id);
+    $('preview-note').textContent = node.parent
+      ? `${id} reconstructs a part of ${node.parent} and returns its scene program.`
+      : 'The root establishes the whole scene and integrates the programs returned by its parts.';
+  };
+  buttons.forEach(button => {
+    button.addEventListener('click', () => select(button));
+    button.addEventListener('pointerenter', () => world.hover(button.dataset.previewNode));
+    button.addEventListener('pointerleave', () => world.hover(null));
+    button.addEventListener('focus', () => world.hover(button.dataset.previewNode));
+    button.addEventListener('blur', () => world.hover(null));
+  });
+  select(buttons[0],false);
+  document.documentElement.dataset.ready = 'true';
+}
+async function explore() {
+  const [treeData, nodes, {RecursionTree}] = await Promise.all([get('data/tree.json'), get('data/nodes.json'), import('./tree.js')]);
   let tree;
-  function selectNode(id, scroll = false) {
-    if (!nodes[id]) return;
+  function select(id, updateURL = true) {
+    if (!nodes[id]) id = treeData.root;
     const node = nodes[id];
+    if (updateURL || id !== treeData.root) world.select(id);
     tree.select(id); tree.reveal(id);
-    $('node-detail').dataset.node = id;
-    $('node-detail').setAttribute('aria-busy', 'false');
+    $('node-detail').dataset.node = id; $('node-detail').setAttribute('aria-busy','false');
     $('node-name').textContent = id;
     const lineage = []; let ancestor = node;
     while (ancestor) { lineage.unshift(ancestor.id); ancestor = nodes[ancestor.parent]; }
     $('breadcrumb').textContent = lineage.join(' / ');
     $('node-depth').textContent = `Depth ${node.depth}`;
-    $('node-tokens').textContent = run.nodeTokens[id].toLocaleString();
     $('node-target').src = `fractal/${id}/target.png`; $('node-target').alt = `Reference target received by ${id}`;
     $('node-final').src = `matched/${id}.png`; $('node-final').alt = `Delivered render of ${id}, in the target crop`;
-    for (const img of [$('node-target'), $('node-final')]) {
-      img.width = node.targetSize[0]; img.height = node.targetSize[1];
-      img.style.setProperty('--node-ratio', `${node.targetSize[0]} / ${node.targetSize[1]}`);
+    for (const image of [$('node-target'),$('node-final')]) {
+      [image.width, image.height] = node.targetSize;
     }
-    $('target-link').href = `fractal/${id}/target.png`; $('target-link').setAttribute('aria-label', `Open full-size ${id} target`);
-    $('final-link').href = `fractal/${id}/FINAL.png`; $('final-link').setAttribute('aria-label', `Open original ${id} delivered render`);
-    $('image-note').textContent = node.croppedFromRoot ? 'Matched to the recorded crop. Click either image to open its original file.' : 'Shown at matched size. Click either image to open its original file.';
+    $('target-link').href = `fractal/${id}/target.png`;
+    $('final-link').href = `fractal/${id}/FINAL.png`;
+    $('image-note').textContent = node.croppedFromRoot
+      ? 'Delivered render matched to the recorded crop. Open either image to see its original file.'
+      : 'Target and render shown at matched size. Open either image to see its original file.';
     $('node-brief').textContent = node.brief.split('\n\n')[0];
     $('brief-link').href = `fractal/${id}/brief.md`;
-    $('node-account').textContent = node.account || 'No account was provided for this node.';
-    $('account-link').href = `fractal/${id}/account.md`; $('account-link').hidden = !node.account;
     $('node-code').textContent = node.code;
     $('module-link').textContent = `${node.module} ↗`; $('module-link').href = `fractal/${id}/${node.module}`;
-    $('parent-context').hidden = !node.parent; $('root-context').hidden = !!node.parent;
-    if (node.parent) {
-      const parent = nodes[node.parent], crop = cropInParent(node.frame, parent.frame);
-      $('parent-render').src = `matched/${parent.id}.png`; $('parent-render').alt = `${parent.id}'s delivered render with the ${id} crop outlined`;
-      $('parent-render').width = parent.targetSize[0]; $('parent-render').height = parent.targetSize[1];
-      for (const [key, value] of Object.entries(crop)) $('crop-outline').style[key] = `${value}%`;
-      $('parent-caption').textContent = `The outlined region is this node’s target window in ${parent.id}.`;
-      $('crop-coordinates').textContent = `Root pixels: [${node.frame.join(', ')}]${node.view.magnification ? ` · ${node.view.magnification}× crop` : ''}`;
-    }
     $('node-jumps').replaceChildren();
     const jump = (target, label) => {
-      const button = document.createElement('button'); button.type = 'button'; button.textContent = label;
-      button.addEventListener('click', () => selectNode(target)); $('node-jumps').append(button);
+      const link = document.createElement('a'); link.href = `explore.html?node=${encodeURIComponent(target)}`; link.textContent = label;
+      link.addEventListener('click', event => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault(); select(target); $('node-name').tabIndex = -1; $('node-name').focus({preventScroll:true});
+      });
+      $('node-jumps').append(link);
     };
-    if (node.parent) jump(node.parent, `↑ ${node.parent}`);
-    const label = document.createElement('span'); label.textContent = node.children.length ? 'Children' : 'Leaf node · no further descent'; $('node-jumps').append(label);
+    if (node.parent) jump(node.parent, `↑ Parent: ${node.parent}`);
+    const label = document.createElement('span'); label.textContent = node.children.length ? 'Children' : 'Leaf program'; $('node-jumps').append(label);
     node.children.forEach(child => jump(child, `↓ ${child}`));
-    if (scroll) {
-      $('node-detail').scrollIntoView({behavior:'instant', block:'start'});
-      $('node-name').tabIndex = -1; $('node-name').focus({preventScroll:true});
+    if (updateURL) {
+      const url = new URL(location.href); url.searchParams.set('node',id); history.replaceState(null,'',url);
     }
   }
-  tree = new RecursionTree($('explore-tree'), treeData, id => selectNode(id));
-  selectNode(treeData.root);
-  setupPlayback(run, selectNode);
-  $('solver-instruction').textContent = instruction;
+  tree = new RecursionTree($('explore-tree'),treeData,select);
+  for (const [id,button] of tree.buttons) {
+    button.addEventListener('pointerenter', () => world.hover(id));
+    button.addEventListener('pointerleave', () => world.hover(null));
+    button.addEventListener('focus', () => world.hover(id));
+    button.addEventListener('blur', () => world.hover(null));
+  }
+  select(new URLSearchParams(location.search).get('node') || treeData.root,false);
   document.documentElement.dataset.ready = 'true';
 }
-start().catch(error => {
-  $('load-error').hidden = false;
-  $('load-error').textContent = `The run data could not load. Serve this directory with a local HTTP server, then reload. ${error.message}`;
-  console.error(error);
-});
+if ($('recursion-preview')) preview().catch(fail);
+else if ($('explore-tree')) explore().catch(fail);
+else document.documentElement.dataset.ready = 'true';
 
-const iframe = $('world-viewer');
-let viewerReady = false, viewerTimer;
-function fallback(message) {
-  if (viewerReady) return;
-  clearTimeout(viewerTimer);
-  $('viewer-loading').hidden = true; $('viewer-frame').hidden = true;
-  $('viewer-fallback').hidden = false; $('viewer-status').textContent = 'Saved camera views';
-  $('viewer-gestures').hidden = true;
-  $('reset-camera').disabled = true;
-  $('fallback-caption').textContent = 'The live viewer could not load in this browser. These five saved renders show the delivered scene from other cameras.';
-}
-window.addEventListener('message', event => {
-  if (event.source !== iframe.contentWindow || event.origin !== location.origin) return;
-  if (event.data?.type === 'rcwm-ready') {
-    viewerReady = true; clearTimeout(viewerTimer);
-    $('viewer-frame').hidden = false; $('viewer-loading').hidden = true; $('viewer-fallback').hidden = true;
-    $('viewer-gestures').hidden = false;
-    $('viewer-status').textContent = 'Live scene · Three.js'; $('reset-camera').disabled = false;
-  }
-  if (event.data?.type === 'rcwm-error') { viewerReady = false; fallback(event.data.message); }
-});
-$('reset-camera').addEventListener('click', () => iframe.contentWindow.postMessage({type:'rcwm-reset'}, location.origin));
-const observer = new IntersectionObserver(entries => {
-  if (entries.some(entry => entry.isIntersecting)) {
-    if (!viewerReady) viewerTimer = setTimeout(() => fallback('initialization timed out'), 90000);
-    observer.disconnect();
-  }
-}, {rootMargin:'400px'});
-observer.observe(iframe);
