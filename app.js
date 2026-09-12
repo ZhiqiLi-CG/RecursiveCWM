@@ -44,21 +44,17 @@ function updateMedia(scene,link){
     $('example-final-link').href=scene.hiResRender;$('example-explore').href=link('explore.html');novelViews($('example-novel-views'),scene);
   }
 }
-function depthControls(tree){
+function depthLegend(tree){
   const max=Math.max(...Object.values(tree.depth));
   for(const legend of document.querySelectorAll('[data-depth-legend]')){
     legend.innerHTML='<span>Depth</span>';
     for(let level=0;level<=max;level++){const i=document.createElement('i');i.className=`depth-${level}`;i.textContent=level;legend.append(i);}
   }
-  const host=document.querySelector('.depth-steps');host.replaceChildren();
-  for(let level=0;level<=max;level++){
-    const b=document.createElement('button');b.type='button';b.dataset.worldDepth=level;b.disabled=true;b.setAttribute('aria-pressed',String(level===max));b.textContent=level===0?'Root only':level===max?`All ${max+1} levels`:`+ Level ${level}`;host.append(b);
-  }
-  return max;
 }
 async function startTree(scene,link){
   const [{tree:treeData,run,nodes,getNode,thumbnail},{RecursionTree}]=await Promise.all([loadRun(scene),import('./tree.js')]);
-  const world=setupWorld(depthControls(treeData)),overview=!!$('overview-tree');
+  depthLegend(treeData);
+  const world=setupWorld(),overview=!!$('overview-tree');
   const tree=new RecursionTree($(overview?'overview-tree':'explore-tree'),treeData,id=>world.select(id),{onPreview:id=>world.hover(id),fitDesktop:overview,thumbnail});
   let selectionVersion=0;
   async function update(id,updateURL=true){

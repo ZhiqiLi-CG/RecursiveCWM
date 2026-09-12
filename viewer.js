@@ -79,7 +79,7 @@ export async function init() {
     animationFrame = 0;
   }
   function frameNode(id, animate = true) {
-    const box = recursion.bounds.get(id);
+    const box = recursion.getFrameBounds(id);
     if (!box || box.isEmpty()) return;
     stopFraming(); framedNode = id; reference = false; projection();
     const center = box.getCenter(new THREE.Vector3());
@@ -133,8 +133,8 @@ export async function init() {
   addEventListener('message', event => {
     if (event.source !== parent || event.origin !== location.origin) return;
     if (event.data?.type === 'rcwm-selection') {
-      if (!recursion.groups.has(event.data.nodeId) || !Number.isInteger(event.data.level) || event.data.level < 0 || event.data.level > recursion.getState().maxDepth) return;
-      recursion.setSelection(event.data.nodeId,event.data.level,event.data.active !== false);
+      if (!recursion.groups.has(event.data.nodeId) || !['all','current','children'].includes(event.data.mode)) return;
+      recursion.setSelection(event.data.nodeId,event.data.mode,event.data.active !== false);
       if (event.data.frame) frameNode(recursion.getState().selectedNode);
     }
     if (event.data?.type === 'rcwm-preview') recursion.preview(event.data.nodeId);

@@ -71,17 +71,13 @@
 <button id="reset-camera" class="button" type="button" disabled>↺ Reset view</button>
 </div>
 <div class="world-controls" id="world-controls">
-<div class="depth-controls">
-<span>Reveal</span>
-<div class="depth-steps" role="group" aria-label="Reveal cumulative recursion depth">
-<button type="button" data-world-depth="0" aria-pressed="false" disabled>Root only</button>
-<button type="button" data-world-depth="1" aria-pressed="false" disabled>+ Level 1</button>
-<button type="button" data-world-depth="2" aria-pressed="false" disabled>+ Level 2</button>
-<button type="button" data-world-depth="3" aria-pressed="false" disabled>+ Level 3</button>
-<button type="button" data-world-depth="4" aria-pressed="true" disabled>All 5 levels</button>
-</div>
-</div>
-<p id="world-depth-note">All five levels, down to individual building programs.</p>
+<div class="mode-controls"><span>Geometry</span>
+<div class="world-modes" role="group" aria-label="Geometry produced by the selected node and its children" aria-describedby="world-mode-note">
+<button type="button" data-world-mode="all" aria-pressed="true" disabled>All</button>
+<button type="button" data-world-mode="current" aria-pressed="false" disabled>Current node only</button>
+<button type="button" data-world-mode="children" aria-pressed="false" disabled>Children only</button>
+</div></div>
+<p id="world-mode-note" aria-live="polite">Everything delivered by scene, including its descendants.</p>
 </div>
 <div id="viewer-frame">
 <iframe id="world-viewer" title="Interactive 3D reconstruction of the medieval village" loading="lazy" allow="fullscreen">

@@ -18,6 +18,9 @@ export function buildCity(THREE, spec, tree) {
       if (segments[1] === 'ponds') return 'foreground-park-ponds';
     }
     if (segments[0] === 'north-housing' && segments[1] === 'buildings') return 'north-housing-buildings';
+    // west-houses/assemble.py renames the translated copies of its one child;
+    // part.json records all three houses as west-house-prototype instances.
+    if (segments[0] === 'west-houses' && /^house-\d+$/.test(segments[1])) return 'west-house-prototype';
     return segments.filter(part => groups.has(part)).sort((a,b) => tree.depth[b]-tree.depth[a])[0] || tree.root;
   }
   const mat = color => new THREE.MeshBasicMaterial({color, side:THREE.DoubleSide});

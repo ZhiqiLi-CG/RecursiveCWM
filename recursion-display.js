@@ -30,13 +30,6 @@ export function setupRecursionDisplay({THREE, root, scene, tree, renderer, rende
   root.updateWorldMatrix(true,true);
   const bounds = new Map([...groups].map(([id,group]) => [id,new THREE.Box3().setFromObject(group)]));
   const guides = new THREE.Group(); guides.name = 'recursion-display-guides'; scene.add(guides);
-  const frontier = new Map();
-  for (const [id,box] of bounds) {
-    const helper = new THREE.Box3Helper(box,0x8bafa4);
-    helper.material.transparent = true; helper.material.opacity = .6;
-    helper.material.depthTest = false; helper.renderOrder = 10; helper.visible = false;
-    guides.add(helper); frontier.set(id,helper);
-  }
   const outline = new THREE.Box3Helper(bounds.get(tree.root).clone(),0x13876c);
   outline.material.depthTest = false; outline.renderOrder = 11; outline.visible = false; guides.add(outline);
   const dimmed = new Map();
@@ -58,41 +51,49 @@ export function setupRecursionDisplay({THREE, root, scene, tree, renderer, rende
     collect(id); descendants.set(id,members);
   }
   const maxDepth = Math.max(...Object.values(tree.depth));
-  let level = maxDepth, selectedNode = tree.root, previewNode = null, selectionActive = false;
-  const parents = {};
-  for (const [id,children] of Object.entries(tree.children)) children.forEach(child => parents[child] = id);
+  const modes = new Set(['all','current','children']);
+  let mode = 'all', selectedNode = tree.root, previewNode = null, selectionActive = false;
+  const childrenOf = id => tree.children[id] || [];
+  const effectiveMode = () => mode === 'children' && !childrenOf(selectedNode).length ? 'current' : mode;
   const currentHighlight = () => previewNode || (selectionActive ? selectedNode : null);
   function getState() {
     const ownMeshes = Object.fromEntries([...groups.keys()].map(id=>[id,0]));
     for (const item of meshes) ownMeshes[item.owner]++;
     const highlightedNode = currentHighlight();
-    return {level,maxDepth,selectedNode,previewNode,highlightedNode,mappedNodes:[...groups.keys()],ownMeshes,
+    return {mode,effectiveMode:effectiveMode(),hasChildren:!!childrenOf(selectedNode).length,maxDepth,selectedNode,previewNode,highlightedNode,mappedNodes:[...groups.keys()],ownMeshes,
       visibleMeshes:meshes.filter(item=>item.object.visible).length,
       highlightedMeshes:highlightedNode ? meshes.filter(item=>item.object.visible && descendants.get(highlightedNode).has(item.owner)).length : 0};
   }
   function apply() {
     const highlightedNode = currentHighlight();
     const selected = highlightedNode && descendants.get(highlightedNode);
+    const delivery = descendants.get(selectedNode), effective = effectiveMode();
     for (const item of meshes) {
-      item.object.visible = item.visible && tree.depth[item.owner] <= level;
+      const included = effective === 'current' ? item.owner === selectedNode : delivery.has(item.owner) && (effective === 'all' || item.owner !== selectedNode);
+      item.object.visible = item.visible && included;
       item.object.material = selected && !selected.has(item.owner) ? dim(item.material) : item.material;
     }
-    for (const [id,helper] of frontier) helper.visible = level < maxDepth && tree.depth[id] === level && !highlightedNode;
     outline.visible = !!highlightedNode;
     if (highlightedNode) outline.box.copy(bounds.get(highlightedNode));
     renderer.shadowMap.needsUpdate = true;
     render(); onChange(getState());
   }
-  function setSelection(id, value, active = true) {
-    if (!groups.has(id) || !Number.isInteger(value) || value < 0 || value > maxDepth) return;
-    while (tree.depth[id] > value) id = parents[id];
-    selectedNode = id; level = value; selectionActive = active; previewNode = null; apply();
+  function setSelection(id, value = mode, active = true) {
+    if (!groups.has(id) || !modes.has(value)) return;
+    selectedNode = id; mode = value; selectionActive = active; previewNode = null; apply();
   }
-  function setDepth(value) { setSelection(selectedNode,value,selectionActive); }
+  function getFrameBounds(id = selectedNode) {
+    if (!groups.has(id)) return null;
+    const children = childrenOf(id);
+    if (mode !== 'children' || !children.length) return bounds.get(id);
+    const box = new THREE.Box3();
+    for (const child of children) box.union(bounds.get(child));
+    return box.isEmpty() ? bounds.get(id) : box;
+  }
   function preview(id) {
     if (id !== null && !groups.has(id)) return;
     previewNode = id; apply();
   }
   function clearHighlight() { selectionActive = false; previewNode = null; apply(); }
-  return {setSelection,setDepth,preview,clearHighlight,getState,groups,meshes,outline,frontier,bounds};
+  return {setSelection,preview,clearHighlight,getState,getFrameBounds,groups,meshes,outline,bounds};
 }

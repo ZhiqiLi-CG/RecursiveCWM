@@ -1,34 +1,42 @@
-// One selection model for both trees, the details, depth buttons, and the live frame.
-export function setupWorld(maxDepth = 4) {
+// One selection model for both trees, the details, ownership modes, and the live frame.
+export function setupWorld() {
   const $ = id => document.getElementById(id), iframe = $('world-viewer');
   if (!iframe) return {bind(){},select(){},hover(){}};
-  const depthButtons = [...document.querySelectorAll('[data-world-depth]')];
-  const descriptions = Array.from({length:maxDepth+1},(_,level)=>level===0 ? 'The root establishes the whole. Reveal another level to see its parts.' : level===maxDepth ? `All ${maxDepth+1} levels of the construction.` : `The whole and its parts through level ${level}.`);
-  let ready = false, timer, tree, parents = {}, selected = 'scene', hovered = null, depth = maxDepth;
+  const modeButtons = [...document.querySelectorAll('[data-world-mode]')];
+  let ready = false, timer, tree, selected = 'scene', hovered = null, mode = 'all';
   let active = false, pendingFrame = false, onSelection = () => {};
   const send = message => { if (ready) iframe.contentWindow.postMessage(message,location.origin); };
   function sync() {
-    send({type:'rcwm-selection',nodeId:selected,level:depth,active,frame:pendingFrame});
+    send({type:'rcwm-selection',nodeId:selected,mode,active,frame:pendingFrame});
     if (ready) pendingFrame = false;
     if (hovered) send({type:'rcwm-preview',nodeId:hovered});
   }
   function display(state) {
-    depthButtons.forEach(button => button.setAttribute('aria-pressed',String(Number(button.dataset.worldDepth) === state.level)));
+    modeButtons.forEach(button => button.setAttribute('aria-pressed',String(button.dataset.worldMode === state.mode)));
     const id = state.highlightedNode;
     $('world-node-id').textContent = id || state.selectedNode;
-    $('world-node-caption').textContent = id ? (state.highlightedMeshes ? 'Highlighted program' : 'Program bounds · reveal deeper levels for geometry') : 'Selected program';
-    $('world-depth-note').textContent = descriptions[state.level];
+    $('world-node-caption').textContent = id ? (state.highlightedMeshes ? 'Highlighted program' : 'Program bounds · no geometry visible in this mode') : 'Selected program';
+    const current = state.selectedNode;
+    $('world-mode-note').textContent = state.mode === 'all'
+      ? `Everything delivered by ${current}, including its descendants.`
+      : state.mode === 'children' && !state.hasChildren
+        ? `${current} has no children; showing only its own geometry.`
+        : state.mode === 'children'
+          ? `Geometry returned by ${current}’s direct children, including their descendants.`
+          : state.ownMeshes[current]
+            ? `Only geometry built by ${current} itself, with every child subprogram hidden.`
+            : `${current} has no geometry of its own; its children are hidden.`;
     $('clear-highlight').hidden = !id;
     $('viewer-shell').dataset.node = id || '';
     $('viewer-shell').dataset.selected = state.selectedNode;
-    $('viewer-shell').dataset.depth = String(state.level);
+    $('viewer-shell').dataset.mode = state.mode;
   }
   function fallback() {
     ready = false; clearTimeout(timer);
     $('viewer-loading').hidden = true; $('viewer-frame').hidden = true;
     $('viewer-fallback').hidden = false; $('viewer-status').textContent = 'Saved camera views';
     $('viewer-gestures').hidden = true; $('reset-camera').disabled = true;
-    depthButtons.forEach(button => button.disabled = true); $('world-controls').hidden = true;
+    modeButtons.forEach(button => button.disabled = true); $('world-controls').hidden = true;
     iframe.closest('.explore-world')?.classList.add('viewer-unavailable');
   }
   window.addEventListener('message',event => {
@@ -39,17 +47,13 @@ export function setupWorld(maxDepth = 4) {
       $('viewer-gestures').hidden = false; $('world-controls').hidden = false;
       iframe.closest('.explore-world')?.classList.remove('viewer-unavailable');
       $('viewer-status').textContent = 'Live scene'; $('reset-camera').disabled = false;
-      depthButtons.forEach(button => button.disabled = false); sync();
+      modeButtons.forEach(button => button.disabled = false); sync();
     } else if (event.data?.type === 'rcwm-state') display(event.data);
     else if (event.data?.type === 'rcwm-error') fallback();
   });
-  depthButtons.forEach(button => button.addEventListener('click',() => {
+  modeButtons.forEach(button => button.addEventListener('click',() => {
     if (!tree) return;
-    depth = Number(button.dataset.worldDepth); hovered = null;
-    const previous = selected;
-    while (tree.depth[selected] > depth) selected = parents[selected];
-    pendingFrame = previous !== selected;
-    if (pendingFrame) { active = true; onSelection(selected); }
+    mode = button.dataset.worldMode; hovered = null; pendingFrame = true;
     sync();
   }));
   $('clear-highlight').addEventListener('click',() => { active = false; hovered = null; send({type:'rcwm-clear-highlight'}); });
@@ -64,14 +68,13 @@ export function setupWorld(maxDepth = 4) {
   return {
     bind(data,callback,initial) {
       tree = data; onSelection = callback;
-      for (const [id,children] of Object.entries(tree.children)) children.forEach(child => parents[child] = id);
       selected = Object.hasOwn(tree.depth,initial) ? initial : tree.root;
-      active = selected !== tree.root; depth = active ? tree.depth[selected] : maxDepth; pendingFrame = active;
+      active = selected !== tree.root; pendingFrame = active;
       onSelection(selected,false); sync();
     },
     select(id) {
       if (!tree || !Object.hasOwn(tree.depth,id)) return;
-      selected = id; depth = tree.depth[id]; hovered = null; active = true; pendingFrame = true;
+      selected = id; hovered = null; active = true; pendingFrame = true;
       onSelection(id); sync();
     },
     hover(id) {
