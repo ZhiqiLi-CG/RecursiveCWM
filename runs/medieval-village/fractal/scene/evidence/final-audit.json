@@ -1,0 +1,44 @@
+{
+  "mountainTopology": {
+    "openEdges": 0,
+    "nonmanifoldEdges": 0,
+    "inconsistentWinding": 0,
+    "min": [
+      1.4860031604766846,
+      0.014999999664723873,
+      -9.949999809265137
+    ],
+    "max": [
+      12.380000114440918,
+      3.968447208404541,
+      -0.2576709985733032
+    ]
+  },
+  "meshes": 9768,
+  "instances": 3200,
+  "invalid": 0,
+  "trees": 545,
+  "waterRoots": 0,
+  "outsideRoots": 0,
+  "maxRootError": 0,
+  "bounds": {
+    "min": [
+      -12.433302879333496,
+      -0.3400000035762787,
+      -10.136655411720277
+    ],
+    "max": [
+      12.553623124401398,
+      3.968447208404541,
+      10.138635815722154
+    ]
+  },
+  "components": [
+    "terrain",
+    "settlements"
+  ],
+  "drawCalls": 9768,
+  "triangles": 860969,
+  "browserErrors": [],
+  "cameraRestored": true
+}

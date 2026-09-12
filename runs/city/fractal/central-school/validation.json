@@ -1,0 +1,22 @@
+{
+  "valid": true,
+  "checked_artifact": "part.json",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "target_sha256": "1ecf61faf60b2883b0c2b88a8730ce68539cf54d4946dd373b8b9566286e8710",
+  "parent_snapshot_valid": true,
+  "components": 313,
+  "own_components": 90,
+  "children": [
+    "school-main-building",
+    "school-tiered-towers"
+  ],
+  "child_geometry_unchanged_except_id_prefix": true,
+  "parent_context_excluded": true,
+  "same_scale_size": [
+    574,
+    436
+  ],
+  "render_errors": [],
+  "render_triangles": 9940,
+  "part_sha256": "46fd9f2565595b90c62d79b6a1720b585e4cace15e85e6826cbfe75d82e54d8a"
+}

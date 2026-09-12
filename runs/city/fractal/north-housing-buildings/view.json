@@ -1,0 +1,25 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "crop_px": [
+    54,
+    16,
+    223,
+    145
+  ],
+  "output_size": [
+    892,
+    580
+  ],
+  "scale": 4,
+  "coordinate_space": "full_reference_pixels",
+  "parent_node": "north-housing",
+  "source_target": "../north-housing/target.png",
+  "source_crop_px_xyxy": [
+    12,
+    12,
+    458,
+    302
+  ],
+  "source_scale": 2
+}

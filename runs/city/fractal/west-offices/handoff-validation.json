@@ -1,0 +1,25 @@
+{
+  "status": "ready_for_runner_child",
+  "children": [
+    "west-offices-annex"
+  ],
+  "owned_components": 89,
+  "camera_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "parent_manifest_sha256": "da2008eeab0eb9373f441cae3ada421070f18eee9f68a868a61bbaaa528f86f0",
+  "target_sha256": "9a245f2ccf8c58a85f3f4377d50c0d848a127d5bec29c9c75a85cf5e1c7d3889",
+  "child_target_size": [
+    336,
+    592
+  ],
+  "child_crop_px": [
+    0,
+    218,
+    42,
+    74
+  ],
+  "child_parent_context_sha256": "eaa3ea2012560abe1e57334df2b1b0e8b8a9cf4a1f75f7912ec872749aaf6cc5",
+  "child_baseline_errors": [],
+  "context_contains_no_annex": true,
+  "parent_part_absent": true,
+  "checks_passed": true
+}

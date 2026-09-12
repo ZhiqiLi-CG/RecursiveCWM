@@ -1,0 +1,27 @@
+{
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "candidate_sha256": "8155edb361b187e9619b0229a618d1aebf3ca6f3559131f28bb67beaa6d48a4b",
+  "components": 423,
+  "child_component_counts": {
+    "west-offices": 113,
+    "west-police": 83,
+    "west-houses": 160,
+    "west-shop": 62
+  },
+  "local_components": 5,
+  "inherited_context_excluded": 258,
+  "child_sources_unchanged": true,
+  "nested_children_flattened_once": true,
+  "geometry_valid": true,
+  "immutable_inputs_valid": true,
+  "render": "resume-round3.png",
+  "comparison": "resume-round3-compare.png",
+  "render_size": [
+    776,
+    458
+  ],
+  "browser_errors": [],
+  "meshes": 203,
+  "triangles": 3800,
+  "visual_acceptance": "Reviewed equal-scale comparison; counts are records, not image acceptance scores."
+}

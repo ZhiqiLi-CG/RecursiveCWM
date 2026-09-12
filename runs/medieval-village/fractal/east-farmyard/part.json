@@ -1,0 +1,43 @@
+{
+  "name": "east-farmyard",
+  "status": "complete",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "ground_y": 0.06,
+  "camera_contract": "../../camera-contract.json",
+  "view": "view.json",
+  "counts": {
+    "buildings": 3,
+    "sheep": 11
+  },
+  "dependencies": [
+    "../scene/common.js"
+  ],
+  "account": "account.md",
+  "verification": {
+    "visual_rounds": 4,
+    "compass_directions": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "matched_magnification": 10
+  },
+  "evidence": [
+    "evidence/final-pair.png",
+    "evidence/final-ground-context-pair.png",
+    "evidence/final-compass-contact.png",
+    "evidence/verification.json"
+  ],
+  "notes": [
+    "Three independent closed timber buildings with thick pitched roofs and completed backs.",
+    "Eleven individually oriented sheep with wool bodies, heads, ears, tails and four legs.",
+    "Reference coordinates and stipulated Y=.06 foundation datum retained.",
+    "Parent terrain must meet the component base datum.",
+    "Inherited mountain obstructs some sheep; completed-ground evidence shows the unobstructed component.",
+    "Terrain, roads, lamps, vegetation and neighboring architecture remain owned by parent/siblings.",
+    "Reference softness, roof patina and shared lighting remain approximate."
+  ]
+}

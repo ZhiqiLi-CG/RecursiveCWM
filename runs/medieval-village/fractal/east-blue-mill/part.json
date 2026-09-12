@@ -1,0 +1,13 @@
+{
+  "name": "east-blue-mill",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "ground_y": 0.06,
+  "notes": [
+    "Complete blue-roofed timber and plaster mill with solid four-arm rotor, supported axle, full rear and side faces, and attached grey-roofed projection.",
+    "Root camera and viewport preserved; matched crop and four compass inspections recorded in evidence/.",
+    "Neighboring house, barn, vegetation and terrain remain inherited context; shared occlusion boundaries need parent integration review.",
+    "Small shading, framing and projection differences remain; see account.md."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "interface_version": 1,
+  "reference_sha256": "a7de8c8223b7",
+  "source_reference_sha256": "9a245f2ccf8c58a85f3f4377d50c0d848a127d5bec29c9c75a85cf5e1c7d3889",
+  "camera_hash": "07ef728c04f7",
+  "parent_snapshot": "west-offices-annex/parent-context.json:eaa3ea201256",
+  "solver_hash": "37375ae59bf5",
+  "parent_node": "west-offices"
+}

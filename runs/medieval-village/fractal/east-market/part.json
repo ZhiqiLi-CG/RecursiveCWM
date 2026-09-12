@@ -1,0 +1,39 @@
+{
+  "interface_version": 1,
+  "name": "east-market",
+  "id": "east-market",
+  "status": "complete",
+  "module": "component.js",
+  "export": "build",
+  "children": [
+    "east-market-shop"
+  ],
+  "child_parts": [
+    "../east-market-shop/part.json"
+  ],
+  "ground_y": 0.06,
+  "camera_contract": "../../camera-contract.json",
+  "objects": [
+    "joined-roof shop and porch",
+    "hollow masonry well and supported canopy",
+    "three canvas stalls",
+    "braced cloth rack",
+    "two display tables",
+    "benches barrels crates and two villagers"
+  ],
+  "notes": [
+    "Synchronous build(ctx) returns an already positioned THREE.Group; add without further transforms.",
+    "Integrates east-market-shop directly.",
+    "Final matched viewport and all four compass views inspected after repairs.",
+    "Simplified cloth folds, goods silhouettes and regular surface courses remain.",
+    "Ancestor-owned lower-east lamp projects near the east counter; review at district integration.",
+    "Roads, lamps, terrain, water, vegetation and UI excluded."
+  ],
+  "evidence": {
+    "reference_comparison": "evidence/final-compare.png",
+    "locked_render": "evidence/final-root.png",
+    "compass": "evidence/final-compass.png",
+    "account": "account.md",
+    "specification": "specification.json"
+  }
+}

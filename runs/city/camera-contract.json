@@ -1,0 +1,99 @@
+{
+  "schema": "city-full.camera.v1",
+  "locked": true,
+  "projection": "orthographic",
+  "resolution": [
+    941,
+    520
+  ],
+  "world_axes": {
+    "x": "image down-right",
+    "y": "height image up",
+    "z": "image down-left"
+  },
+  "reference_origin_px": [
+    470.5,
+    260.0
+  ],
+  "basis_u_px": [
+    30,
+    16.35
+  ],
+  "basis_v_px": [
+    -30,
+    16.35
+  ],
+  "pixels_per_world_unit": 42.42640687119285,
+  "vertical_pixels_per_world_unit": 35.5718287412947,
+  "elevation_degrees": 33.02466363166587,
+  "azimuth_degrees": 45,
+  "target": [
+    0,
+    0,
+    0
+  ],
+  "position": [
+    17.785914370647347,
+    16.35,
+    17.785914370647347
+  ],
+  "up": [
+    0,
+    1,
+    0
+  ],
+  "left": -11.08979135160902,
+  "right": 11.08979135160902,
+  "top": 6.128258770283412,
+  "bottom": -6.128258770283412,
+  "near": 0.1,
+  "far": 200,
+  "render": {
+    "background": "#ffffff"
+  },
+  "lock_rule": "Immutable after root full-frame visual review. All descendant crops use setViewOffset in full 941x520 reference coordinates; never refit camera.",
+  "calibration": {
+    "method": "Orthographic analytic orientation from two ground-edge families with slopes approximately +/-0.545. Set arbitrary horizontal basis to 30 px/world unit and vertical ground basis to 16.35. Elevation asin(0.545); azimuth 45 degrees. y remains vertical in image.",
+    "reference_edges": [
+      {
+        "a": [
+          0,
+          177
+        ],
+        "b": [
+          293,
+          16
+        ],
+        "absolute_slope": 0.5494880546075085
+      },
+      {
+        "a": [
+          123,
+          179
+        ],
+        "b": [
+          282,
+          92
+        ],
+        "absolute_slope": 0.5471698113207547
+      },
+      {
+        "a": [
+          139,
+          358
+        ],
+        "b": [
+          261,
+          292
+        ],
+        "absolute_slope": 0.5409836065573771
+      }
+    ],
+    "visual_review": "Personally viewed round0/1/2 equal-scale full-frame target-versus-render comparisons and overlays. Revised initial 30deg to 33.024deg from long ground edges; adjusted left road topology, foreground road and terrain boundary. Full reference framing and two ground-axis families accepted. Buildings absent in substrate render; this does not validate building geometry. Remaining road widths, crossing orientation and intersection details belong to root reintegration.",
+    "evidence": [
+      "fractal/scene/round2-compare.png",
+      "fractal/scene/camera-overlay2.png"
+    ],
+    "scope": "Camera convention, framing and orientation only. Ground anchors are manually chosen from reference; matching them is not an independent image-accuracy metric."
+  }
+}

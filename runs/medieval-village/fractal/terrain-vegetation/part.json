@@ -1,0 +1,122 @@
+{
+  "name": "terrain-vegetation",
+  "parent": "terrain",
+  "status": "complete",
+  "type": "threejs-component",
+  "module": "vegetation.js",
+  "export": "build",
+  "build_export": "build",
+  "children": [
+    "vegetation-west",
+    "vegetation-belt",
+    "vegetation-foreground"
+  ],
+  "child_parts": [
+    "../vegetation-west/part.json",
+    "../vegetation-belt/part.json",
+    "../vegetation-foreground/part.json"
+  ],
+  "dependencies": [
+    "../scene/common.js",
+    "../vegetation-west/forest.js",
+    "../vegetation-belt/forest.js",
+    "../vegetation-foreground/forest.js"
+  ],
+  "counts": {
+    "conifers": 545,
+    "cacti": 30,
+    "rocks": 22,
+    "shrubs": 3
+  },
+  "interface": {
+    "build": "Synchronous build(ctx) returns THREE.Group",
+    "requires": [
+      "ctx.pixelToWorld",
+      "ctx.worldToPixel"
+    ],
+    "optional": [
+      "ctx.heightAt",
+      "ctx.surfaceAt"
+    ],
+    "placement": "Build once under the locked reference camera; sample final world X/Z ground height and bury roots .025 below it. Fallback soil height .035."
+  },
+  "ownership": [
+    "All conifers",
+    "Sparse southern cacti",
+    "Small shrubs",
+    "Discrete natural stones"
+  ],
+  "camera_contract": "../../camera-contract.json",
+  "view": "view.json",
+  "supplemental_view": "view-south.json",
+  "account": "account.md",
+  "specification": "specification.json",
+  "ground_floor": {
+    "owner": "terrain",
+    "data": "forest-floor.json",
+    "patch_count": 17,
+    "optional_module": "forest-floor.js",
+    "optional_export": "applyForestFloor",
+    "dependency": "forest-floor-data.js",
+    "usage": "After building ground, call applyForestFloor(groundGroup, {...ctx, heightAt, surfaceAt}) to blend footprints into existing continuous-carved-ground vertex colors. Vegetation build does not call this. No meshes are added."
+  },
+  "integration_notes": [
+    "Build ground first and pass its heightAt and surfaceAt to vegetation build(ctx).",
+    "Import the three child forests only through vegetation.js to avoid duplicate trees.",
+    "Apply consolidated forest-floor material suggestions to terrain; final evidence uses the optional adapter.",
+    "Belt materials are cloned and harmonized here; belt width/height scales 1.06/1.03 and foreground .92/1.045 preserve root layout.",
+    "Final preview used current terrain-mountain/mountain.js as read-only context; mountain is not part of this component. Parent must use its final delivered mountain.",
+    "Keep reference-camera context fixed while constructing; rotate the render camera afterward for inspection.",
+    "Global lighting still yields softer/shorter shadows than the reference and is for the scene parent to reconcile."
+  ],
+  "validation": {
+    "counts": {
+      "conifers": 545,
+      "cacti": 30,
+      "rocks": 22,
+      "shrubs": 3
+    },
+    "forestCounts": [
+      {
+        "name": "western-conifer-grove",
+        "count": 165
+      },
+      {
+        "name": "vegetation-belt",
+        "count": 229
+      },
+      {
+        "name": "foreground-pine-grove",
+        "count": 151
+      }
+    ],
+    "waterRoots": [],
+    "outsideTile": [],
+    "maxRootError": 1.3877787807814457e-17,
+    "nonfinite": 0,
+    "cactusWater": [],
+    "browserErrors": []
+  },
+  "evidence": [
+    "evidence/final-full.png",
+    "evidence/final-paired.png",
+    "evidence/final-south-paired.png",
+    "evidence/final-west-paired.png",
+    "evidence/final-belt-paired.png",
+    "evidence/final-foreground-paired.png",
+    "evidence/final-compass-contact.png",
+    "evidence/final-detail-compass-western-conifer-grove.png",
+    "evidence/final-detail-compass-vegetation-belt.png",
+    "evidence/final-detail-compass-foreground-pine-grove.png",
+    "evidence/final-audit.json",
+    "evidence/final-compass-0.png",
+    "evidence/final-compass-1.png",
+    "evidence/final-compass-2.png",
+    "evidence/final-compass-3.png"
+  ],
+  "remaining_visual_approximations": [
+    "Individual crown outlines and small tree-spacing variations",
+    "Softer inherited illumination and shadows",
+    "Contextual architecture, mountain and ground details are independently owned"
+  ]
+}

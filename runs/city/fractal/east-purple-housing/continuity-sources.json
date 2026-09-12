@@ -1,0 +1,14 @@
+[
+  {
+    "node": "east-pink-housing",
+    "path": "../east-pink-housing/part.json",
+    "sha256": "1e2f90fef6d9ff178198645e33759645c00a95f6cadf90d837492258d1bee7fb",
+    "preview_only": true
+  },
+  {
+    "node": "east-teal-towers",
+    "path": "../east-teal-towers/part.json",
+    "sha256": "ed623743b19be17ffa418105115f034c6d78cf4aa5f30a4d4765f8a543f8f264",
+    "preview_only": true
+  }
+]

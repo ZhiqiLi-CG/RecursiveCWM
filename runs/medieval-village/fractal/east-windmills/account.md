@@ -1,0 +1,31 @@
+# East windmills — depth 3
+
+## Calibrated whole
+These are a pair of freestanding medieval tower windmills in the reference's faceted, warmly colored miniature style: the western mill is smaller, and the eastern mill stands taller beside the finite land edge. A complete windmill has a closed masonry foundation, a tapered timber-and-plaster enclosure with framing around every face, a full roof, and an attached axle carrying four thick, framed lattice sails. The reference calibrates that construction toward broad grey polygonal feet, ivory panels, dark warm braces, projecting brown belts, small terracotta caps, and diagonal, foreshortened rotor crosses.
+
+## Round 0 — inherited whole
+Read the brief, target, viewport, immutable manifest, locked camera contract, supplied preview, and parent account. Applied the worldgen-techniques skill. Rendered the supplied preview with an empty owned component: evidence/round0-root.png and round0-paired.png show both mills entirely absent. Comparisons crop root [1145,309,1282,404] and enlarge to exactly 822×570, matching target.png at 6× magnification. Left is always reference; right is current rendering. The conspicuous residual is the missing pair, not a background texture issue.
+
+## Round 1 — complete initial construction
+Built both mills using one parameterized assembly with independent placement and scale. Each includes a closed octagonal stone core with solid masonry blocks, closed tapered plaster volume, eight corner posts, diagonal braces, complete timber bands, supported projecting belt, access door and step, rear hatch, closed gable cap with solid roof slopes, forward axle and eight-sided hub, and four lattice wings constructed from solid beams and individual slats. No image planes or double-sided paper substitutes were used.
+
+Inspected evidence/round1-paired.png and round1-compass-1.png. The initial cap was too large, the rotor stood too far forward, the tower framing was too dense, and the palette was too orange. The rotated view showed enclosed backs and attached rotor structure rather than a stage set. Preserved round1-component.js in evidence as a source checkpoint; its original relative imports are archival, not an entrypoint.
+
+## Round 2 — proportions and attachment
+Reduced roof depth and rise, brought the axle forward end closer to the enclosure while retaining clearance, simplified braces into larger ivory panels, reduced the taller mill's rotor radius, darkened the belts and cap, and adjusted root ground-foot anchors. Inspected evidence/round2-paired.png. Roof silhouette and paired spacing were much closer, but tower height and sail diagonals still needed adjustment. Preserved round2-component.js.
+
+## Rounds 3–5 — orientation, ground contact, final whole
+Shortened tower proportions vertically, tuned western and eastern rotor angles separately, adjusted the tower orientation, and restored a little peak height to the western cap. The final western rotor is 50 degrees and the eastern rotor 45 degrees in their local vertical planes. Both towers turn by 0.40 radians; the western assembly uses 0.73 scale and a 0.95 vertical correction, the eastern assembly 1.0 scale and a 0.93 vertical correction. Added the third longitudinal sail rail and lightened the slats so their lattice construction remains legible at reference magnification. Preserved the intermediate round3-component.js; subsequent final captures supersede its appearance.
+
+Inspected all four rotated directions, then extended the solid foundation cores below grade to eliminate the inherited 0.06 world-unit ground gap. Reduced the doorstep footprint after the first enlarged step read too prominently below the base. Re-rendered the locked view and all four directions after those changes. The final evidence is final-root.png, final-crop.png, final-paired.png, final-compass-0.png through final-compass-3.png, the individual final-detail images, and final-compass-sheet.png. These were visually inspected after the last edit. The browser validation record reports zero page errors.
+
+The two mills now supply the distinct heights and spacing, broad masonry feet, tapered framed enclosures, brown belts, warm caps, and diagonal grey rotors visible in the reference. At sixfold enlargement the modeled timber and masonry remain crisper and more regular than the blurred reference, and the roof caps are an architectural approximation rather than a texture trace. Those are local stylistic residuals; no unbuilt internal subassembly or missing object-layout relationship requires a new recursive child. children is empty.
+
+## Completion and integration
+Four-direction views show solid backs, continuous roofs, complete all-around wall framing and masonry, attached hubs, thick rails and cross slats, and bases meeting the ground. The rotor plane is local z=0.275; roof slopes end at approximately z=0.23 and rotor framing has finite thickness, leaving separation. The low rotor tips pass outside the tapered walls; the projecting lower belt lies below the rotor sweep. Foundation cores extend to local y=-0.11 under the common y=0.06 anchor, preserving ground contact for both scales.
+
+Final ground-foot anchors are root (1169,387) and (1233.5,372), each obtained through ctx.pixelToWorld at height 0.06. Anchors were refined from the approximate brief coordinates against visible bases, never inferred from roof peaks. The component exports synchronous build(ctx) and only owns the two mills and their immediate foundations and steps. No parent/sibling files, manifest, camera, land boundary, or git state were edited.
+
+Parent integration notes: the preview's flat olive ground, absent trees, shadow context, and road shape differ substantially from the reference and remain outside this component. The inherited lamp near the taller mill's south/front foot looks close to its access approach; inspect it together with the final road and terrain. The reference places trees west/behind the smaller mill; keep new vegetation clear of its sail sweep. Both mills lie inside the existing tile boundary, which was not extended. Recheck feet when the terrain component is integrated; the foundation skirts give a small allowance below nominal grade.
+
+Finished component: component.js. Completion marker: part.json. No recursive children and no direct agents.

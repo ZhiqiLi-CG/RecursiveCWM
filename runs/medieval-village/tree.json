@@ -1,0 +1,122 @@
+{
+ "root": "scene",
+ "depth": {
+  "scene": 0,
+  "terrain": 1,
+  "settlements": 1,
+  "terrain-mountain": 2,
+  "terrain-vegetation": 2,
+  "terrain-ground": 2,
+  "west-village": 2,
+  "adobe-village": 2,
+  "east-village": 2,
+  "west-south-houses": 3,
+  "west-north-houses": 3,
+  "west-east-houses": 3,
+  "west-market": 3,
+  "vegetation-west": 3,
+  "vegetation-foreground": 3,
+  "vegetation-belt": 3,
+  "east-farmstead": 3,
+  "east-market": 3,
+  "east-lakeside": 3,
+  "east-windmills": 3,
+  "east-market-shop": 4,
+  "east-tile-house": 4,
+  "east-farmyard": 4,
+  "east-blue-mill": 4
+ },
+ "children": {
+  "scene": [
+   "terrain",
+   "settlements"
+  ],
+  "terrain": [
+   "terrain-mountain",
+   "terrain-ground",
+   "terrain-vegetation"
+  ],
+  "settlements": [
+   "west-village",
+   "east-village",
+   "adobe-village"
+  ],
+  "west-village": [
+   "west-north-houses",
+   "west-south-houses",
+   "west-east-houses",
+   "west-market"
+  ],
+  "terrain-vegetation": [
+   "vegetation-west",
+   "vegetation-belt",
+   "vegetation-foreground"
+  ],
+  "east-village": [
+   "east-farmstead",
+   "east-market",
+   "east-lakeside",
+   "east-windmills"
+  ],
+  "east-market": [
+   "east-market-shop"
+  ],
+  "east-farmstead": [
+   "east-farmyard",
+   "east-blue-mill",
+   "east-tile-house"
+  ]
+ },
+ "first_session": {
+  "scene": "2026-09-10T00:14:30-04:00",
+  "terrain": "2026-09-10T00:23:25-04:00",
+  "settlements": "2026-09-10T00:23:25-04:00",
+  "terrain-mountain": "2026-09-10T00:27:19-04:00",
+  "terrain-vegetation": "2026-09-10T00:27:19-04:00",
+  "terrain-ground": "2026-09-10T00:27:19-04:00",
+  "west-village": "2026-09-10T00:27:31-04:00",
+  "adobe-village": "2026-09-10T00:27:31-04:00",
+  "east-village": "2026-09-10T00:27:31-04:00",
+  "west-south-houses": "2026-09-10T00:30:57-04:00",
+  "west-north-houses": "2026-09-10T00:30:57-04:00",
+  "west-east-houses": "2026-09-10T00:30:57-04:00",
+  "west-market": "2026-09-10T00:30:57-04:00",
+  "vegetation-west": "2026-09-10T00:32:51-04:00",
+  "vegetation-foreground": "2026-09-10T00:32:51-04:00",
+  "vegetation-belt": "2026-09-10T00:32:51-04:00",
+  "east-farmstead": "2026-09-10T00:32:51-04:00",
+  "east-market": "2026-09-10T00:32:51-04:00",
+  "east-lakeside": "2026-09-10T00:32:51-04:00",
+  "east-windmills": "2026-09-10T00:32:51-04:00",
+  "east-market-shop": "2026-09-10T00:38:40-04:00",
+  "east-tile-house": "2026-09-10T00:40:41-04:00",
+  "east-farmyard": "2026-09-10T00:40:41-04:00",
+  "east-blue-mill": "2026-09-10T00:40:41-04:00"
+ },
+ "final_render_source": {
+  "scene": "final.png",
+  "settlements": "evidence/final.png",
+  "west-village": "evidence/final.png",
+  "adobe-village": "evidence/final.png",
+  "west-south-houses": "evidence/final.png",
+  "west-north-houses": "evidence/final.png",
+  "west-east-houses": "evidence/final.png",
+  "west-market": "evidence/final.png",
+  "terrain": "evidence/final-matched.png",
+  "terrain-mountain": "evidence/final-crop.png",
+  "terrain-vegetation": "evidence/final-matched.png",
+  "terrain-ground": "evidence/final-matched.png",
+  "east-village": "evidence/final-matched.png",
+  "vegetation-west": "evidence/final-matched.png",
+  "vegetation-foreground": "evidence/final-crop.png",
+  "vegetation-belt": "evidence/final-matched.png",
+  "east-farmstead": "evidence/final-crop.png",
+  "east-market": "evidence/final-crop.png",
+  "east-lakeside": "evidence/final-matched.png",
+  "east-windmills": "evidence/final-crop.png",
+  "east-market-shop": "evidence/final-root.png",
+  "east-tile-house": "evidence/final-matched.png",
+  "east-farmyard": "evidence/final-crop.png",
+  "east-blue-mill": "evidence/final-matched.png"
+ }
+}

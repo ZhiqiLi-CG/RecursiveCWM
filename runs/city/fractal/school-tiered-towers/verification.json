@@ -1,0 +1,37 @@
+{
+  "owned_components": 95,
+  "camera_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "target_unchanged": true,
+  "owned_ids_unique": true,
+  "context_excluded": true,
+  "finite_positive_geometry": true,
+  "render_errors": [],
+  "target_render_size": [
+    695,
+    770
+  ],
+  "comparison_size": [
+    1390,
+    770
+  ],
+  "visual_evidence": "resume-review-compare.png",
+  "visual_acceptance": "human-model eye review; no numerical image threshold",
+  "children": [],
+  "parent_visual_evidence": "resume-parent-review-compare.png",
+  "resume_review": {
+    "children_requested": [],
+    "children_returned": [],
+    "reason": "empty child request triggered runner resume; no child integration needed",
+    "candidate_matches_delivery": true,
+    "preview_matches_context_plus_owned": true,
+    "parent_context_sha256": "d7c983fb7021888cb3edbe69385f57d4ab085c6810714338aa0ca49825b46ae5",
+    "parent_view_size": [
+      574,
+      436
+    ],
+    "parent_render_errors": [],
+    "part_sha256": "e255ba50fd571deb1e096b11773d24fc137ad4da424b6fa07d39467c0968e92a",
+    "further_descent": false,
+    "scope_limit": "parent snapshot excludes sibling orange school; parent must review complete assembly"
+  }
+}

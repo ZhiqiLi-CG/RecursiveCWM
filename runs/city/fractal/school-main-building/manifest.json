@@ -1,0 +1,9 @@
+{
+  "interface_version": 1,
+  "reference_sha256": "1ecf61faf60b",
+  "camera_hash": "07ef728c04f7",
+  "parent_snapshot": "central-school/preview.json:d7c983fb7021",
+  "solver_hash": "37375ae59bf5",
+  "parent_node": "central-school",
+  "target_sha256": "21e10944f8abf0ffd5dfa8f0142e4a88215609f799fb273498d8ca22f60d03f5"
+}

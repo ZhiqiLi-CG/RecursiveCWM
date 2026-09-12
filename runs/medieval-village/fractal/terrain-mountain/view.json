@@ -1,0 +1,22 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "parent": "terrain",
+  "root_target_size": [
+    1400,
+    963
+  ],
+  "crop_root_px": [
+    492,
+    12,
+    1124,
+    312
+  ],
+  "target_size": [
+    1264,
+    600
+  ],
+  "magnification": 2,
+  "mapping": "root_x = crop_root_px[0] + local_x / magnification; root_y = crop_root_px[1] + local_y / magnification",
+  "parent_snapshot": "../scene/blockout.js",
+  "rendering": "Use parent terrain/preview.js, render full frame then crop and resize to target_size."
+}

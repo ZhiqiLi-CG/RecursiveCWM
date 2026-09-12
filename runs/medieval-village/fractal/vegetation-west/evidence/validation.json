@@ -1,0 +1,17 @@
+{
+  "count": 165,
+  "stands": {
+    "ridge": 31,
+    "core": 65,
+    "fringe": 47,
+    "fingers": 22
+  },
+  "heights": [
+    0.2271801027496452,
+    1.221019963463777
+  ],
+  "outsideTile": [],
+  "waterRoots": [],
+  "maxGroundError": 1.3877787807814457e-17,
+  "browserErrors": []
+}

@@ -1,0 +1,18 @@
+{
+  "meshes": 1063,
+  "triangles": 48797,
+  "projection": [],
+  "camera_position": [
+    64.15473875048707,
+    44.20407114538187,
+    12.025841395860786
+  ],
+  "camera_target": [
+    -1.9011265781142628,
+    0.6040711453818693,
+    0.37841010438353384
+  ],
+  "view": null,
+  "errors": [],
+  "camera_contract_sha256": "fffb9a48200cddbdbf982fb36ba0565142f92cd7969bfed6059f299077207ea7"
+}

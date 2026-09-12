@@ -1,0 +1,22 @@
+{
+  "houses": 4,
+  "dormers": 8,
+  "chimneys": 4,
+  "components": 240,
+  "render_errors": [],
+  "camera_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "parent_snapshot_sha256": "202061591ed7eb23930a2d5234f0f90ca31f7f6f75ca94ba8b9634857ab592b0",
+  "equal_scale_image_size": [
+    892,
+    580
+  ],
+  "rounds": 4,
+  "judgment": "visual; no image metric used as acceptance threshold",
+  "resume_review": {
+    "render": "resume-round5.png",
+    "comparison": "resume-compare5.png",
+    "render_errors": [],
+    "new_children": [],
+    "geometry_changed": false
+  }
+}

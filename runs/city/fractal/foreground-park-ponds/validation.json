@@ -1,0 +1,34 @@
+{
+  "components": 40,
+  "owned_water_surfaces": 2,
+  "owned_shore_leaf_groups": 2,
+  "output_size": [
+    740,
+    460
+  ],
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "render_errors": [],
+  "target_visible_water_pixels": 51690,
+  "render_water_pixels_with_completed_occluded_banks": 56951,
+  "visible_target_water_coverage": 0.994176823370091,
+  "note": "Coverage is record only; target trees absent in base preview. Visual review determines acceptance.",
+  "resume_review": {
+    "children_discovered": [],
+    "owned_components_match_rendered_preview": true,
+    "unique_ids_and_finite_geometry": true,
+    "render": "resume-final.png",
+    "comparison": "resume-final-compare.png",
+    "render_errors": [],
+    "triangles_with_parent_context": 1327,
+    "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+    "decision": "accept owned ponds and shore foliage; parent tree occlusion remains parent integration scope"
+  },
+  "resume2_review": {
+    "children": [],
+    "comparison": "resume2-final-compare.png",
+    "render_errors": [],
+    "components": 40,
+    "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+    "decision": "accept owned geometry; no further descent"
+  }
+}

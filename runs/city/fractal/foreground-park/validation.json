@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "owned_components": 8323,
+  "tree_instances": 11,
+  "ponds": 2,
+  "children": [
+    "foreground-park-red-tree",
+    "foreground-park-cone-tree",
+    "foreground-park-spread-tree",
+    "foreground-park-ponds"
+  ],
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "dimensions": [
+    554,
+    438
+  ],
+  "browser_errors": [],
+  "preview_triangles": 19953,
+  "source_children_unchanged": true,
+  "unique_prefixed_ids": true,
+  "finite_geometry_and_valid_indices": true,
+  "no_parent_components": true,
+  "flattened_references": true,
+  "visual_evidence": "integrated1-compare.png",
+  "visual_acceptance": "Personal equal-scale review, not a metric threshold.",
+  "candidate_sha256": "feeb4d87ef8a15e72273cca9ceb876d380b86dc41d9ebd038543dacad2457124"
+}

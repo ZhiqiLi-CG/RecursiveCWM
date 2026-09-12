@@ -1,0 +1,11 @@
+{
+  "interface_version": 1,
+  "reference_sha256": "e638268c27a6",
+  "camera_hash": "07ef728c04f7",
+  "parent_snapshot": "east-district/context.json:5a9576da3b70",
+  "solver_hash": "37375ae59bf5",
+  "parent_node": "east-district",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "parent_target_sha256": "79022c2a58b87c962674ad8251a192e1e9e0e7dbfc3ec1e3a80d8517d9f9b18c",
+  "target_sha256": "e638268c27a640d11f472328094f7702c91cc72cfb03f5f5ace9cc26cfa271de"
+}

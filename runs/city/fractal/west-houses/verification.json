@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "node": "west-houses",
+  "components": 160,
+  "house_instances": 3,
+  "components_per_house": 44,
+  "owned_environment_components": 28,
+  "child_included_exactly_once": true,
+  "context_excluded": true,
+  "rendered_components_equal_delivery": true,
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "immutable_inputs_verified": true,
+  "render_errors": [],
+  "visual_review": "round4-compare.png, 724x532 per side, 4x root scale",
+  "child_sha256": "5329f5d6a0b7338fbfa676d717061cb857e0c4c0cb7a1a02739cdfb0ca74e7eb",
+  "candidate_sha256": "c877a90cbe62fbd2e009db86c4871ebde19a0a20a7f0dcd840b573fe75dfe6fb"
+}

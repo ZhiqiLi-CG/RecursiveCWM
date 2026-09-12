@@ -1,0 +1,11 @@
+{
+  "status": "handoff-ready-not-complete",
+  "camera_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "local_components": 28,
+  "unique_owned_ids": true,
+  "exact_child_crop_reproduction": true,
+  "parent_snapshot_matches": true,
+  "parent_and_child_render_errors": [],
+  "final_part_absent": true,
+  "child": "west-house-prototype"
+}

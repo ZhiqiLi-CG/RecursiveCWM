@@ -1,0 +1,25 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "crop_px": [
+    209,
+    222,
+    66,
+    64
+  ],
+  "output_size": [
+    792,
+    768
+  ],
+  "scale": 12,
+  "coordinate_space": "full_reference_pixels",
+  "parent_node": "west-houses",
+  "source_target": "../west-houses/target.png",
+  "source_crop_px_xyxy": [
+    8,
+    216,
+    272,
+    472
+  ],
+  "source_scale": 4
+}

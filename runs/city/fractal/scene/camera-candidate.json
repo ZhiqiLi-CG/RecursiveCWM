@@ -1,0 +1,54 @@
+{
+  "schema": "city-full.camera.v1",
+  "locked": false,
+  "projection": "orthographic",
+  "resolution": [
+    941,
+    520
+  ],
+  "world_axes": {
+    "x": "image down-right",
+    "y": "height image up",
+    "z": "image down-left"
+  },
+  "reference_origin_px": [
+    470.5,
+    260.0
+  ],
+  "basis_u_px": [
+    30,
+    16.35
+  ],
+  "basis_v_px": [
+    -30,
+    16.35
+  ],
+  "pixels_per_world_unit": 42.42640687119285,
+  "vertical_pixels_per_world_unit": 35.5718287412947,
+  "elevation_degrees": 33.02466363166587,
+  "azimuth_degrees": 45,
+  "target": [
+    0,
+    0,
+    0
+  ],
+  "position": [
+    17.785914370647347,
+    16.35,
+    17.785914370647347
+  ],
+  "up": [
+    0,
+    1,
+    0
+  ],
+  "left": -11.08979135160902,
+  "right": 11.08979135160902,
+  "top": 6.128258770283412,
+  "bottom": -6.128258770283412,
+  "near": 0.1,
+  "far": 200,
+  "render": {
+    "background": "#ffffff"
+  }
+}

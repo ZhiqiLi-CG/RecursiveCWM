@@ -1,0 +1,146 @@
+{
+  "status": "awaiting_recursive_children",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "base_sha256": "5a9576da3b70d7e2182533793b88a01cbbe1f078332f255c708fffe8221708d9",
+  "components": 264,
+  "render_report": {
+    "meshes": 10,
+    "triangles": 659,
+    "projection": [],
+    "camera_position": [
+      17.785914370647347,
+      16.35,
+      17.785914370647347
+    ],
+    "camera_target": [
+      0,
+      0,
+      0
+    ],
+    "view": [
+      0,
+      0,
+      941,
+      520
+    ],
+    "errors": [],
+    "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c"
+  },
+  "children": [
+    {
+      "node": "north-housing",
+      "required_materials_valid": true,
+      "crop_px": [
+        48,
+        10,
+        319,
+        164
+      ],
+      "output_size": [
+        638,
+        328
+      ],
+      "part_exists": false,
+      "manifest": {
+        "interface_version": 1,
+        "reference_sha256": "ae4cf73dd981",
+        "camera_hash": "07ef728c04f7",
+        "parent_snapshot": "scene/base.json:5a9576da3b70",
+        "solver_hash": "37375ae59bf5",
+        "parent_node": "scene"
+      }
+    },
+    {
+      "node": "west-civic",
+      "required_materials_valid": true,
+      "crop_px": [
+        0,
+        130,
+        388,
+        229
+      ],
+      "output_size": [
+        776,
+        458
+      ],
+      "part_exists": false,
+      "manifest": {
+        "interface_version": 1,
+        "reference_sha256": "39586cac3756",
+        "camera_hash": "07ef728c04f7",
+        "parent_snapshot": "scene/base.json:5a9576da3b70",
+        "solver_hash": "37375ae59bf5",
+        "parent_node": "scene"
+      }
+    },
+    {
+      "node": "central-school",
+      "required_materials_valid": true,
+      "crop_px": [
+        370,
+        188,
+        287,
+        218
+      ],
+      "output_size": [
+        574,
+        436
+      ],
+      "part_exists": false,
+      "manifest": {
+        "interface_version": 1,
+        "reference_sha256": "1ecf61faf60b",
+        "camera_hash": "07ef728c04f7",
+        "parent_snapshot": "scene/base.json:5a9576da3b70",
+        "solver_hash": "37375ae59bf5",
+        "parent_node": "scene"
+      }
+    },
+    {
+      "node": "east-district",
+      "required_materials_valid": true,
+      "crop_px": [
+        355,
+        36,
+        586,
+        294
+      ],
+      "output_size": [
+        1172,
+        588
+      ],
+      "part_exists": false,
+      "manifest": {
+        "interface_version": 1,
+        "reference_sha256": "79022c2a58b8",
+        "camera_hash": "07ef728c04f7",
+        "parent_snapshot": "scene/base.json:5a9576da3b70",
+        "solver_hash": "37375ae59bf5",
+        "parent_node": "scene"
+      }
+    },
+    {
+      "node": "foreground-park",
+      "required_materials_valid": true,
+      "crop_px": [
+        124,
+        288,
+        277,
+        219
+      ],
+      "output_size": [
+        554,
+        438
+      ],
+      "part_exists": false,
+      "manifest": {
+        "interface_version": 1,
+        "reference_sha256": "56f53d381366",
+        "camera_hash": "07ef728c04f7",
+        "parent_snapshot": "scene/base.json:5a9576da3b70",
+        "solver_hash": "37375ae59bf5",
+        "parent_node": "scene"
+      }
+    }
+  ]
+}

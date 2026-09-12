@@ -1,6 +1,6 @@
 # Recursive Code World Models
 
-A static research project site built from the supplied paper assets and medieval-village run. No build step, package installation, framework, or external runtime CDN is required.
+A static research project site built from the supplied paper assets, Medieval village run, and City run. No build step, framework, server-side API, or runtime CDN is needed.
 
 ## Serve
 
@@ -8,85 +8,89 @@ A static research project site built from the supplied paper assets and medieval
 python3 -m http.server 8000 --directory /data/zhiqi/rcwm-project-page/site
 ```
 
-Open `http://localhost:8000/`. JavaScript modules require HTTP rather than `file://`. Publish the contents of `site/` unchanged for GitHub Pages; all local URLs are relative. Chromium verification also uses a nested `/site/` deployment path.
+Open `http://localhost:8000/`. JavaScript modules require HTTP. Publish the contents of `site/` unchanged; local assets use relative paths and verification also covers a nested `/site/` deployment.
 
-Set `ARXIV_URL` in `config.js` to update the arXiv button and shared Paper navigation. Until a URL is supplied, Paper points to the overview’s resource header. Author links remain `#`; Code is visibly marked `Code (TODO)` and disabled.
+The author's arXiv URL in `config.js` and BibTeX in `index.html` are preserved byte-for-byte. Author links remain placeholders; Code remains visibly disabled.
 
-## Page architecture
+## Pages
 
-- `index.html`: publication header, teaser, short abstract with the remaining supplied text in a disclosure, live recursive world, clickable branch preview and target/render pair, comparison slider and one city figure, BibTeX, and footer.
-- `explore.html`: the complete recursion tree beside a live selection view, followed by target/render images, brief, program excerpt, and parent/child links. On portrait phones the live view stays visible while selecting tree nodes. On short screens and during fallback it scrolls normally.
-- `results.html`: all paper comparison sheets, the novel-view grid, the complete HTML metrics table, and the method figure. An additional disclosure contains the supplied recursion-tree panel.
+- `index.html`: publication header, teaser, full abstract via disclosure, Method link, example switcher, live world, complete selectable tree, selected target/render and brief, results at a glance, BibTeX.
+- `explore.html`: the shared tree and live viewer, matched target/render pair, crop window on the parent's render, brief and account excerpt, depth and node tokens, first 25 lines of the main module, original-file links, parent/child navigation, and **Watch it build** playback.
+- `results.html`: the selected example's reference/render pair, saved camera views and comparison figure, followed by every paper comparison, novel-view grid, complete 40-row metrics table, and method figure.
+- `method.html`: the original method figure and complete solver instruction rendered as headings, four numbered steps, Completion paragraph, Discipline paragraph, and download link. Every footer links here.
 
-All pages share Overview / Explore a run / Results / Paper navigation. The reference study and architecture decision are in `../LAYOUT-NOTES.md`. Playback, the timeline, and token/event counters were removed.
+All pages share Overview / Explore a run / Results / Method / Paper navigation. The selected example persists through `?scene=city` or `?scene=medieval-village`. Method content, the abstract, and BibTeX are identical for both examples. The former front-page statistics strip stays removed. The layout study and decisions are in `../LAYOUT-NOTES.md`.
 
-## Live recursion
+## Scene registry
 
-Both live views use the original delivered scene. Drag to orbit, scroll or pinch to zoom, and use Reset view to restore the reference camera. With the canvas focused, arrow keys orbit, +/− zoom, and R resets.
+`data/scenes.json` is the single registry. Each entry supplies:
 
-Depth buttons reveal the final program cumulatively: root, levels 1–3, and all five levels. Every mesh belongs to its nearest mapped program group. All 24 nodes map uniquely; the four aliases in `recursion-display.js` are:
-
-| Node | Delivered group name |
+| Field | Value |
 | --- | --- |
-| `scene` | `medieval-village-map` |
-| `terrain-mountain` | `snow-massif` |
-| `vegetation-west` | `western-conifer-grove` |
-| `vegetation-foreground` | `foreground-pine-grove` |
+| `id`, `name` | Query-string identifier and displayed example name. |
+| `runDirectory` | Relative directory containing `tree.json`, `events.jsonl`, `camera-contract.json`, and `fractal/<node>/`. |
+| `referenceImage`, `finalRender`, `hiResRender` | Relative paths to scene media. |
+| `novelViews` | Array of `{ "src": "…", "caption": "…" }` camera images. |
+| `comparisonFigure` | Image path, or `{ "src": "…", "original": "…" }`. |
+| `viewerEntry` | Static iframe entry, currently `viewer.html` for both scenes. |
+| `derivedDirectory` (optional) | Prepared `thumbs/<id>.webp` and `matched/<id>.webp`; raw images work when omitted. |
+| `renderFile` (optional) | A common packaged filename such as `FINAL.png`; otherwise filenames come from `tree.json.final_render_source`. |
+| `groupAliases` (optional) | Node-id to delivered-group-name mapping. |
 
-The root is an assembly with no meshes of its own. Root-only therefore shows its actual bounds; later levels reveal delivered geometry and outline the current program frontier. This is a decomposition of the final program, not a replay of unavailable intermediate reconstructions.
+To add an example, drop a run directory with the same layout into `site/runs/` and add one registry entry. The tree, levels, node details, tokens, playback, media, and navigation derive from that entry and run data. No application edits or metadata build are required. The supplied runs have `part.json`, `view.json`, `brief.md`, and `account.md` for each node; the main module comes from `part.json.module`, or `scene.js` for a primitive-spec run. The shared viewer supports the supplied perspective component-build and orthographic primitive-spec formats.
 
-Hovering or focusing a thumbnail/tree node outlines its subtree, keeps its original materials, dims other groups, and displays its node ID. Hover respects the chosen depth. Clicking selects the node and reveals all levels so its full subtree is visible. Clear highlight restores the exact original material objects; choosing a depth also clears the highlight. Overview clicks update both comparison images and the full-explorer link. `explore.html?node=east-farmyard` opens a particular program directly.
+`tools/prepare_scenes.py` optionally creates optimized display images for the registered examples. It is not required to serve or add a raw run. The supplied asset packages store the chosen renders as `FINAL.png`, while `final_render_source` records their original names, including round renders. Their exact bytes are also copied to those recorded names inside the published runs; no render was regenerated. Nodes absent from `final_render_source` have no render slot. This applies to City's `foreground-park-cone-tree`, `foreground-park-ponds`, `foreground-park-spread-tree`, and `west-shop`.
 
-Tree keyboard controls: ↑ parent, ↓ first child, ←/→ previous/next node, Home/End first/last node. The tree scrolls horizontally where needed. Clipboard denial selects the BibTeX text for manual copying. If WebGL is unavailable, five supplied saved views replace the live scene.
+## Interaction and playback
 
-## Files and data
+The world is a program, built recursively. Clicking a tree node reveals construction levels through its depth, highlights its program, smoothly frames its bounding box, outlines its ancestors, and updates the details. Hover/focus previews only the highlight. Increasing reveal depth keeps selection; lowering it selects the deepest visible ancestor. Assembly nodes without their own geometry show bounds until deeper levels reveal their parts.
 
-| File or directory | Purpose |
+Tree keys: ↑ parent, ↓ first child, ←/→ siblings, Home/End first/last node. Trees scroll horizontally where needed; explorer keyboard focus stays below its sticky viewer. Drag the world to orbit; scroll/pinch to zoom. Canvas keys orbit, +/− zoom, and R resets. Reset view restores the calibrated reference camera; reduced-motion preferences skip framing animations. A node can be linked directly, e.g. `explore.html?scene=city&node=school-sign`.
+
+Playback runs the recorded timestamps in stable file order, compressed to about 60 seconds at 1×. Play/pause, restart, step, scrub, and 0.5–4× speed are available. Children appear when called, sessions light up their nodes, supplied render thumbnails appear on delivery, and returning parents are outlined during “whole again.” The clock and tokens track the trace. Playback scrolls within its own tree; Inspect opens the full node detail.
+
+The Medieval village trace contains 199 events over 1:17:23 and 3,548,594 tokens. City contains 243 events over 1:47:11. Its 68 session-end records have empty `usage_total` fields; the parser converts only those missing values to `null`, retaining every event and timestamp. City token totals are displayed as unavailable, never invented.
+
+## Files and source preservation
+
+| Files | Purpose |
 | --- | --- |
-| `index.html`, `explore.html`, `results.html` | Static page content and navigation. |
-| `styles.css` | Shared typography, responsive hierarchy, viewer controls, tree and table layout. |
-| `config.js` | Single publication URL setting. |
-| `app.js` | Preview and explorer selection, matched images, source links, citation copying, and instruction disclosure. |
-| `tree.js` | Connected thumbnail tree and keyboard navigation. |
-| `world-ui.js` | Shared depth/selection controls and checked same-origin iframe messaging. |
-| `viewer.js` | Original root build, lighting, calibrated camera, OrbitControls, responsive rendering and reset. |
-| `recursion-display.js` | Validated node/group mapping, cumulative visibility, bounds, and reversible material highlighting. |
-| `fractal/` | Supplied node programs, targets, original final renders, briefs, and historical records. All 77 delivered JS/MJS modules remain byte-for-byte unchanged. `scene/index.html` is the adapted viewer entry with its local Three.js import map. |
-| `vendor/OrbitControls.js`, `fractal/scene/three.module.js` | Supplied local Three.js dependencies. |
-| `camera-contract.json` | Recorded reference camera. |
-| `data/tree.json`, `data/nodes.json` | Authoritative topology and prepared node details/source excerpts. |
-| `data/solver-instruction.md` | Exact supplied instruction, loaded when its footer disclosure opens. |
-| `data/results-table.md` | Original metrics table; HTML preserves every value and bold entry. |
-| `data/events.jsonl` | Retained source trace for provenance; not loaded or presented by the site. |
-| `images/` | Optimized teaser, reference, final render, and saved novel views from supplied assets. |
-| `images/paper/` | Uncropped WebP display derivatives and unchanged full-resolution paper figures. Figure links open the originals. |
-| `matched/`, `thumbs/` | Delivered images matched to target crops, plus small tree/preview thumbnails. |
-| `tools/prepare_assets.py` | Optional original run/teaser image preparation using Pillow; not required to serve the site. |
-| `tools/check-*.mjs` | Chromium architecture, page, recursion, and fallback checks. |
-| `IMPLEMENTATION.md` | Implementation checklist and item 2b plan. |
+| `app.js`, `scenes.js` | Shared page integration, registry/navigation, lazy node data, image matching and crop coordinates. |
+| `method.js`, `data/solver-instruction.md` | Safe formatting of the exact supplied instruction. |
+| `tree.js`, `world-ui.js` | Shared tree, keyboard/hover selection, depth controls and same-origin viewer messages. |
+| `run.js`, `playback.js`, `playback.css` | Trace parsing, state reduction, connected playback tree and controls. |
+| `viewer.html`, `viewer.js` | Static viewer entry, scene loading, camera controls, smooth framing and reset. |
+| `city-adapter.js` | Geometry-preserving static rendering of City's `candidate.json` with its recorded camera. |
+| `recursion-display.js` | Validated program groups, cumulative visibility, bounds and reversible material dimming. |
+| `runs/` | Copied source runs, chosen render aliases, and optional display derivatives. |
+| `fractal/`, `vendor/` | Retained first-version village files and supplied local Three.js/OrbitControls. |
+| `images/paper/`, `data/results-table.md` | Original paper evidence and optimized display copies. |
+| `tools/check-layout4*.mjs`, `tools/check-city-viewer.mjs`, `tools/check-trace.mjs` | Current browser/source behavior checks. |
 
-All imagery comes from `../assets/`; no reconstruction images were fabricated. The overview reference/final pair uses the supplied clean medieval-village images. Eight original node final renders use the root frame; their `matched/` copies use the recorded crop and target size, while image links retain the untouched originals. The abstract and citation retain the supplied text. Paper images and metrics come from `../assets/paper/`.
+City's delivered `scene.js` fetches server endpoints and batches all primitives by color. It remains byte-for-byte unchanged. The separate adapter loads static `candidate.json` and `camera-contract.json`, preserving all 11,063 primitives and 48,797 colored triangles. It assigns primitives to the 25-node hierarchy using their component IDs and parent instance names; all leaves, including those without renders, have real geometry. The adapted reference render is pixel-identical to the delivered renderer. Medieval village retains its original 24-node component build and four group aliases.
 
-Reference image: **WorldClaw, Fig. 9, used only as reconstruction input**. Files inside `fractal/` describe the historical run; their old environment paths are not serving instructions for this site.
+All delivered JS/MJS modules, paper originals, and source run files remain unchanged. The complete instruction is identical to `assets/solver-instruction.md`. No imagery or missing token values were fabricated. Reference acknowledgement remains WorldClaw, Fig. 9, used as reconstruction input. Historical environment paths in the downloaded briefs/accounts are source text, not site hosting instructions.
 
 ## Verification
 
-Verified in headless Chromium at **1440 × 1000** and **390 × 844**, with an additional **844 × 390** explorer check. Screenshots in `../checks/layout2-*.png` were visually inspected. Current reports:
+Headless Chromium checks cover all four pages for both scenes at **1440 × 1000** and **390 × 844**. Reports and inspected screenshots are in `../checks/layout4-*`:
 
-- `layout2-report.json`: all three pages, preview/deep links, every node, keyboard navigation, matched images, source links, slider, metadata, citation copying, camera orbit/zoom/reset, exact metrics, and overflow checks.
-- `layout2-recursion-report.json`: all 24 mappings, all five reveal states on both live pages, every explorer highlight, hover/selection clearing, exact material restoration, and phone selection visibility. Visible mesh counts by depth are 0, 66, 1,340, 7,855, and 9,768.
-- `layout2-fallback-report.json`: both live pages and both widths with WebGL disabled.
-- `layout2-source-report.json`: unchanged delivered modules and paper originals; ten-line layout notes.
+- `layout4-report.json`: 16 scene/page/viewport combinations; node selection and details, live viewers, complete playback runs, metadata, images, page width, and screenshots.
+- `layout4-results-report.json`: full-page and footer captures of Results; CPU rendering avoids the headless GPU capture limit on long pages.
+- `layout4-playback-report.json`: final playback card bounds, hidden future connectors, completion and whole-again screenshots on both scenes and widths.
+- `layout4-integration-report.json`: actual scene switching across pages, sibling/parent/child keyboard selection, hover stability, depth promotion, complete visible instruction text, missing-render display, and a third registry entry using raw images with no application changes.
+- `layout4-fallback-report.json`: both live pages, scenes and widths with WebGL disabled; all 49 node details, images and original-file links checked.
+- `layout4-source-report.json`: publication/instruction preservation and unchanged source assets.
+- `layout4-viewer-report.json`: every node's bounds/highlighting/reset at desktop and phone sizes, plus exact City geometry and reference-image agreement.
 
-Normal browser runs have no JavaScript/console errors, failed requests, or external runtime requests. Earlier screenshots and reports without the `layout2-` prefix describe superseded layouts.
-
-To rerun from the project directory with the server above running:
+Normal page runs have no JavaScript/console errors, failed requests, or external runtime requests. Earlier `layout2-*` and `layout3-*` reports describe superseded layouts.
 
 ```bash
-/data/zhiqi/CodeWorld2/.render-tools/node/bin/node site/tools/check-layout.mjs http://localhost:8000/
-/data/zhiqi/CodeWorld2/.render-tools/node/bin/node site/tools/check-browser.mjs http://localhost:8000/
-/data/zhiqi/CodeWorld2/.render-tools/node/bin/node site/tools/check-recursion.mjs http://localhost:8000/
-/data/zhiqi/CodeWorld2/.render-tools/node/bin/node site/tools/check-fallback.mjs http://localhost:8000/
+/data/zhiqi/CodeWorld2/.render-tools/node/bin/node site/tools/check-layout4-browser.mjs http://localhost:8000/
+/data/zhiqi/CodeWorld2/.render-tools/node/bin/node site/tools/check-layout4-integration.mjs http://localhost:8000/
+/data/zhiqi/CodeWorld2/.render-tools/node/bin/node site/tools/check-layout4-fallback.mjs http://localhost:8000/
+/data/zhiqi/CodeWorld2/.render-tools/node/bin/node site/tools/check-city-viewer.mjs http://localhost:8000/
+/data/zhiqi/CodeWorld2/.render-tools/node/bin/node site/tools/check-trace.mjs
 ```
 
-The Node/Playwright paths are specific to this workspace. Hosting the finished site needs only a static HTTP server.
+Commands run from the project directory. Node/Playwright paths are specific to this workspace; hosting only requires a static HTTP server.

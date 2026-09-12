@@ -1,0 +1,8 @@
+{
+  "kind": "Stylized medieval strategy-map diorama with graphic map pins and educational plate framing",
+  "regions": ["snow mountain and northern conifers", "western woodland village", "central lake and eastern settlement with windmills", "southern conifer grove", "southwestern sand and foreground adobe village"],
+  "assets": {"mountain_massif": 1, "large_lakes": 2, "connected_river_network": 1, "conifers": "hundreds, grouped into visually matched groves", "western_buildings": "approximately 12", "central_and_eastern_buildings": "approximately 12 including three mills", "adobe_buildings": 6, "pins": 4, "corner_labels": 4, "plain_legend": 1},
+  "materials": ["olive uneven ground", "warm beige sand and lanes", "opaque sky-blue water", "white faceted snow with blue-gray crevices", "lime-to-dark-green pine crowns", "timber frames, plaster and stone", "rust, slate-blue and straw roofs"],
+  "relations": ["Mountain closes rear of map; rivers leave its left and front foothills", "Main lake occupies center and feeds foreground and right-edge branches", "Road network threads all village clusters, crossing rivers at several points", "West village surrounds small market green", "Eastern mills face the path beside pond", "Adobe houses cluster on both banks of foreground river"],
+  "integration": {"root": "camera, lights, background, pins, border labels, legend, assembly and continuity", "terrain": "all terrain, water, mountain, vegetation and natural small detail", "settlements": "all architecture, roads, bridges, fences, lamps, stalls and human props"}
+}

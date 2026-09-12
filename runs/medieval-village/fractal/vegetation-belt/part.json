@@ -1,0 +1,599 @@
+{
+  "name": "vegetation-belt",
+  "status": "complete",
+  "module": "forest.js",
+  "export": "build",
+  "children": [],
+  "interface": "synchronous build(ctx) returns THREE.Group",
+  "count": 229,
+  "requested_anchors": 230,
+  "count_note": "One edge-adjacent root omitted by the tile guard; all 229 delivered roots are within bounds.",
+  "camera_contract": "../../camera-contract.json",
+  "view": "view.json",
+  "specification": "specification.json",
+  "planting_notes": [
+    "Explicit ROOT BASE pixel anchors, x >= 493 and y < 430; deterministic variation.",
+    "Six irregular clusters retain source river gaps, road corridor, lake shore and sparse eastern fingers.",
+    "Roots use ctx.pixelToWorld(x,y,0), then ctx.heightAt(worldX,worldZ) minus .025; .035 fallback terrain height.",
+    "Narrow closed whorled crowns with solid trunks; height range .2256 to 1.128 world units.",
+    "Full rear foliage and plausible occluded continuation inside existing foothill patches; no planting over the snowy rear mountain.",
+    "No terrain surfaces or unrelated scene content; preview.js is diagnostic only."
+  ],
+  "ground_floor": {
+    "recipient": "terrain-ground",
+    "coordinates": "ROOT image pixels",
+    "suggested_color": "#78603d",
+    "application": "Blend into terrain material with irregular feathered boundaries; clip to final land, exclude roads and water, and reconcile mountain footprint. These polygons are suggestions, not exported meshes.",
+    "patches": [
+      {
+        "name": "source-upper-island",
+        "polygon": [
+          [
+            498,
+            195
+          ],
+          [
+            529,
+            178
+          ],
+          [
+            564,
+            181
+          ],
+          [
+            579,
+            200
+          ],
+          [
+            575,
+            222
+          ],
+          [
+            583,
+            243
+          ],
+          [
+            568,
+            248
+          ],
+          [
+            548,
+            231
+          ],
+          [
+            535,
+            211
+          ],
+          [
+            504,
+            210
+          ]
+        ]
+      },
+      {
+        "name": "source-lower-island",
+        "polygon": [
+          [
+            544,
+            281
+          ],
+          [
+            561,
+            274
+          ],
+          [
+            581,
+            275
+          ],
+          [
+            595,
+            289
+          ],
+          [
+            596,
+            301
+          ],
+          [
+            575,
+            303
+          ],
+          [
+            549,
+            296
+          ]
+        ]
+      },
+      {
+        "name": "source-eastern-bank",
+        "polygon": [
+          [
+            605,
+            205
+          ],
+          [
+            624,
+            196
+          ],
+          [
+            641,
+            211
+          ],
+          [
+            643,
+            230
+          ],
+          [
+            630,
+            237
+          ],
+          [
+            608,
+            224
+          ]
+        ]
+      },
+      {
+        "name": "cliff-front-west",
+        "polygon": [
+          [
+            623,
+            260
+          ],
+          [
+            639,
+            242
+          ],
+          [
+            653,
+            229
+          ],
+          [
+            681,
+            234
+          ],
+          [
+            699,
+            239
+          ],
+          [
+            703,
+            256
+          ],
+          [
+            720,
+            265
+          ],
+          [
+            709,
+            278
+          ],
+          [
+            681,
+            273
+          ],
+          [
+            664,
+            281
+          ],
+          [
+            636,
+            277
+          ],
+          [
+            619,
+            271
+          ]
+        ]
+      },
+      {
+        "name": "cliff-front-center",
+        "polygon": [
+          [
+            715,
+            233
+          ],
+          [
+            742,
+            230
+          ],
+          [
+            767,
+            239
+          ],
+          [
+            789,
+            244
+          ],
+          [
+            812,
+            260
+          ],
+          [
+            839,
+            269
+          ],
+          [
+            863,
+            249
+          ],
+          [
+            887,
+            242
+          ],
+          [
+            909,
+            250
+          ],
+          [
+            913,
+            261
+          ],
+          [
+            888,
+            266
+          ],
+          [
+            870,
+            267
+          ],
+          [
+            846,
+            285
+          ],
+          [
+            817,
+            287
+          ],
+          [
+            791,
+            275
+          ],
+          [
+            773,
+            262
+          ],
+          [
+            752,
+            252
+          ],
+          [
+            720,
+            244
+          ]
+        ]
+      },
+      {
+        "name": "cliff-east-shoulder",
+        "polygon": [
+          [
+            932,
+            220
+          ],
+          [
+            965,
+            218
+          ],
+          [
+            984,
+            193
+          ],
+          [
+            1003,
+            190
+          ],
+          [
+            1025,
+            216
+          ],
+          [
+            1042,
+            228
+          ],
+          [
+            1031,
+            244
+          ],
+          [
+            1005,
+            256
+          ],
+          [
+            978,
+            249
+          ],
+          [
+            963,
+            254
+          ],
+          [
+            952,
+            273
+          ],
+          [
+            938,
+            269
+          ],
+          [
+            932,
+            255
+          ],
+          [
+            950,
+            242
+          ]
+        ]
+      },
+      {
+        "name": "road-interior-grove",
+        "polygon": [
+          [
+            883,
+            284
+          ],
+          [
+            905,
+            280
+          ],
+          [
+            926,
+            281
+          ],
+          [
+            944,
+            286
+          ],
+          [
+            938,
+            301
+          ],
+          [
+            951,
+            307
+          ],
+          [
+            975,
+            300
+          ],
+          [
+            992,
+            286
+          ],
+          [
+            995,
+            302
+          ],
+          [
+            979,
+            314
+          ],
+          [
+            955,
+            315
+          ],
+          [
+            951,
+            329
+          ],
+          [
+            931,
+            332
+          ],
+          [
+            915,
+            322
+          ],
+          [
+            911,
+            303
+          ],
+          [
+            889,
+            306
+          ]
+        ]
+      },
+      {
+        "name": "east-ridge-small-islands",
+        "polygon": [
+          [
+            1006,
+            270
+          ],
+          [
+            1025,
+            262
+          ],
+          [
+            1047,
+            266
+          ],
+          [
+            1060,
+            289
+          ],
+          [
+            1051,
+            297
+          ],
+          [
+            1035,
+            292
+          ],
+          [
+            1015,
+            286
+          ]
+        ]
+      },
+      {
+        "name": "east-ridge-long-grove",
+        "polygon": [
+          [
+            1059,
+            251
+          ],
+          [
+            1073,
+            245
+          ],
+          [
+            1101,
+            259
+          ],
+          [
+            1120,
+            262
+          ],
+          [
+            1133,
+            278
+          ],
+          [
+            1150,
+            286
+          ],
+          [
+            1159,
+            309
+          ],
+          [
+            1147,
+            323
+          ],
+          [
+            1126,
+            319
+          ],
+          [
+            1108,
+            317
+          ],
+          [
+            1091,
+            312
+          ],
+          [
+            1080,
+            292
+          ],
+          [
+            1074,
+            278
+          ],
+          [
+            1057,
+            268
+          ]
+        ]
+      },
+      {
+        "name": "southeast-fingers",
+        "polygon": [
+          [
+            1158,
+            325
+          ],
+          [
+            1174,
+            315
+          ],
+          [
+            1190,
+            328
+          ],
+          [
+            1208,
+            336
+          ],
+          [
+            1215,
+            354
+          ],
+          [
+            1193,
+            363
+          ],
+          [
+            1172,
+            356
+          ],
+          [
+            1169,
+            370
+          ],
+          [
+            1140,
+            377
+          ],
+          [
+            1119,
+            377
+          ],
+          [
+            1127,
+            358
+          ],
+          [
+            1118,
+            350
+          ],
+          [
+            1131,
+            337
+          ],
+          [
+            1150,
+            343
+          ]
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "count": 229,
+    "requested": 230,
+    "regions": {
+      "sourceIslands": 45,
+      "cliffFront": 65,
+      "cliffShoulder": 26,
+      "roadGrove": 26,
+      "easternRidge": 38,
+      "southeastFingers": 30
+    },
+    "grounding": "heightAt(x,z) minus .025",
+    "children": [],
+    "finiteGeometry": true,
+    "crownTriangles": 36182,
+    "nonManifoldEdges": 0,
+    "maxSamplerGroundingError": 0,
+    "allRootsInsideTile": true,
+    "heightRange": [
+      0.22559999999999997,
+      1.128
+    ],
+    "duplicateAnchors": 0,
+    "browserErrors": []
+  },
+  "evidence": [
+    "evidence/initial-paired.png",
+    "evidence/round1-paired.png",
+    "evidence/round2-paired.png",
+    "evidence/final-paired.png",
+    "evidence/final-detail-source.png",
+    "evidence/final-detail-cliff.png",
+    "evidence/final-detail-east.png",
+    "evidence/final-context-paired.png",
+    "evidence/final-compass-0.png",
+    "evidence/final-compass-1.png",
+    "evidence/final-compass-2.png",
+    "evidence/final-compass-3.png",
+    "evidence/final-compass-contact.png",
+    "evidence/audit.json"
+  ],
+  "integration_notes": [
+    "Supply final terrain height sampler.",
+    "The inherited cone occludes reference-positioned trees. Recheck contacts with completed mountain; do not use cone as planting authority.",
+    "Reconcile ground footprints and neighboring forest palettes during parent whole-again."
+  ],
+  "account": "account.md"
+}

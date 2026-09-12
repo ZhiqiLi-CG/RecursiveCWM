@@ -1,0 +1,40 @@
+{
+  "name": "east-farmstead",
+  "status": "complete",
+  "module": "component.js",
+  "export": "build",
+  "children": [
+    "east-farmyard",
+    "east-blue-mill",
+    "east-tile-house"
+  ],
+  "child_parts": [
+    "../east-farmyard/part.json",
+    "../east-blue-mill/part.json",
+    "../east-tile-house/part.json"
+  ],
+  "ground_y": 0.06,
+  "counts": {
+    "buildings": 6,
+    "sheep": 11
+  },
+  "local_components": [
+    "barn.js"
+  ],
+  "camera_contract": "../../camera-contract.json",
+  "view": "view.json",
+  "account": "account.md",
+  "evidence": {
+    "matched_comparison": "evidence/final-pair.png",
+    "completed_ground_comparison": "evidence/final-ground-pair.png",
+    "four_compass": "evidence/group-four-compass.png",
+    "verification": "evidence/verification.json"
+  },
+  "notes": [
+    "Complete assembly imports delivered children; no farmstead placeholders remain.",
+    "Existing solid foundations, posts and hooves extend beneath the terrain; upper geometry retains calibrated anchors.",
+    "Canvas, mill, house and lower barn overlaps inspected in the locked root crop; complete backs inspected from four directions.",
+    "Landscape, roads, lamps and UI remain external. Baseline mountain obstructs some sheep; completed-ground evidence shows the complete flock.",
+    "Reference softness, detailed roof patina, grey mill projection outline and shared lighting remain approximate."
+  ]
+}

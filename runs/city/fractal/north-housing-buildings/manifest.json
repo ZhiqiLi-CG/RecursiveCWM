@@ -1,0 +1,9 @@
+{
+  "interface_version": 1,
+  "reference_sha256": "4e985c961caf",
+  "source_reference_sha256": "ae4cf73dd981e028c9bb905a69324759c93cd10ac0339fedffe4362e7cffd37f",
+  "camera_hash": "07ef728c04f7",
+  "parent_snapshot": "north-housing/base.json:202061591ed7",
+  "solver_hash": "37375ae59bf5",
+  "parent_node": "north-housing"
+}

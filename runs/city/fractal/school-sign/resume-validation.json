@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "owned_components": 7,
+  "children": [],
+  "render_errors": [],
+  "unchanged_from_final_pixels": true,
+  "camera_target_parent_hashes_verified": true,
+  "evidence": "resume-whole-compare.png"
+}

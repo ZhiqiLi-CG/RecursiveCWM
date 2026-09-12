@@ -1,0 +1,43 @@
+{
+  "errors": [],
+  "stats": {
+    "meshes": 838,
+    "vertices": 23466,
+    "nonfinite": 0,
+    "names": [
+      "tower",
+      "west-home",
+      "central-home",
+      "upper-east-home",
+      "lower-east-home",
+      "foreground-home",
+      "goods-shade-cart"
+    ]
+  },
+  "bounds": [
+    [
+      156,
+      427,
+      485,
+      649
+    ],
+    [
+      344,
+      128,
+      597,
+      284
+    ],
+    [
+      845,
+      166,
+      1113,
+      328
+    ],
+    [
+      798,
+      485,
+      1130,
+      723
+    ]
+  ]
+}

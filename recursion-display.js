@@ -1,11 +1,11 @@
 // Map the delivered, unmodified program groups to the authoritative recursion tree.
-const groupAliases = {
+const villageAliases = {
   scene: 'medieval-village-map',
   'terrain-mountain': 'snow-massif',
   'vegetation-west': 'western-conifer-grove',
   'vegetation-foreground': 'foreground-pine-grove'
 };
-export function setupRecursionDisplay({THREE, root, scene, tree, renderer, render, onChange}) {
+export function setupRecursionDisplay({THREE, root, scene, tree, renderer, render, onChange, groupAliases = villageAliases}) {
   const groups = new Map(), groupIds = new Map(), meshes = [];
   for (const id of Object.keys(tree.depth)) {
     const matches = [];
@@ -57,36 +57,42 @@ export function setupRecursionDisplay({THREE, root, scene, tree, renderer, rende
     const collect = node => { members.add(node); (tree.children[node] || []).forEach(collect); };
     collect(id); descendants.set(id,members);
   }
-  let level = 4, highlightedNode = null;
+  const maxDepth = Math.max(...Object.values(tree.depth));
+  let level = maxDepth, selectedNode = tree.root, previewNode = null, selectionActive = false;
+  const parents = {};
+  for (const [id,children] of Object.entries(tree.children)) children.forEach(child => parents[child] = id);
+  const currentHighlight = () => previewNode || (selectionActive ? selectedNode : null);
   function getState() {
     const ownMeshes = Object.fromEntries([...groups.keys()].map(id=>[id,0]));
     for (const item of meshes) ownMeshes[item.owner]++;
-    return {level,highlightedNode,mappedNodes:[...groups.keys()],ownMeshes,
+    const highlightedNode = currentHighlight();
+    return {level,maxDepth,selectedNode,previewNode,highlightedNode,mappedNodes:[...groups.keys()],ownMeshes,
       visibleMeshes:meshes.filter(item=>item.object.visible).length,
       highlightedMeshes:highlightedNode ? meshes.filter(item=>item.object.visible && descendants.get(highlightedNode).has(item.owner)).length : 0};
   }
   function apply() {
+    const highlightedNode = currentHighlight();
     const selected = highlightedNode && descendants.get(highlightedNode);
     for (const item of meshes) {
       item.object.visible = item.visible && tree.depth[item.owner] <= level;
       item.object.material = selected && !selected.has(item.owner) ? dim(item.material) : item.material;
     }
-    for (const [id,helper] of frontier) helper.visible = level < 4 && tree.depth[id] === level && !highlightedNode;
+    for (const [id,helper] of frontier) helper.visible = level < maxDepth && tree.depth[id] === level && !highlightedNode;
     outline.visible = !!highlightedNode;
     if (highlightedNode) outline.box.copy(bounds.get(highlightedNode));
     renderer.shadowMap.needsUpdate = true;
     render(); onChange(getState());
   }
-  function setDepth(value) {
-    if (!Number.isInteger(value) || value < 0 || value > 4) return;
-    level = value; highlightedNode = null; apply();
+  function setSelection(id, value, active = true) {
+    if (!groups.has(id) || !Number.isInteger(value) || value < 0 || value > maxDepth) return;
+    while (tree.depth[id] > value) id = parents[id];
+    selectedNode = id; level = value; selectionActive = active; previewNode = null; apply();
   }
-  function highlight(id, reveal = false) {
+  function setDepth(value) { setSelection(selectedNode,value,selectionActive); }
+  function preview(id) {
     if (id !== null && !groups.has(id)) return;
-    highlightedNode = id;
-    if (id && reveal) level = 4;
-    apply();
+    previewNode = id; apply();
   }
-  // Full world is the initial view. Original materials are untouched and restored by clear.
-  return {setDepth,highlight,getState,groups,meshes,outline,frontier};
+  function clearHighlight() { selectionActive = false; previewNode = null; apply(); }
+  return {setSelection,setDepth,preview,clearHighlight,getState,groups,meshes,outline,frontier,bounds};
 }

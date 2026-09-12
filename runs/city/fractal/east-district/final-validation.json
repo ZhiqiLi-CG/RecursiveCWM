@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "components": 583,
+  "child_components": 581,
+  "district_components": 2,
+  "child_refs": [
+    {
+      "node": "east-shop",
+      "path": "../east-shop/part.json",
+      "sha256": "499f544a02b3a1668376c13fdefa3bb950deb6547d0f503c89cdff4c430b2ea5",
+      "component_count": 164,
+      "included_in_components": true
+    },
+    {
+      "node": "east-pink-housing",
+      "path": "../east-pink-housing/part.json",
+      "sha256": "1e2f90fef6d9ff178198645e33759645c00a95f6cadf90d837492258d1bee7fb",
+      "component_count": 82,
+      "included_in_components": true
+    },
+    {
+      "node": "east-purple-housing",
+      "path": "../east-purple-housing/part.json",
+      "sha256": "8c0751b9d40510d1530139584b078cf9723d2607b54f3c9ba906e3e1552087d0",
+      "component_count": 205,
+      "included_in_components": true
+    },
+    {
+      "node": "east-teal-towers",
+      "path": "../east-teal-towers/part.json",
+      "sha256": "ed623743b19be17ffa418105115f034c6d78cf4aa5f30a4d4765f8a543f8f264",
+      "component_count": 100,
+      "included_in_components": true
+    },
+    {
+      "node": "east-hospital",
+      "path": "../east-hospital/part.json",
+      "sha256": "b156d13dbbbc82c8e7dcb641443c1c28e0d2f37c059aac6697291249e533dce3",
+      "component_count": 30,
+      "included_in_components": true
+    }
+  ],
+  "unique_ids": true,
+  "finite_geometry": true,
+  "child_geometry_unchanged": true,
+  "parent_and_neighbor_geometry_excluded": true,
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "part_sha256": "cf9777bc592eec55e6a1a8b99055220a81d2d321da7a072d192e169c479d64bb",
+  "render_errors": [],
+  "render_triangles_including_context": 13588,
+  "output_size": [
+    1172,
+    588
+  ],
+  "equal_scale_comparison": [
+    2344,
+    612
+  ],
+  "visual_evidence": [
+    "integrated-round0-compare.png",
+    "integrated-round1-compare.png",
+    "integrated-final-compare.png",
+    "integrated-final-hospital-seam.png"
+  ],
+  "visual_judgement": "Recorded in account.md; structural checks do not assert pixel identity."
+}

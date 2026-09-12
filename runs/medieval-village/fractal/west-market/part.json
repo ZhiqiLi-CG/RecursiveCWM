@@ -1,0 +1,27 @@
+{
+  "interface_version": 1,
+  "id": "west-market",
+  "status": "complete",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "ground_y": 0.06,
+  "physical_bedding_offset_y": -0.05,
+  "camera_contract": "../../camera-contract.json",
+  "coordinate_space": "inherited world coordinates; add returned THREE.Group with identity transform",
+  "assets": {"tents": 1, "stalls": 5, "carts": 3, "barrel_sack_groups": 6, "people": 3, "lamps": 16},
+  "integration_notes": [
+    "Synchronous build(ctx) returns west-market THREE.Group. No external assets or async dependencies.",
+    "Owns market furnishings and west lane lamps only; preview.js adds parent roads solely for review.",
+    "Ground anchors are inferred from the locked reference; geometry is bedded 0.05 below the 0.06 anchor plane.",
+    "Maintain house occlusion of the western tent and the eastern cream awning when integrating architectural siblings.",
+    "No route changes; the central green remains open."
+  ],
+  "evidence": {
+    "matched_whole": "evidence/final-comparison.png",
+    "magnified_parts": "evidence/detail-comparisons.png",
+    "compass_review": "evidence/compass-props.png",
+    "locked_render": "evidence/final.png",
+    "account": "account.md"
+  }
+}

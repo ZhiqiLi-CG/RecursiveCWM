@@ -1,0 +1,629 @@
+{
+  "name": "vegetation-west",
+  "status": "complete",
+  "parent": "terrain-vegetation",
+  "module": "forest.js",
+  "export": "build",
+  "children": [],
+  "count": 165,
+  "counts": {
+    "ridge": 31,
+    "core": 65,
+    "fringe": 47,
+    "fingers": 22
+  },
+  "height_range_world": [
+    0.2271801027496452,
+    1.221019963463777
+  ],
+  "coordinate_system": "ROOT image pixels through the immutable camera; Y-up world space",
+  "ownership": "Conifers with source root x <493 and y <430; no terrain, architecture, water, rocks, cacti or lights",
+  "interface": {
+    "build": "synchronous build(ctx) returns THREE.Group",
+    "requires": [
+      "ctx.pixelToWorld",
+      "ctx.worldToPixel"
+    ],
+    "optional": [
+      "ctx.heightAt",
+      "ctx.surfaceAt"
+    ],
+    "placement": "Height sampler evaluated at clamped world X/Z; root origin = sampled height - 0.025; minimum 0.04 inset from tile edge"
+  },
+  "planting_notes": [
+    "Individually measured anchors, not rectangular scatter.",
+    "Four irregular regions preserve a diagonal rear ridge, dense core, younger western fringe, and village fingers.",
+    "Crowns use complete radial triangulated geometry with irregular whorls, complete undersides, and capped trunks.",
+    "Deterministic silhouette, height, lean and foliage variation; inferred continuation beneath the green scene marker.",
+    "Build once under locked reference camera before rotating for inspection."
+  ],
+  "ground_floor_polygons_file": "ground-floor-polygons.json",
+  "ground_floor_polygons": [
+    {
+      "name": "rear-ridge",
+      "root_pixels": [
+        [
+          313.667,
+          276.333
+        ],
+        [
+          322.667,
+          268.0
+        ],
+        [
+          332.333,
+          262.333
+        ],
+        [
+          339.333,
+          257.0
+        ],
+        [
+          359.667,
+          249.333
+        ],
+        [
+          384.667,
+          237.333
+        ],
+        [
+          403.333,
+          230.333
+        ],
+        [
+          430.0,
+          217.667
+        ],
+        [
+          457.0,
+          206.0
+        ],
+        [
+          463.333,
+          213.333
+        ],
+        [
+          468.333,
+          222.667
+        ],
+        [
+          480.667,
+          229.0
+        ],
+        [
+          489.333,
+          235.667
+        ],
+        [
+          483.0,
+          245.0
+        ],
+        [
+          468.333,
+          249.0
+        ],
+        [
+          453.0,
+          246.0
+        ],
+        [
+          439.667,
+          249.333
+        ],
+        [
+          423.0,
+          256.0
+        ],
+        [
+          410.333,
+          253.333
+        ],
+        [
+          399.0,
+          261.0
+        ],
+        [
+          387.0,
+          262.667
+        ],
+        [
+          380.0,
+          271.0
+        ],
+        [
+          363.333,
+          273.333
+        ],
+        [
+          347.667,
+          275.333
+        ],
+        [
+          335.333,
+          277.0
+        ],
+        [
+          326.667,
+          272.667
+        ]
+      ],
+      "material_hint": "muted brown olive soil; feather irregular boundary into grass",
+      "application": "blend into terrain vertex color or terrain material; do not add an elevated disk"
+    },
+    {
+      "name": "central-stand",
+      "root_pixels": [
+        [
+          241.667,
+          300.0
+        ],
+        [
+          251.333,
+          295.333
+        ],
+        [
+          262.0,
+          287.667
+        ],
+        [
+          273.333,
+          284.333
+        ],
+        [
+          287.0,
+          275.333
+        ],
+        [
+          304.0,
+          268.333
+        ],
+        [
+          313.333,
+          277.333
+        ],
+        [
+          331.0,
+          274.333
+        ],
+        [
+          346.0,
+          268.667
+        ],
+        [
+          367.333,
+          269.667
+        ],
+        [
+          384.667,
+          268.0
+        ],
+        [
+          400.333,
+          274.0
+        ],
+        [
+          416.0,
+          273.333
+        ],
+        [
+          430.667,
+          262.333
+        ],
+        [
+          449.333,
+          263.333
+        ],
+        [
+          460.667,
+          272.333
+        ],
+        [
+          466.333,
+          287.667
+        ],
+        [
+          470.667,
+          306.0
+        ],
+        [
+          456.333,
+          312.667
+        ],
+        [
+          442.0,
+          316.333
+        ],
+        [
+          434.667,
+          323.333
+        ],
+        [
+          423.0,
+          328.333
+        ],
+        [
+          414.333,
+          317.333
+        ],
+        [
+          412.667,
+          308.667
+        ],
+        [
+          400.0,
+          305.0
+        ],
+        [
+          389.667,
+          311.667
+        ],
+        [
+          379.667,
+          316.667
+        ],
+        [
+          368.0,
+          326.0
+        ],
+        [
+          358.667,
+          335.333
+        ],
+        [
+          345.0,
+          333.667
+        ],
+        [
+          335.333,
+          342.0
+        ],
+        [
+          327.0,
+          335.0
+        ],
+        [
+          321.333,
+          325.0
+        ],
+        [
+          309.0,
+          333.333
+        ],
+        [
+          296.667,
+          336.333
+        ],
+        [
+          286.333,
+          329.0
+        ],
+        [
+          280.333,
+          321.333
+        ],
+        [
+          268.667,
+          315.0
+        ],
+        [
+          258.333,
+          312.0
+        ],
+        [
+          250.0,
+          315.0
+        ],
+        [
+          241.333,
+          310.0
+        ]
+      ],
+      "material_hint": "muted brown olive soil; feather irregular boundary into grass",
+      "application": "blend into terrain vertex color or terrain material; do not add an elevated disk"
+    },
+    {
+      "name": "western-fringe",
+      "root_pixels": [
+        [
+          219.667,
+          331.0
+        ],
+        [
+          230.333,
+          327.333
+        ],
+        [
+          237.333,
+          320.333
+        ],
+        [
+          247.667,
+          318.333
+        ],
+        [
+          258.667,
+          329.667
+        ],
+        [
+          269.333,
+          336.333
+        ],
+        [
+          279.0,
+          337.0
+        ],
+        [
+          284.0,
+          347.0
+        ],
+        [
+          294.0,
+          344.667
+        ],
+        [
+          306.667,
+          343.0
+        ],
+        [
+          319.0,
+          341.0
+        ],
+        [
+          335.333,
+          341.333
+        ],
+        [
+          347.333,
+          349.333
+        ],
+        [
+          343.667,
+          361.0
+        ],
+        [
+          335.333,
+          367.0
+        ],
+        [
+          332.667,
+          376.667
+        ],
+        [
+          341.333,
+          386.667
+        ],
+        [
+          330.667,
+          391.667
+        ],
+        [
+          320.333,
+          384.0
+        ],
+        [
+          308.667,
+          383.667
+        ],
+        [
+          311.333,
+          395.333
+        ],
+        [
+          296.0,
+          397.333
+        ],
+        [
+          286.667,
+          391.333
+        ],
+        [
+          276.0,
+          394.667
+        ],
+        [
+          265.0,
+          391.0
+        ],
+        [
+          254.333,
+          384.333
+        ],
+        [
+          246.0,
+          386.333
+        ],
+        [
+          240.0,
+          378.333
+        ],
+        [
+          241.0,
+          369.667
+        ],
+        [
+          232.0,
+          371.667
+        ],
+        [
+          220.0,
+          371.0
+        ],
+        [
+          209.667,
+          368.0
+        ],
+        [
+          202.333,
+          358.333
+        ],
+        [
+          211.0,
+          349.667
+        ],
+        [
+          218.333,
+          344.333
+        ]
+      ],
+      "material_hint": "muted brown olive soil; feather irregular boundary into grass",
+      "application": "blend into terrain vertex color or terrain material; do not add an elevated disk"
+    },
+    {
+      "name": "village-fingers",
+      "root_pixels": [
+        [
+          409.333,
+          350.667
+        ],
+        [
+          417.667,
+          343.0
+        ],
+        [
+          425.667,
+          340.667
+        ],
+        [
+          431.0,
+          332.667
+        ],
+        [
+          439.0,
+          339.333
+        ],
+        [
+          446.0,
+          348.667
+        ],
+        [
+          454.333,
+          357.333
+        ],
+        [
+          467.0,
+          355.0
+        ],
+        [
+          476.333,
+          348.0
+        ],
+        [
+          484.667,
+          345.333
+        ],
+        [
+          494.333,
+          356.0
+        ],
+        [
+          496.0,
+          368.333
+        ],
+        [
+          489.0,
+          378.333
+        ],
+        [
+          484.0,
+          388.667
+        ],
+        [
+          474.0,
+          392.333
+        ],
+        [
+          463.0,
+          383.333
+        ],
+        [
+          455.0,
+          383.333
+        ],
+        [
+          449.333,
+          398.333
+        ],
+        [
+          441.667,
+          408.667
+        ],
+        [
+          431.667,
+          404.0
+        ],
+        [
+          430.0,
+          390.333
+        ],
+        [
+          423.667,
+          383.667
+        ],
+        [
+          412.333,
+          377.0
+        ],
+        [
+          405.0,
+          379.0
+        ],
+        [
+          402.333,
+          372.0
+        ],
+        [
+          408.667,
+          364.0
+        ]
+      ],
+      "material_hint": "muted brown olive soil; feather irregular boundary into grass",
+      "application": "blend into terrain vertex color or terrain material; do not add an elevated disk"
+    }
+  ],
+  "integration_notes": [
+    "Supply terrain-ground heightAt before calling build.",
+    "Blend recommended forest-floor colors into the existing ground surface; do not create floating disks.",
+    "Parent should check forest/soil continuity and sibling boundaries after integration."
+  ],
+  "evidence": [
+    "evidence/round0-paired.png",
+    "evidence/round1-paired.png",
+    "evidence/round2-paired.png",
+    "evidence/round3-paired.png",
+    "evidence/final-full.png",
+    "evidence/final-paired.png",
+    "evidence/detail-ridge.png",
+    "evidence/detail-core.png",
+    "evidence/detail-fringe.png",
+    "evidence/detail-fingers.png",
+    "evidence/compass-board.png",
+    "evidence/compass-0.png",
+    "evidence/compass-1.png",
+    "evidence/compass-2.png",
+    "evidence/compass-3.png",
+    "evidence/validation.json"
+  ],
+  "validation": {
+    "count": 165,
+    "stands": {
+      "ridge": 31,
+      "core": 65,
+      "fringe": 47,
+      "fingers": 22
+    },
+    "heights": [
+      0.2271801027496452,
+      1.221019963463777
+    ],
+    "outsideTile": [],
+    "waterRoots": [],
+    "maxGroundError": 1.3877787807814457e-17,
+    "browserErrors": []
+  },
+  "account": "account.md",
+  "remaining_context_differences": [
+    "Brown forest floor awaiting ground-owner integration.",
+    "Placeholder architecture and absent map-marker overlay are outside this node.",
+    "Individual foliage silhouettes and reference blur are approximated."
+  ]
+}

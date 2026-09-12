@@ -1,0 +1,34 @@
+{
+  "camera_and_target_hashes": "pass",
+  "owned_components": 30,
+  "unique_owned_ids": "pass",
+  "context_excluded": "pass",
+  "children": [],
+  "equal_image_size": [
+    680,
+    492
+  ],
+  "render_errors": [],
+  "visual_evidence": [
+    "baseline-compare.png",
+    "round1-compare.png",
+    "round2-compare.png",
+    "round3-compare.png",
+    "final-compare.png",
+    "final-facade-detail.png"
+  ],
+  "resume_review": {
+    "equal_image_size": [
+      680,
+      492
+    ],
+    "render_errors": [],
+    "actual_children": [],
+    "preview_only_siblings": [
+      "east-teal-towers"
+    ],
+    "owned_components": 30,
+    "geometry_changed": false,
+    "visual_evidence": "resume-whole-compare.png"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "components": 1052,
+  "owned_local_components": 812,
+  "flattened_child_components": 240,
+  "children": [
+    "north-housing-buildings"
+  ],
+  "child_sha256": "af063b321279c831c439439b48321bb81e3098973339045e2a7d04e41b36334f",
+  "render": "round7.png",
+  "comparison": "round7-compare.png",
+  "render_errors": [],
+  "resolution": [
+    638,
+    328
+  ],
+  "triangles_with_parent_context": 4387,
+  "visual_review": "Personally inspected rounds 5, 6, 7 at equal 2x scale. Paths connected, rear lawn trimmed; child and district relationships accepted.",
+  "remaining_context": "West-civic occlusion and root road geometry are reserved for root integration."
+}

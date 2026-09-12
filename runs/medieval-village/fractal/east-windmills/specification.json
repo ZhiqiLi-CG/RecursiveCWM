@@ -1,0 +1,43 @@
+{
+  "name": "east-windmills",
+  "style": "faceted medieval miniature",
+  "assets": [
+    {
+      "name": "western mill",
+      "foot_root_px": [
+        1169,
+        387
+      ],
+      "scale": 0.72,
+      "vertical_correction": 0.95,
+      "rotor_angle_degrees": 50
+    },
+    {
+      "name": "eastern mill",
+      "foot_root_px": [
+        1233.5,
+        372
+      ],
+      "scale": 1,
+      "vertical_correction": 0.93,
+      "rotor_angle_degrees": 45
+    }
+  ],
+  "structure": [
+    "closed octagonal masonry foot",
+    "tapered eight-sided plaster tower",
+    "timber corner posts and diagonal braces",
+    "projecting timber belt",
+    "full warm pyramidal roof cap",
+    "forward axle and solid hub",
+    "four timber lattice sail frames with thick slats"
+  ],
+  "relations": "eastern mill taller; two separated bases just inside tile boundary; rotors face forward and clear the tower",
+  "context_excluded": [
+    "trees",
+    "roads",
+    "terrain",
+    "lamps"
+  ],
+  "children": []
+}

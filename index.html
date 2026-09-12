@@ -6,7 +6,7 @@
   <meta name="description" content="Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world.">
   <meta name="theme-color" content="#ffffff">
   <title>Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs</title>
-  <!-- Set ARXIV_URL in config.js when the arXiv page is available. -->
+  <!-- Publication URL is configured in config.js. -->
   <script src="config.js">
 </script>
   <meta property="og:type" content="website">
@@ -30,6 +30,7 @@
 <a href="index.html" aria-current="page">Overview</a>
 <a href="explore.html">Explore a run</a>
 <a href="results.html">Results</a>
+<a href="method.html">Method</a>
 <a href="index.html#paper-header" data-paper-link>Paper</a>
 </nav>
 <main id="top">
@@ -80,10 +81,12 @@
 <p>This global–local–global recursion gives fine-scale structures their own perception-and-editing loops while preserving scene-wide geometry and relationships. Reference-aligned views propagate a shared camera projection across levels, while parent revisitation addresses boundaries, spatial relations, and shared errors that emerge after local refinement. A vision-language coding agent directly compares reference images with scene renders to guide refinement, recursive descent, and return. Across complex scenes, RCWM outperforms prior code-based image-to-scene reconstruction methods. Ablation studies further support the benefits of recursive construction and suggest that deeper calls can improve finer-scale reconstruction. RCWM provides a recursive construction principle for building complex executable worlds from visual evidence.</p>
 </details>
 </div>
+<p class="method-link"><a href="method.html">Read the method and the solver instruction →</a></p>
 </section>
 <section class="section media-column" id="world" aria-labelledby="world-title">
-      <h2 id="world-title">The world is a recursive program</h2>
-<p class="section-intro">Reveal the levels, or choose a part below. Drag to look around.</p>
+<div class="scene-switcher" data-scene-switcher></div>
+      <h2 id="world-title">The world is a program, built recursively</h2>
+<p class="section-intro">Reveal the levels of the construction, or pick a part. Drag to look around.</p>
       <div class="viewer-shell" id="viewer-shell">
 <div class="viewer-toolbar">
 <span class="viewer-state">
@@ -96,7 +99,7 @@
 <div class="world-controls" id="world-controls">
 <div class="depth-controls"><span>Reveal</span><div class="depth-steps" role="group" aria-label="Reveal cumulative recursion depth"><button type="button" data-world-depth="0" aria-pressed="false" disabled>Root only</button><button type="button" data-world-depth="1" aria-pressed="false" disabled>+ Level 1</button><button type="button" data-world-depth="2" aria-pressed="false" disabled>+ Level 2</button><button type="button" data-world-depth="3" aria-pressed="false" disabled>+ Level 3</button><button type="button" data-world-depth="4" aria-pressed="true" disabled>All 5 levels</button></div></div><p id="world-depth-note">All five levels, down to individual building programs.</p></div>
 <div id="viewer-frame">
-<iframe id="world-viewer" title="Interactive 3D reconstruction of the medieval village" src="fractal/scene/index.html" loading="lazy" allow="fullscreen">
+<iframe id="world-viewer" title="Interactive 3D reconstruction of the medieval village" loading="lazy" allow="fullscreen">
 </iframe>
 <div class="world-selection" aria-live="polite"><span><span id="world-node-caption">Whole scene</span><strong id="world-node-id">scene</strong></span><button type="button" id="clear-highlight" hidden>Clear highlight</button></div>
 <div id="viewer-loading">
@@ -108,7 +111,7 @@
 </div>
       <div class="viewer-caption">
 <p id="viewer-gestures">Drag to orbit · Scroll or pinch to zoom</p>
-<a href="fractal/scene/component.js" target="_blank" rel="noopener">Open the root program ↗</a>
+<a data-root-program href="fractal/scene/component.js" target="_blank" rel="noopener">Open the root program ↗</a>
 </div>
       <div class="fallback" id="viewer-fallback" hidden>
 <p id="fallback-caption" role="status">The live viewer could not load in this browser. These five saved renders show the delivered scene from other cameras.</p>
@@ -136,29 +139,13 @@
 </div>
 </div>
     </section>
-<section class="text-column" id="recursion-preview" aria-label="Explore a branch of the recursion">
-<div class="preview-strip" role="group" aria-label="Choose a part of the scene">
-<button type="button" data-preview-node="scene" aria-pressed="true" aria-label="Show whole scene">
-<img src="thumbs/scene.webp" width="160" height="100" alt="" loading="lazy">
-<span>Whole scene</span>
-</button>
-<button type="button" data-preview-node="settlements" aria-pressed="false" aria-label="Show settlements">
-<img src="thumbs/settlements.webp" width="160" height="100" alt="" loading="lazy">
-<span>Settlements</span>
-</button>
-<button type="button" data-preview-node="east-village" aria-pressed="false" aria-label="Show village">
-<img src="thumbs/east-village.webp" width="160" height="100" alt="" loading="lazy">
-<span>Village</span>
-</button>
-<button type="button" data-preview-node="east-farmstead" aria-pressed="false" aria-label="Show farmstead">
-<img src="thumbs/east-farmstead.webp" width="160" height="100" alt="" loading="lazy">
-<span>Farmstead</span>
-</button>
-<button type="button" data-preview-node="east-farmyard" aria-pressed="false" aria-label="Show farmyard">
-<img src="thumbs/east-farmyard.webp" width="160" height="100" alt="" loading="lazy">
-<span>Farmyard</span>
-</button>
+<section class="media-column" id="recursion-preview" aria-label="Explore the complete recursion tree">
+<div class="explorer-surface overview-tree-surface">
+<div class="tree-toolbar"><h2>Follow the scene program</h2><div class="depth-legend" aria-label="Recursion depths" data-depth-legend><span>Depth</span><i class="depth-0">0</i><i class="depth-1">1</i><i class="depth-2">2</i><i class="depth-3">3</i><i class="depth-4">4</i></div></div>
+<div class="tree-scroll" id="overview-tree" aria-label="Complete recursion tree"></div>
+<p class="tree-foot">Select a node to frame its program. ↑ parent · ↓ child · ← → siblings. On phones, scroll sideways for more.</p>
 </div>
+<article id="overview-node-panel" class="overview-node-panel" aria-labelledby="preview-node-name" aria-busy="true">
 <div class="preview-heading">
 <h3 id="preview-node-name">Whole scene</h3>
 <span id="preview-depth">Depth 0</span>
@@ -178,6 +165,8 @@
 </figure>
 </div>
 <p class="preview-note" id="preview-note">Each part receives a closer view of the reference and returns a scene program.</p>
+<div class="preview-brief-block"><div class="brief-heading"><h3>The brief</h3><a id="preview-brief-link" href="fractal/scene/brief.md" target="_blank" rel="noopener">Full brief ↗</a></div><p id="preview-brief"></p></div>
+</article>
 <p class="section-action">
 <a class="text-link" id="full-run-link" href="explore.html?node=scene">Explore the full run →</a>
 </p>
@@ -186,7 +175,7 @@
 </section>
 <section class="section text-column" id="results-glance" aria-labelledby="glance-title">
 <h2 id="glance-title">Results at a glance</h2>
-<p class="section-intro">Compare the reference with our reconstruction, then look closer at another scene.</p>
+<p class="section-intro">Compare the reference with our reconstruction, then inspect the scene’s details.</p>
 <figure class="hero-figure">
         <div class="comparison" id="comparison" style="--split:50%">
           <img class="compare-image" src="images/delivered.webp" width="1400" height="963" alt="The delivered program's rendered medieval village, with mountain, forests, rivers and buildings" loading="lazy">
@@ -205,7 +194,7 @@
 <span>Drag to compare · same camera</span>
 </figcaption>
       </figure>
-<figure class="paper-figure glance-figure">
+<figure class="paper-figure glance-figure" data-scene-comparison>
 <a href="images/paper/case-city-full.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure: City reconstruction: the whole scene and close-up comparisons with SEIG, VIGA, and img2threejs.">
 <img src="images/paper/case-city-full.webp" width="1800" height="1396" alt="City reconstruction: the whole scene and close-up comparisons with SEIG, VIGA, and img2threejs." loading="lazy">
 </a>
@@ -240,11 +229,7 @@
     </section>
 </main>
 <footer class="footer text-column">
-  <details class="instruction">
-<summary>The recursive solver instruction</summary>
-<pre id="solver-instruction">The complete instruction is available below.</pre>
-<a href="data/solver-instruction.md">Download the instruction ↗</a>
-</details>
+  <p><a href="method.html">The solver instruction</a></p>
   <p>Reference image: <em>WorldClaw</em>, Fig. 9. Used only as input to the reconstruction.</p>
   <p class="template-credit">Page template inspired by the <a href="https://nerfies.github.io/">Nerfies project page</a>.</p>
   <a class="back-top" href="#top">Back to top ↑</a>

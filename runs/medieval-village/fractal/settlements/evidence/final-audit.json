@@ -1,0 +1,24 @@
+{
+  "meshes": 8403,
+  "invalid": 0,
+  "bounds": {
+    "min": [
+      -12.433302879333496,
+      -0.0855175256729126,
+      -10
+    ],
+    "max": [
+      12.433302879333496,
+      1.8801767013070998,
+      10
+    ]
+  },
+  "groups": [
+    "settlement-road-network",
+    "west-village",
+    "east-village",
+    "adobe-village",
+    "connecting-lane-lamps"
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,24 @@
+{
+  "components": 62,
+  "unique_owned_ids": true,
+  "finite_geometry": true,
+  "camera_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "parent_snapshot_sha256": "5a9576da3b70d7e2182533793b88a01cbbe1f078332f255c708fffe8221708d9",
+  "target_sha256": "e1dc6158f533b19dad16338322634896f8acfa1ac07dcbd87f9e0fcf2e169c31",
+  "manifest_sha256": "8f946ad5b5eabbc8258c0be37d783fe667fed17829ac235610f755414df7975d",
+  "render_errors": [],
+  "preview_meshes": 43,
+  "preview_triangles": 1058,
+  "final_visual_evidence": "round4-compare.png",
+  "scale": 4,
+  "resume_review": {
+    "child_list_source": "children.json.prev",
+    "children": [],
+    "render": "resume-round5.png",
+    "visual_evidence": "resume-round5-compare.png",
+    "render_errors": [],
+    "components": 62,
+    "camera_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+    "decision": "complete; no additional recursion"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "artifact": "part.json",
+  "passed": true,
+  "own_components": 121,
+  "child_components": 7,
+  "total_components": 128,
+  "context_components": 314,
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "child_sha256": "3e1f810559f4557e198d60556cdb062e7e17ffa358d7f785fda90bf63da7d892",
+  "render_errors": [],
+  "triangles": 6820,
+  "equal_scale": 6,
+  "target_sha256": "21e10944f8abf0ffd5dfa8f0142e4a88215609f799fb273498d8ca22f60d03f5",
+  "parent_context_sha256": "d7c983fb7021888cb3edbe69385f57d4ab085c6810714338aa0ca49825b46ae5",
+  "checks": [
+    "immutable inheritance",
+    "unique owned IDs",
+    "exact child flattening",
+    "no context in delivery",
+    "finite geometry and valid indices",
+    "same-size target and render",
+    "error-free WebGL render"
+  ]
+}

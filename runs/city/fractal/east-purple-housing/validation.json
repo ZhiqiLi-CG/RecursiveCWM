@@ -1,0 +1,28 @@
+{
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "target_hash_valid": true,
+  "component_count": 205,
+  "primitive_counts": {
+    "polygon": 7,
+    "box": 54,
+    "triangles": 102,
+    "ellipsoid": 42
+  },
+  "unique_owned_ids": true,
+  "finite_geometry": true,
+  "children": [],
+  "render_errors": [],
+  "review_evidence": "round4-compare.png",
+  "acceptance": "visual; no image-error score used as acceptance gate",
+  "continuity_review": {
+    "evidence": "round5-continuity-compare.png",
+    "render_errors": [],
+    "child_parts_integrated": 0,
+    "previous_children": [],
+    "preview_neighbors": [
+      "east-pink-housing",
+      "east-teal-towers"
+    ],
+    "own_components_unchanged": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "east-lakeside",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "ground_y": 0.06,
+  "assets": ["dark-thatch-cottage", "blue-slate-house", "pale-thatch-house", "canvas-shelter", "covered-pondside-cart", "upright-covered-goods", "barrel-and-crate-stack"],
+  "evidence": {
+    "reference_comparison": "evidence/final-paired.png",
+    "compass_views": "evidence/final-compass-contact.png",
+    "geometry": "evidence/geometry-check.json"
+  },
+  "notes": [
+    "Complete volumetric architecture and pondside props only; parent supplies roads, lamps and all natural features.",
+    "Retain distinct roof materials and orientations; coordinates are root-pixel footprint centers.",
+    "Parent should settle unfinished lane continuity and the lamp at (1047,494) near the slate storage platform; see account.md.",
+    "Four compass views and final locked 6x crop visually inspected after completion."
+  ]
+}

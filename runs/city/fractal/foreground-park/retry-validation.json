@@ -1,0 +1,65 @@
+{
+  "camera_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "children": [
+    {
+      "node": "foreground-park-red-tree",
+      "materials_valid": true,
+      "part_exists": false,
+      "crop_px": [
+        208,
+        426,
+        37,
+        65
+      ],
+      "output_size": [
+        222,
+        390
+      ]
+    },
+    {
+      "node": "foreground-park-cone-tree",
+      "materials_valid": true,
+      "part_exists": false,
+      "crop_px": [
+        167,
+        349,
+        36,
+        50
+      ],
+      "output_size": [
+        216,
+        300
+      ]
+    },
+    {
+      "node": "foreground-park-spread-tree",
+      "materials_valid": true,
+      "part_exists": false,
+      "crop_px": [
+        262,
+        419,
+        40,
+        42
+      ],
+      "output_size": [
+        240,
+        252
+      ]
+    },
+    {
+      "node": "foreground-park-ponds",
+      "materials_valid": true,
+      "part_exists": false,
+      "crop_px": [
+        150,
+        366,
+        185,
+        115
+      ],
+      "output_size": [
+        740,
+        460
+      ]
+    }
+  ]
+}

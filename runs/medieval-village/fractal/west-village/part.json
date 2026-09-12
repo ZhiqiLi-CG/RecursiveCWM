@@ -1,0 +1,30 @@
+{
+  "name": "west-village",
+  "status": "complete",
+  "module": "component.js",
+  "export": "build",
+  "children": [
+    "west-north-houses",
+    "west-south-houses",
+    "west-east-houses",
+    "west-market"
+  ],
+  "ground_y": 0.06,
+  "coordinate_system": "Inherited root world coordinates, Y up; add group with identity transform.",
+  "building_count": 11,
+  "notes": [
+    "Integrates the four delivered child modules without editing their sources.",
+    "Owns eleven buildings, attached steps and lower western wing, market furnishings, figures and sixteen lamps. No through-roads, natural terrain, water, vegetation or map graphics.",
+    "Western house and tent have local placement/material/volume corrections in this wrapper. Other child placements remain unchanged.",
+    "Northern child requires browser document.createElement for its synchronous procedural thatch texture.",
+    "Settlements parent should resolve the western road wedge, doubled southeast market lane and west-loop connection against final terrain; see account.md.",
+    "Final reference comparison and four compass inspections completed; fine facade and material differences remain approximations."
+  ],
+  "evidence": {
+    "matched_reference": "evidence/final-paired.png",
+    "locked_render": "evidence/final.png",
+    "four_compass": "evidence/compass-contact.png",
+    "browser_inspection": "evidence/inspection.json",
+    "account": "account.md"
+  }
+}

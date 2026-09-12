@@ -1,0 +1,29 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "parent": "east-farmstead",
+  "root_target_size": [
+    1400,
+    963
+  ],
+  "crop_root_px": [
+    785,
+    326,
+    838,
+    394
+  ],
+  "target_size": [
+    530,
+    680
+  ],
+  "magnification": 10,
+  "source_target": "../east-farmstead/target.png",
+  "source_crop_px": [
+    624,
+    288,
+    942,
+    696
+  ],
+  "mapping": "root_x = 785 + local_x / 10; root_y = 326 + local_y / 10",
+  "parent_snapshot": "../east-farmstead/snapshot.js",
+  "rendering": "Locked root camera; crop then enlarge. No reference reframing."
+}

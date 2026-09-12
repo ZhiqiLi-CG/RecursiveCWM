@@ -1,0 +1,14 @@
+{
+  "reference_sha256": "dee36960f37ebffb2cf355279d8c454efc94314101dceec5d574d45af165a601",
+  "camera_sha256": "3406d985d8c27b0077a95f5e6da6d638bae3b9457aaaf23046cefc15ed949f72",
+  "parent_snapshot_sha256": "31788e0aa2cc8793f0fce3c288c91ef3f2dc0a0b8445d8e8365913c36c5fac95",
+  "renders": [
+    "final-paired.png",
+    "house-compass-0.png",
+    "house-compass-1.png",
+    "house-compass-2.png",
+    "house-compass-3.png"
+  ],
+  "decisions": "visual inspection; no image metric used",
+  "inherited_inputs_unchanged": true
+}

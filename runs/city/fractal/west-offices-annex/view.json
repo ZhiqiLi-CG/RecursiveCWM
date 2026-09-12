@@ -1,0 +1,25 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "crop_px": [
+    0,
+    218,
+    42,
+    74
+  ],
+  "output_size": [
+    336,
+    592
+  ],
+  "scale": 8,
+  "coordinate_space": "full_reference_pixels",
+  "parent_node": "west-offices",
+  "source_target": "../west-offices/target.png",
+  "source_crop_px_xyxy": [
+    0,
+    324,
+    168,
+    620
+  ],
+  "source_scale": 4
+}

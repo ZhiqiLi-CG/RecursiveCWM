@@ -1,0 +1,48 @@
+{
+  "interface_version": 1,
+  "name": "east-village",
+  "status": "complete",
+  "module": "component.js",
+  "export": "build",
+  "children": [
+    "east-farmstead",
+    "east-market",
+    "east-lakeside",
+    "east-windmills"
+  ],
+  "child_parts": [
+    "../east-farmstead/part.json",
+    "../east-market/part.json",
+    "../east-lakeside/part.json",
+    "../east-windmills/part.json"
+  ],
+  "ground_y": 0.06,
+  "coordinate_system": "Y up; ROOT pixel footprint anchors projected using immutable camera contract; already positioned, add without further transforms.",
+  "camera_contract": "../../camera-contract.json",
+  "view": "view.json",
+  "account": "account.md",
+  "local_components": [
+    "lamps.js",
+    "seat-supports.js"
+  ],
+  "counts": {
+    "district_lamps": 18,
+    "windmills": 3,
+    "meshes": 3642
+  },
+  "evidence": {
+    "matched_reference": "evidence/final-paired.png",
+    "locked_render": "evidence/final-ground.png",
+    "inherited_context": "evidence/final-inherited-paired.png",
+    "four_compass": "evidence/final-compass-sheet.png",
+    "validation": "evidence/final-verification.json"
+  },
+  "notes": [
+    "All four children integrated; no inherited architecture placeholders remain.",
+    "Existing low support geometry is extended below grade without shifting child anchors or upper silhouettes.",
+    "Market-counter and slate-platform lamp clearance settled against the magnified target.",
+    "Settlements parent owns outstanding through-road widening, eastern-lane joining and bridge approach fitting; see account.md.",
+    "Terrain, vegetation, water and UI are external; final-ground evidence uses terrain-ground/ground.js as read-only context.",
+    "Roof patina, cloth/goods details and shared shading remain approximate; no further owned subassembly requires descent."
+  ]
+}

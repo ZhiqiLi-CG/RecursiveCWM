@@ -1,0 +1,103 @@
+{
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "context_sha256": "5a9576da3b70d7e2182533793b88a01cbbe1f078332f255c708fffe8221708d9",
+  "children": [
+    {
+      "node": "east-shop",
+      "crop_px": [
+        355,
+        38,
+        88,
+        86
+      ],
+      "output_size": [
+        352,
+        344
+      ],
+      "crop_pixels_exact": true,
+      "hashes_valid": true,
+      "renderer_errors": [],
+      "part_exists": false
+    },
+    {
+      "node": "east-pink-housing",
+      "crop_px": [
+        410,
+        72,
+        154,
+        110
+      ],
+      "output_size": [
+        616,
+        440
+      ],
+      "crop_pixels_exact": true,
+      "hashes_valid": true,
+      "renderer_errors": [],
+      "part_exists": false
+    },
+    {
+      "node": "east-purple-housing",
+      "crop_px": [
+        562,
+        91,
+        184,
+        145
+      ],
+      "output_size": [
+        736,
+        580
+      ],
+      "crop_pixels_exact": true,
+      "hashes_valid": true,
+      "renderer_errors": [],
+      "part_exists": false
+    },
+    {
+      "node": "east-teal-towers",
+      "crop_px": [
+        704,
+        101,
+        237,
+        202
+      ],
+      "output_size": [
+        948,
+        808
+      ],
+      "crop_pixels_exact": true,
+      "hashes_valid": true,
+      "renderer_errors": [],
+      "part_exists": false
+    },
+    {
+      "node": "east-hospital",
+      "crop_px": [
+        620,
+        207,
+        170,
+        123
+      ],
+      "output_size": [
+        680,
+        492
+      ],
+      "crop_pixels_exact": true,
+      "hashes_valid": true,
+      "renderer_errors": [],
+      "part_exists": false
+    }
+  ],
+  "status": "Ready for runner dispatch; all preparation checks and visual crop review passed",
+  "visual_review": {
+    "district": "recovery-compare.png",
+    "children": [
+      "../east-shop/baseline-compare.png",
+      "../east-pink-housing/baseline-compare.png",
+      "../east-purple-housing/baseline-compare.png",
+      "../east-teal-towers/baseline-compare.png",
+      "../east-hospital/baseline-compare.png"
+    ],
+    "finding": "All five owned object groups absent from substrate. Each crop covers owned silhouette, plot and necessary neighbor context. Child scale 4, parent scale 2; left/right images have identical pixel dimensions. No geometry fidelity claimed."
+  }
+}

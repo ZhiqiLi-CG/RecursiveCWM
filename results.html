@@ -6,7 +6,7 @@
   <meta name="description" content="Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world.">
   <meta name="theme-color" content="#ffffff">
   <title>Results · Recursive Code World Models</title>
-  <!-- Set ARXIV_URL in config.js when the arXiv page is available. -->
+  <!-- Publication URL is configured in config.js. -->
   <script src="config.js">
 </script>
   <meta property="og:type" content="website">
@@ -30,6 +30,7 @@
 <a href="index.html">Overview</a>
 <a href="explore.html">Explore a run</a>
 <a href="results.html" aria-current="page">Results</a>
+<a href="method.html">Method</a>
 <a href="index.html#paper-header" data-paper-link>Paper</a>
 </nav>
 <main id="top">
@@ -38,11 +39,18 @@
 <h1>Results</h1>
 <p>Comparisons, novel views, and the recursive construction behind them.</p>
 </header>
+<section class="media-column example-results" aria-labelledby="example-title">
+<div class="scene-switcher" data-scene-switcher></div><h2 id="example-title">The selected example</h2>
+<div class="matched-pair example-pair"><figure><figcaption>Reference</figcaption><a id="example-reference-link" target="_blank" rel="noopener"><img id="example-reference" alt=""></a></figure><figure><figcaption>Our reconstruction</figcaption><a id="example-final-link" target="_blank" rel="noopener"><img id="example-final" alt=""></a></figure></div>
+<p class="section-action"><a id="example-explore" class="text-link" href="explore.html">Explore this run →</a></p>
+<h3>From other cameras</h3><div class="novel-grid" id="example-novel-views"></div>
+<figure class="paper-figure example-comparison" data-scene-comparison><a target="_blank" rel="noopener"><img alt="" loading="lazy"></a><figcaption></figcaption></figure>
+</section>
 <nav class="section-nav text-column" aria-label="Results sections">
 <a href="#comparisons">Comparisons</a>
 <a href="#novel-views">Novel views</a>
 <a href="#quantitative">Metrics</a>
-<a href="#method">Method</a>
+<a href="method.html">Method &amp; instruction</a>
 </nav>
 <section class="section media-column" id="comparisons">
 <h2>Reconstructing the whole and the details</h2>
@@ -624,11 +632,7 @@
 </section>
 </main>
 <footer class="footer text-column">
-  <details class="instruction">
-<summary>The recursive solver instruction</summary>
-<pre id="solver-instruction">The complete instruction is available below.</pre>
-<a href="data/solver-instruction.md">Download the instruction ↗</a>
-</details>
+  <p><a href="method.html">The solver instruction</a></p>
   <p>Reference image: <em>WorldClaw</em>, Fig. 9. Used only as input to the reconstruction.</p>
   <p class="template-credit">Page template inspired by the <a href="https://nerfies.github.io/">Nerfies project page</a>.</p>
   <a class="back-top" href="#top">Back to top ↑</a>

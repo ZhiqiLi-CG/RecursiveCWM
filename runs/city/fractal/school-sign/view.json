@@ -1,0 +1,25 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "crop_px": [
+    441,
+    200,
+    54,
+    47
+  ],
+  "output_size": [
+    864,
+    752
+  ],
+  "scale": 16,
+  "coordinate_space": "full_reference_pixels",
+  "parent_node": "school-main-building",
+  "target_source": "../school-main-building/target.png",
+  "source_crop_px": [
+    222,
+    12,
+    546,
+    294
+  ],
+  "source_crop_format": "xyxy"
+}

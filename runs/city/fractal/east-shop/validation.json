@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "owned_components": 164,
+  "children": [],
+  "camera_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "target_sha256": "160b0fa8ed5d5562e75ca917783fdf13d6781d52192e13f5458da86e5e28f62b",
+  "context_sha256": "5a9576da3b70d7e2182533793b88a01cbbe1f078332f255c708fffe8221708d9",
+  "renderer_errors": [],
+  "render_triangles": 1421,
+  "comparison": "final-compare.png",
+  "visual_review": "Personally inspected final-compare.png at identical 352x344 per image. Owned shop and apron accepted with documented residuals; absent sibling buildings and inherited grass are context."
+}

@@ -1,0 +1,86 @@
+{
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "checks": [
+    {
+      "node": "west-offices",
+      "crop_px": [
+        0,
+        137,
+        145,
+        169
+      ],
+      "size": [
+        580,
+        676
+      ],
+      "exact_source_crop": true,
+      "camera_match": true,
+      "parent_snapshot_match": true,
+      "source_reference_match": true,
+      "target_hash_match": true,
+      "browser_errors": [],
+      "part_exists": false
+    },
+    {
+      "node": "west-police",
+      "crop_px": [
+        87,
+        245,
+        159,
+        105
+      ],
+      "size": [
+        636,
+        420
+      ],
+      "exact_source_crop": true,
+      "camera_match": true,
+      "parent_snapshot_match": true,
+      "source_reference_match": true,
+      "target_hash_match": true,
+      "browser_errors": [],
+      "part_exists": false
+    },
+    {
+      "node": "west-houses",
+      "crop_px": [
+        207,
+        168,
+        181,
+        133
+      ],
+      "size": [
+        724,
+        532
+      ],
+      "exact_source_crop": true,
+      "camera_match": true,
+      "parent_snapshot_match": true,
+      "source_reference_match": true,
+      "target_hash_match": true,
+      "browser_errors": [],
+      "part_exists": false
+    },
+    {
+      "node": "west-shop",
+      "crop_px": [
+        304,
+        219,
+        84,
+        91
+      ],
+      "size": [
+        336,
+        364
+      ],
+      "exact_source_crop": true,
+      "camera_match": true,
+      "parent_snapshot_match": true,
+      "source_reference_match": true,
+      "target_hash_match": true,
+      "browser_errors": [],
+      "part_exists": false
+    }
+  ],
+  "final_part_exists": false
+}

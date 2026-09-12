@@ -1,0 +1,125 @@
+{
+ "root": "scene",
+ "scene": "city-full",
+ "depth": {
+  "scene": 0,
+  "north-housing": 1,
+  "west-civic": 1,
+  "central-school": 1,
+  "east-district": 1,
+  "foreground-park": 1,
+  "foreground-park-red-tree": 2,
+  "foreground-park-cone-tree": 2,
+  "foreground-park-ponds": 2,
+  "foreground-park-spread-tree": 2,
+  "school-main-building": 2,
+  "school-tiered-towers": 2,
+  "west-offices": 2,
+  "west-police": 2,
+  "west-houses": 2,
+  "west-shop": 2,
+  "east-shop": 2,
+  "east-pink-housing": 2,
+  "east-purple-housing": 2,
+  "east-teal-towers": 2,
+  "east-hospital": 2,
+  "north-housing-buildings": 2,
+  "west-house-prototype": 3,
+  "school-sign": 3,
+  "west-offices-annex": 3
+ },
+ "children": {
+  "scene": [
+   "north-housing",
+   "west-civic",
+   "central-school",
+   "east-district",
+   "foreground-park"
+  ],
+  "foreground-park": [
+   "foreground-park-red-tree",
+   "foreground-park-cone-tree",
+   "foreground-park-spread-tree",
+   "foreground-park-ponds"
+  ],
+  "central-school": [
+   "school-main-building",
+   "school-tiered-towers"
+  ],
+  "west-civic": [
+   "west-offices",
+   "west-police",
+   "west-houses",
+   "west-shop"
+  ],
+  "east-district": [
+   "east-shop",
+   "east-pink-housing",
+   "east-purple-housing",
+   "east-teal-towers",
+   "east-hospital"
+  ],
+  "north-housing": [
+   "north-housing-buildings"
+  ],
+  "west-houses": [
+   "west-house-prototype"
+  ],
+  "school-main-building": [
+   "school-sign"
+  ],
+  "west-offices": [
+   "west-offices-annex"
+  ]
+ },
+ "first_session": {
+  "scene": "2026-09-08T19:32:49-04:00",
+  "north-housing": "2026-09-08T19:43:15-04:00",
+  "west-civic": "2026-09-08T19:43:15-04:00",
+  "central-school": "2026-09-08T19:43:15-04:00",
+  "east-district": "2026-09-08T19:43:15-04:00",
+  "foreground-park": "2026-09-08T19:43:15-04:00",
+  "foreground-park-red-tree": "2026-09-08T19:48:42-04:00",
+  "foreground-park-cone-tree": "2026-09-08T19:48:42-04:00",
+  "foreground-park-ponds": "2026-09-08T19:48:42-04:00",
+  "foreground-park-spread-tree": "2026-09-08T19:48:42-04:00",
+  "school-main-building": "2026-09-08T19:48:46-04:00",
+  "school-tiered-towers": "2026-09-08T19:48:46-04:00",
+  "west-offices": "2026-09-08T20:47:04-04:00",
+  "west-police": "2026-09-08T20:47:04-04:00",
+  "west-houses": "2026-09-08T20:47:04-04:00",
+  "west-shop": "2026-09-08T20:47:04-04:00",
+  "east-shop": "2026-09-08T20:47:04-04:00",
+  "east-pink-housing": "2026-09-08T20:47:04-04:00",
+  "east-purple-housing": "2026-09-08T20:47:04-04:00",
+  "east-teal-towers": "2026-09-08T20:47:04-04:00",
+  "east-hospital": "2026-09-08T20:47:04-04:00",
+  "north-housing-buildings": "2026-09-08T20:49:37-04:00",
+  "west-house-prototype": "2026-09-08T20:52:32-04:00",
+  "school-sign": "2026-09-08T20:55:10-04:00",
+  "west-offices-annex": "2026-09-08T20:56:36-04:00"
+ },
+ "final_render_source": {
+  "scene": "final.png",
+  "central-school": "final.png",
+  "foreground-park-red-tree": "final.png",
+  "school-main-building": "final.png",
+  "east-shop": "final.png",
+  "east-hospital": "final.png",
+  "school-sign": "final.png",
+  "west-offices-annex": "final.png",
+  "north-housing": "round7.png",
+  "west-civic": "resume-round3.png",
+  "east-district": "integrated-final-hospital-seam.png",
+  "foreground-park": "integrated1.png",
+  "school-tiered-towers": "resume-parent-review.png",
+  "west-offices": "resume-round4.png",
+  "west-police": "round5.png",
+  "west-houses": "round4.png",
+  "east-pink-housing": "resume-round7.png",
+  "east-purple-housing": "round5-continuity.png",
+  "east-teal-towers": "resume-round3.png",
+  "north-housing-buildings": "resume-round5.png",
+  "west-house-prototype": "reintegration.png"
+ }
+}

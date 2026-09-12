@@ -1,0 +1,10 @@
+[
+  {
+    "path": "../west-civic/base.json",
+    "sha256": "5a9576da3b70d7e2182533793b88a01cbbe1f078332f255c708fffe8221708d9"
+  },
+  {
+    "path": "../west-shop/part.json",
+    "sha256": "d493d901c7071665c7242a4e3834e6b3333b447fe065fb61b5634870e54ce3ed"
+  }
+]

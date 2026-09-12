@@ -1,0 +1,17 @@
+{
+  "part_valid": true,
+  "no_children_file": true,
+  "parent_snapshot_unchanged": true,
+  "compass_views": 4,
+  "render_mesh_count": 388,
+  "reference_crop": [
+    785,
+    326,
+    838,
+    394
+  ],
+  "matched_size": [
+    530,
+    680
+  ]
+}

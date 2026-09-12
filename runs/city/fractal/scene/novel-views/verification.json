@@ -1,0 +1,72 @@
+{
+  "frozen_scene_unchanged": true,
+  "source_sha256": "d5a19515bac9ea87cadb81a1bd01cfb34f3d5dd0163997c808129ec8cb64ccaf",
+  "images": [
+    {
+      "file": "view-L35.png",
+      "resolution": [
+        1400,
+        900
+      ],
+      "bytes": 182406,
+      "nonwhite_pixels": 897519,
+      "azimuth_degrees": 10,
+      "elevation_degrees": 33.02466363166587,
+      "personally_viewed": true,
+      "render_errors": []
+    },
+    {
+      "file": "view-R35.png",
+      "resolution": [
+        1400,
+        900
+      ],
+      "bytes": 171843,
+      "nonwhite_pixels": 802989,
+      "azimuth_degrees": 80,
+      "elevation_degrees": 33.02466363166587,
+      "personally_viewed": true,
+      "render_errors": []
+    },
+    {
+      "file": "view-orbit.png",
+      "resolution": [
+        1400,
+        900
+      ],
+      "bytes": 233049,
+      "nonwhite_pixels": 793505,
+      "azimuth_degrees": 45,
+      "elevation_degrees": 35,
+      "personally_viewed": true,
+      "render_errors": []
+    },
+    {
+      "file": "view-close1.png",
+      "resolution": [
+        1400,
+        900
+      ],
+      "bytes": 170291,
+      "nonwhite_pixels": 1253489,
+      "azimuth_degrees": 38,
+      "elevation_degrees": 33.02466363166587,
+      "personally_viewed": true,
+      "render_errors": []
+    },
+    {
+      "file": "view-close2.png",
+      "resolution": [
+        1400,
+        900
+      ],
+      "bytes": 168562,
+      "nonwhite_pixels": 1176552,
+      "azimuth_degrees": 48,
+      "elevation_degrees": 33.02466363166587,
+      "personally_viewed": true,
+      "render_errors": []
+    }
+  ],
+  "visual_review": "Personally inspected all five final 1400x900 images. L35/R35 preserve exact requested azimuth offsets and reference elevation. Orbit uses 35-degree elevation. Close1 frames school, mint towers, shop and fountain; close2 was rerendered from northeast towers to western civic cluster to reduce empty sky and improve content coverage. Original four oblique/top views removed."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "component_count": 24,
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "parent_snapshot_sha256": "eaa3ea2012560abe1e57334df2b1b0e8b8a9cf4a1f75f7912ec872749aaf6cc5",
+  "input_sha256": {
+    "manifest.json": "7dd35a63db5a13158b0e21cb554fc165c3c2339fb01c3fbc711e6f641fa7da3a",
+    "view.json": "09cf6a3ba012c5bab5e3a1ba1f76a56cbb863fe5b47eb56de34aab8b0db55c5b",
+    "target.png": "a7de8c8223b75fe160b3434cb60feeae7479a2f1a9f71364c84e2282f9269b9c",
+    "brief.md": "663a425f82ec7b571b030776ed78f399306a058a7d4b91fed6daea0c0e2b825b"
+  },
+  "final_render_errors": [],
+  "checks": [
+    "camera contract matches view and renderer",
+    "parent snapshot matches inherited manifest",
+    "preview exactly parent components + owned components",
+    "unique prefixed owned IDs, no context copies",
+    "valid positive box dimensions and triangle indices",
+    "empty children and child refs",
+    "generator parses"
+  ],
+  "visual_evidence": "final-compare.png",
+  "visual_review": "Personally reviewed final equal-scale target and render, 336x592 each; accepted owned annex silhouette, recessed roof, windows, door and continuity. Remaining contextual tower offsets and sharper raster edges recorded in account.md.",
+  "resumed_whole_review": {
+    "status": "passed",
+    "children_queue": "children.json.prev is []; no child deliveries named or referenced",
+    "render": "resume-final.png",
+    "visual_evidence": "resume-final-compare.png",
+    "render_errors": [],
+    "identical_to_previously_reviewed_render": true,
+    "action": "No further subdivision; retain 24 owned components and empty child references."
+  }
+}

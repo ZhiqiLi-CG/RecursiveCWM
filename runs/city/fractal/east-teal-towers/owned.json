@@ -1,0 +1,1766 @@
+{
+  "node": "east-teal-towers",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "components": [
+    {
+      "id": "east-teal-towers/paving",
+      "type": "polygon",
+      "points": [
+        [
+          2.414659386694053,
+          -5.202007279972613
+        ],
+        [
+          2.0603780411283044,
+          -8.456288625538363
+        ],
+        [
+          7.212518713911178,
+          -8.470814619422155
+        ],
+        [
+          7.671234310241454,
+          -8.01209902309188
+        ],
+        [
+          7.536219019721576,
+          -5.247114313611757
+        ]
+      ],
+      "y": 0.012,
+      "color": "#777593"
+    },
+    {
+      "id": "east-teal-towers/tower-1/body",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        1.22,
+        -6.164073525427145
+      ],
+      "size": [
+        1.02,
+        2.39,
+        0.77
+      ],
+      "colors": [
+        "#60b8a3",
+        "#579c81",
+        "#49c9bd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/band-0",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        0.918,
+        -6.164073525427145
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/slab-0",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        0.865,
+        -6.164073525427145
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/band-1",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        1.1909999999999998,
+        -6.164073525427145
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/slab-1",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        1.138,
+        -6.164073525427145
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/band-2",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        1.464,
+        -6.164073525427145
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/slab-2",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        1.411,
+        -6.164073525427145
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/band-3",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        1.737,
+        -6.164073525427145
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/slab-3",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        1.6840000000000002,
+        -6.164073525427145
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/band-4",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        2.0100000000000002,
+        -6.164073525427145
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/slab-4",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        1.957,
+        -6.164073525427145
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/band-5",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        2.2830000000000004,
+        -6.164073525427145
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/slab-5",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        2.2300000000000004,
+        -6.164073525427145
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/roof-deck",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        2.425,
+        -6.164073525427145
+      ],
+      "size": [
+        1.12,
+        0.065,
+        0.8400000000000001
+      ],
+      "colors": [
+        "#3b4431",
+        "#558c77",
+        "#82aa8e"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/roof-rim-back",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        2.536,
+        -6.551573525427145
+      ],
+      "size": [
+        1.12,
+        0.115,
+        0.065
+      ],
+      "colors": [
+        "#55d7c9",
+        "#47b9aa",
+        "#303c31"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/roof-rim-front",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        2.536,
+        -5.776573525427144
+      ],
+      "size": [
+        1.12,
+        0.115,
+        0.065
+      ],
+      "colors": [
+        "#55d7c9",
+        "#47b9aa",
+        "#68d6c3"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/roof-rim-left",
+      "type": "box",
+      "position": [
+        3.083426474572856,
+        2.536,
+        -6.164073525427145
+      ],
+      "size": [
+        0.065,
+        0.115,
+        0.8400000000000001
+      ],
+      "colors": [
+        "#55d7c9",
+        "#303c31",
+        "#68d6c3"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/roof-rim-right",
+      "type": "box",
+      "position": [
+        4.138426474572856,
+        2.536,
+        -6.164073525427145
+      ],
+      "size": [
+        0.065,
+        0.115,
+        0.8400000000000001
+      ],
+      "colors": [
+        "#55d7c9",
+        "#47b9aa",
+        "#68d6c3"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/roof-front-trim",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        2.438,
+        -5.739073525427145
+      ],
+      "size": [
+        1.12,
+        0.025,
+        0.012
+      ],
+      "colors": [
+        "#a6d6c1",
+        "#a6d6c1",
+        "#a6d6c1"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/window-0",
+      "type": "box",
+      "position": [
+        3.310926474572856,
+        0.665,
+        -5.767073525427145
+      ],
+      "size": [
+        0.16,
+        0.19,
+        0.017
+      ],
+      "colors": [
+        "#f6f9ef",
+        "#f6f9ef",
+        "#f6f9ef"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/window-1",
+      "type": "box",
+      "position": [
+        3.5909264745728557,
+        0.665,
+        -5.767073525427145
+      ],
+      "size": [
+        0.16,
+        0.19,
+        0.017
+      ],
+      "colors": [
+        "#f6f9ef",
+        "#f6f9ef",
+        "#f6f9ef"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/window-2",
+      "type": "box",
+      "position": [
+        3.8709264745728555,
+        0.665,
+        -5.767073525427145
+      ],
+      "size": [
+        0.16,
+        0.19,
+        0.017
+      ],
+      "colors": [
+        "#f6f9ef",
+        "#f6f9ef",
+        "#f6f9ef"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/door-frame",
+      "type": "box",
+      "position": [
+        3.6109264745728558,
+        0.224,
+        -5.764073525427145
+      ],
+      "size": [
+        0.4,
+        0.4,
+        0.018
+      ],
+      "colors": [
+        "#bce4d6",
+        "#bce4d6",
+        "#bce4d6"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-1/door",
+      "type": "box",
+      "position": [
+        3.634926474572856,
+        0.223,
+        -5.750073525427145
+      ],
+      "size": [
+        0.326,
+        0.397,
+        0.014
+      ],
+      "colors": [
+        "#ffffff",
+        "#ffffff",
+        "#ffffff"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/body",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        1.22,
+        -6.234257011665677
+      ],
+      "size": [
+        1.02,
+        2.39,
+        0.77
+      ],
+      "colors": [
+        "#60b8a3",
+        "#579c81",
+        "#49c9bd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/band-0",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        0.918,
+        -6.234257011665677
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/slab-0",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        0.865,
+        -6.234257011665677
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/band-1",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        1.1909999999999998,
+        -6.234257011665677
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/slab-1",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        1.138,
+        -6.234257011665677
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/band-2",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        1.464,
+        -6.234257011665677
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/slab-2",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        1.411,
+        -6.234257011665677
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/band-3",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        1.737,
+        -6.234257011665677
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/slab-3",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        1.6840000000000002,
+        -6.234257011665677
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/band-4",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        2.0100000000000002,
+        -6.234257011665677
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/slab-4",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        1.957,
+        -6.234257011665677
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/band-5",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        2.2830000000000004,
+        -6.234257011665677
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/slab-5",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        2.2300000000000004,
+        -6.234257011665677
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/roof-deck",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        2.425,
+        -6.234257011665677
+      ],
+      "size": [
+        1.12,
+        0.065,
+        0.8400000000000001
+      ],
+      "colors": [
+        "#3b4431",
+        "#558c77",
+        "#82aa8e"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/roof-rim-back",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        2.536,
+        -6.621757011665677
+      ],
+      "size": [
+        1.12,
+        0.115,
+        0.065
+      ],
+      "colors": [
+        "#55d7c9",
+        "#47b9aa",
+        "#303c31"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/roof-rim-front",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        2.536,
+        -5.846757011665677
+      ],
+      "size": [
+        1.12,
+        0.115,
+        0.065
+      ],
+      "colors": [
+        "#55d7c9",
+        "#47b9aa",
+        "#68d6c3"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/roof-rim-left",
+      "type": "box",
+      "position": [
+        4.713242988334323,
+        2.536,
+        -6.234257011665677
+      ],
+      "size": [
+        0.065,
+        0.115,
+        0.8400000000000001
+      ],
+      "colors": [
+        "#55d7c9",
+        "#303c31",
+        "#68d6c3"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/roof-rim-right",
+      "type": "box",
+      "position": [
+        5.768242988334323,
+        2.536,
+        -6.234257011665677
+      ],
+      "size": [
+        0.065,
+        0.115,
+        0.8400000000000001
+      ],
+      "colors": [
+        "#55d7c9",
+        "#47b9aa",
+        "#68d6c3"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/roof-front-trim",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        2.438,
+        -5.809257011665677
+      ],
+      "size": [
+        1.12,
+        0.025,
+        0.012
+      ],
+      "colors": [
+        "#a6d6c1",
+        "#a6d6c1",
+        "#a6d6c1"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/window-0",
+      "type": "box",
+      "position": [
+        4.940742988334323,
+        0.665,
+        -5.8372570116656775
+      ],
+      "size": [
+        0.16,
+        0.19,
+        0.017
+      ],
+      "colors": [
+        "#f6f9ef",
+        "#f6f9ef",
+        "#f6f9ef"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/window-1",
+      "type": "box",
+      "position": [
+        5.220742988334323,
+        0.665,
+        -5.8372570116656775
+      ],
+      "size": [
+        0.16,
+        0.19,
+        0.017
+      ],
+      "colors": [
+        "#f6f9ef",
+        "#f6f9ef",
+        "#f6f9ef"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/window-2",
+      "type": "box",
+      "position": [
+        5.500742988334323,
+        0.665,
+        -5.8372570116656775
+      ],
+      "size": [
+        0.16,
+        0.19,
+        0.017
+      ],
+      "colors": [
+        "#f6f9ef",
+        "#f6f9ef",
+        "#f6f9ef"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/door-frame",
+      "type": "box",
+      "position": [
+        5.240742988334323,
+        0.224,
+        -5.834257011665677
+      ],
+      "size": [
+        0.4,
+        0.4,
+        0.018
+      ],
+      "colors": [
+        "#bce4d6",
+        "#bce4d6",
+        "#bce4d6"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-2/door",
+      "type": "box",
+      "position": [
+        5.264742988334323,
+        0.223,
+        -5.820257011665677
+      ],
+      "size": [
+        0.326,
+        0.397,
+        0.014
+      ],
+      "colors": [
+        "#ffffff",
+        "#ffffff",
+        "#ffffff"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/body",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        1.22,
+        -6.273859458148857
+      ],
+      "size": [
+        1.02,
+        2.39,
+        0.77
+      ],
+      "colors": [
+        "#60b8a3",
+        "#579c81",
+        "#49c9bd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/band-0",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        0.918,
+        -6.273859458148857
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/slab-0",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        0.865,
+        -6.273859458148857
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/band-1",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        1.1909999999999998,
+        -6.273859458148857
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/slab-1",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        1.138,
+        -6.273859458148857
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/band-2",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        1.464,
+        -6.273859458148857
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/slab-2",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        1.411,
+        -6.273859458148857
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/band-3",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        1.737,
+        -6.273859458148857
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/slab-3",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        1.6840000000000002,
+        -6.273859458148857
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/band-4",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        2.0100000000000002,
+        -6.273859458148857
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/slab-4",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        1.957,
+        -6.273859458148857
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/band-5",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        2.2830000000000004,
+        -6.273859458148857
+      ],
+      "size": [
+        1.024,
+        0.092,
+        0.774
+      ],
+      "colors": [
+        "#748f78",
+        "#527b68",
+        "#74977b"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/slab-5",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        2.2300000000000004,
+        -6.273859458148857
+      ],
+      "size": [
+        1.18,
+        0.075,
+        0.9
+      ],
+      "colors": [
+        "#52d6c8",
+        "#40bdae",
+        "#40cbbd"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/roof-deck",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        2.425,
+        -6.273859458148857
+      ],
+      "size": [
+        1.12,
+        0.065,
+        0.8400000000000001
+      ],
+      "colors": [
+        "#3b4431",
+        "#558c77",
+        "#82aa8e"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/roof-rim-back",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        2.536,
+        -6.6613594581488575
+      ],
+      "size": [
+        1.12,
+        0.115,
+        0.065
+      ],
+      "colors": [
+        "#55d7c9",
+        "#47b9aa",
+        "#303c31"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/roof-rim-front",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        2.536,
+        -5.886359458148857
+      ],
+      "size": [
+        1.12,
+        0.115,
+        0.065
+      ],
+      "colors": [
+        "#55d7c9",
+        "#47b9aa",
+        "#68d6c3"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/roof-rim-left",
+      "type": "box",
+      "position": [
+        6.3736405418511435,
+        2.536,
+        -6.273859458148857
+      ],
+      "size": [
+        0.065,
+        0.115,
+        0.8400000000000001
+      ],
+      "colors": [
+        "#55d7c9",
+        "#303c31",
+        "#68d6c3"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/roof-rim-right",
+      "type": "box",
+      "position": [
+        7.428640541851143,
+        2.536,
+        -6.273859458148857
+      ],
+      "size": [
+        0.065,
+        0.115,
+        0.8400000000000001
+      ],
+      "colors": [
+        "#55d7c9",
+        "#47b9aa",
+        "#68d6c3"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/roof-front-trim",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        2.438,
+        -5.8488594581488575
+      ],
+      "size": [
+        1.12,
+        0.025,
+        0.012
+      ],
+      "colors": [
+        "#a6d6c1",
+        "#a6d6c1",
+        "#a6d6c1"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/window-0",
+      "type": "box",
+      "position": [
+        6.6011405418511435,
+        0.665,
+        -5.876859458148858
+      ],
+      "size": [
+        0.16,
+        0.19,
+        0.017
+      ],
+      "colors": [
+        "#f6f9ef",
+        "#f6f9ef",
+        "#f6f9ef"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/window-1",
+      "type": "box",
+      "position": [
+        6.881140541851144,
+        0.665,
+        -5.876859458148858
+      ],
+      "size": [
+        0.16,
+        0.19,
+        0.017
+      ],
+      "colors": [
+        "#f6f9ef",
+        "#f6f9ef",
+        "#f6f9ef"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/window-2",
+      "type": "box",
+      "position": [
+        7.161140541851143,
+        0.665,
+        -5.876859458148858
+      ],
+      "size": [
+        0.16,
+        0.19,
+        0.017
+      ],
+      "colors": [
+        "#f6f9ef",
+        "#f6f9ef",
+        "#f6f9ef"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/door-frame",
+      "type": "box",
+      "position": [
+        6.901140541851143,
+        0.224,
+        -5.873859458148858
+      ],
+      "size": [
+        0.4,
+        0.4,
+        0.018
+      ],
+      "colors": [
+        "#bce4d6",
+        "#bce4d6",
+        "#bce4d6"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tower-3/door",
+      "type": "box",
+      "position": [
+        6.925140541851143,
+        0.223,
+        -5.859859458148858
+      ],
+      "size": [
+        0.326,
+        0.397,
+        0.014
+      ],
+      "colors": [
+        "#ffffff",
+        "#ffffff",
+        "#ffffff"
+      ]
+    },
+    {
+      "id": "east-teal-towers/tree-1/trunk",
+      "type": "cylinder",
+      "position": [
+        3.187149716163069,
+        0.235,
+        -5.242850283836931
+      ],
+      "radius": 0.061,
+      "height": 0.44,
+      "segments": 12,
+      "color": "#946337"
+    },
+    {
+      "id": "east-teal-towers/tree-1/tier-0",
+      "type": "cylinder",
+      "position": [
+        3.187149716163069,
+        0.56,
+        -5.242850283836931
+      ],
+      "radius": 0.337,
+      "radiusTop": 0.32352000000000003,
+      "height": 0.225,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-1/tier-top-0",
+      "type": "cylinder",
+      "position": [
+        3.187149716163069,
+        0.6745000000000001,
+        -5.242850283836931
+      ],
+      "radius": 0.32352000000000003,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-1/tier-1",
+      "type": "cylinder",
+      "position": [
+        3.187149716163069,
+        0.765,
+        -5.242850283836931
+      ],
+      "radius": 0.267,
+      "radiusTop": 0.25632,
+      "height": 0.18,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-1/tier-top-1",
+      "type": "cylinder",
+      "position": [
+        3.187149716163069,
+        0.857,
+        -5.242850283836931
+      ],
+      "radius": 0.25632,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-1/tier-2",
+      "type": "cylinder",
+      "position": [
+        3.187149716163069,
+        0.91,
+        -5.242850283836931
+      ],
+      "radius": 0.203,
+      "radiusTop": 0.19488,
+      "height": 0.13,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-1/tier-top-2",
+      "type": "cylinder",
+      "position": [
+        3.187149716163069,
+        0.9770000000000001,
+        -5.242850283836931
+      ],
+      "radius": 0.19488,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-1/tier-3",
+      "type": "cylinder",
+      "position": [
+        3.187149716163069,
+        1.0,
+        -5.242850283836931
+      ],
+      "radius": 0.149,
+      "radiusTop": 0.14304,
+      "height": 0.08,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-1/tier-top-3",
+      "type": "cylinder",
+      "position": [
+        3.187149716163069,
+        1.042,
+        -5.242850283836931
+      ],
+      "radius": 0.14304,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-2/trunk",
+      "type": "cylinder",
+      "position": [
+        4.82892341646888,
+        0.235,
+        -5.2944099168644545
+      ],
+      "radius": 0.061,
+      "height": 0.44,
+      "segments": 12,
+      "color": "#946337"
+    },
+    {
+      "id": "east-teal-towers/tree-2/tier-0",
+      "type": "cylinder",
+      "position": [
+        4.82892341646888,
+        0.56,
+        -5.2944099168644545
+      ],
+      "radius": 0.337,
+      "radiusTop": 0.32352000000000003,
+      "height": 0.225,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-2/tier-top-0",
+      "type": "cylinder",
+      "position": [
+        4.82892341646888,
+        0.6745000000000001,
+        -5.2944099168644545
+      ],
+      "radius": 0.32352000000000003,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-2/tier-1",
+      "type": "cylinder",
+      "position": [
+        4.82892341646888,
+        0.765,
+        -5.2944099168644545
+      ],
+      "radius": 0.267,
+      "radiusTop": 0.25632,
+      "height": 0.18,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-2/tier-top-1",
+      "type": "cylinder",
+      "position": [
+        4.82892341646888,
+        0.857,
+        -5.2944099168644545
+      ],
+      "radius": 0.25632,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-2/tier-2",
+      "type": "cylinder",
+      "position": [
+        4.82892341646888,
+        0.91,
+        -5.2944099168644545
+      ],
+      "radius": 0.203,
+      "radiusTop": 0.19488,
+      "height": 0.13,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-2/tier-top-2",
+      "type": "cylinder",
+      "position": [
+        4.82892341646888,
+        0.9770000000000001,
+        -5.2944099168644545
+      ],
+      "radius": 0.19488,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-2/tier-3",
+      "type": "cylinder",
+      "position": [
+        4.82892341646888,
+        1.0,
+        -5.2944099168644545
+      ],
+      "radius": 0.149,
+      "radiusTop": 0.14304,
+      "height": 0.08,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-2/tier-top-3",
+      "type": "cylinder",
+      "position": [
+        4.82892341646888,
+        1.042,
+        -5.2944099168644545
+      ],
+      "radius": 0.14304,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-3/trunk",
+      "type": "cylinder",
+      "position": [
+        6.482088554083558,
+        0.235,
+        -5.351244779249776
+      ],
+      "radius": 0.061,
+      "height": 0.44,
+      "segments": 12,
+      "color": "#946337"
+    },
+    {
+      "id": "east-teal-towers/tree-3/tier-0",
+      "type": "cylinder",
+      "position": [
+        6.482088554083558,
+        0.56,
+        -5.351244779249776
+      ],
+      "radius": 0.337,
+      "radiusTop": 0.32352000000000003,
+      "height": 0.225,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-3/tier-top-0",
+      "type": "cylinder",
+      "position": [
+        6.482088554083558,
+        0.6745000000000001,
+        -5.351244779249776
+      ],
+      "radius": 0.32352000000000003,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-3/tier-1",
+      "type": "cylinder",
+      "position": [
+        6.482088554083558,
+        0.765,
+        -5.351244779249776
+      ],
+      "radius": 0.267,
+      "radiusTop": 0.25632,
+      "height": 0.18,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-3/tier-top-1",
+      "type": "cylinder",
+      "position": [
+        6.482088554083558,
+        0.857,
+        -5.351244779249776
+      ],
+      "radius": 0.25632,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-3/tier-2",
+      "type": "cylinder",
+      "position": [
+        6.482088554083558,
+        0.91,
+        -5.351244779249776
+      ],
+      "radius": 0.203,
+      "radiusTop": 0.19488,
+      "height": 0.13,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-3/tier-top-2",
+      "type": "cylinder",
+      "position": [
+        6.482088554083558,
+        0.9770000000000001,
+        -5.351244779249776
+      ],
+      "radius": 0.19488,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    },
+    {
+      "id": "east-teal-towers/tree-3/tier-3",
+      "type": "cylinder",
+      "position": [
+        6.482088554083558,
+        1.0,
+        -5.351244779249776
+      ],
+      "radius": 0.149,
+      "radiusTop": 0.14304,
+      "height": 0.08,
+      "segments": 48,
+      "color": "#71891b"
+    },
+    {
+      "id": "east-teal-towers/tree-3/tier-top-3",
+      "type": "cylinder",
+      "position": [
+        6.482088554083558,
+        1.042,
+        -5.351244779249776
+      ],
+      "radius": 0.14304,
+      "height": 0.009,
+      "segments": 48,
+      "color": "#a3bf31"
+    }
+  ],
+  "children": []
+}

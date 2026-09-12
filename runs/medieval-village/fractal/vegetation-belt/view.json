@@ -1,0 +1,22 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "parent": "terrain-vegetation",
+  "root_target_size": [
+    1400,
+    963
+  ],
+  "crop_root_px": [
+    480,
+    140,
+    1242,
+    393
+  ],
+  "target_size": [
+    1524,
+    506
+  ],
+  "magnification": 2,
+  "mapping": "root_x = crop_root_px[0] + local_x / magnification; root_y = crop_root_px[1] + local_y / magnification",
+  "parent_snapshot": "../terrain-vegetation/vegetation.js",
+  "rendering": "Render full frame with terrain/preview.js, then crop root box and resize."
+}

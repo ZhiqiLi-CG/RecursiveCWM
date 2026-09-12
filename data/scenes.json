@@ -1,0 +1,39 @@
+[
+  {
+    "id": "medieval-village",
+    "name": "Medieval village",
+    "runDirectory": "runs/medieval-village",
+    "referenceImage": "images/reference.webp",
+    "finalRender": "images/delivered.webp",
+    "hiResRender": "runs/medieval-village/final-hires.png",
+    "novelViews": [
+      {"src":"images/view-L35.webp","caption":"Left view"},
+      {"src":"images/view-R35.webp","caption":"Right view"},
+      {"src":"images/view-orbit.webp","caption":"Orbit view"},
+      {"src":"images/view-close1.webp","caption":"Close view 1"},
+      {"src":"images/view-close2.webp","caption":"Close view 2"}
+    ],
+    "comparisonFigure": {"src":"images/paper/case-medieval-village.webp","original":"images/paper/case-medieval-village.jpg"},
+    "viewerEntry": "viewer.html",
+    "derivedDirectory": "runs/medieval-village/display",
+    "groupAliases": {"scene":"medieval-village-map","terrain-mountain":"snow-massif","vegetation-west":"western-conifer-grove","vegetation-foreground":"foreground-pine-grove"}
+  },
+  {
+    "id": "city",
+    "name": "City",
+    "runDirectory": "runs/city",
+    "referenceImage": "runs/city/display/reference.webp",
+    "finalRender": "runs/city/display/final.webp",
+    "hiResRender": "runs/city/final-hires-3x.png",
+    "novelViews": [
+      {"src":"runs/city/display/view-L35.webp","caption":"Left view"},
+      {"src":"runs/city/display/view-R35.webp","caption":"Right view"},
+      {"src":"runs/city/display/view-orbit.webp","caption":"Orbit view"},
+      {"src":"runs/city/display/view-close1.webp","caption":"Close view 1"},
+      {"src":"runs/city/display/view-close2.webp","caption":"Close view 2"}
+    ],
+    "comparisonFigure": {"src":"images/paper/case-city-full.webp","original":"runs/city/paper-comparison-city.jpg"},
+    "viewerEntry": "viewer.html",
+    "derivedDirectory": "runs/city/display"
+  }
+]

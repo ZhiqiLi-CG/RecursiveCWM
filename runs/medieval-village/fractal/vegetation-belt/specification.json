@@ -1,0 +1,30 @@
+{
+  "component": "upper mountain forest belt and eastern conifer groves",
+  "style": "faceted miniature, narrow irregular whorled evergreen crowns, warm lit green and dark undersides",
+  "regions": [
+    "western source islands",
+    "cliff-front belt",
+    "northeast cliff shoulder",
+    "road-enclosed grove",
+    "eastern ridge",
+    "southeast forest fingers"
+  ],
+  "layout": "Explicit reference root anchors; scattered saplings and soil openings, clear river corridors, open winding-road passage and lake margin",
+  "geometry": "Closed irregular nine-sided whorled crowns with solid tapered trunks; varied radius, height, tier phase and lean; complete rear crowns",
+  "grounding": "Root world position from root-frame pixels; heightAt(worldX,worldZ), buried .025; bounded to tile",
+  "materials": [
+    "#498324",
+    "#568f27",
+    "#658e2b",
+    "#377322",
+    "#709b32"
+  ],
+  "children": [],
+  "context": "Snow cliffs, soil, water, roads and buildings belong to other components; no terrain meshes in delivery",
+  "status": "complete leaf",
+  "count": 229,
+  "height_range_world": [
+    0.2256,
+    1.128
+  ]
+}

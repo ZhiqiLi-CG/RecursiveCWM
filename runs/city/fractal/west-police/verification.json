@@ -1,0 +1,25 @@
+{
+  "component_count": 83,
+  "unique_owned_ids": true,
+  "finite_geometry": true,
+  "positive_box_sizes": true,
+  "context_excluded": true,
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "manifest_content_unchanged": true,
+  "equal_scale_output": [
+    636,
+    420
+  ],
+  "render_errors": [],
+  "render_triangles": 952,
+  "final_visual_evidence": "round5-compare.png",
+  "children": [],
+  "resume_review": {
+    "declared_children": [],
+    "children_found": [],
+    "parent_snapshot_sha256_prefix": "5a9576da3b70",
+    "render": "round5.png",
+    "same_pixels_as_round4": true,
+    "readonly_input_hashes_verified": true
+  }
+}

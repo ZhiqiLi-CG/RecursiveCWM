@@ -1,0 +1,10 @@
+{
+  "interface_version": 1,
+  "reference_sha256": "1ecf61faf60b",
+  "camera_hash": "07ef728c04f7",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "parent_snapshot": "school-main-building/preview.json:62f3a45e803bedf4c1371441e2cbb26f378abae6ce07f6de0f1a5bc2803e87ee",
+  "parent_node": "school-main-building",
+  "target_sha256": "abc63e62ff8b6691306ea40afc2ff84e2608a4d564164e74915fe890a042c276",
+  "solver_hash": "37375ae59bf5"
+}

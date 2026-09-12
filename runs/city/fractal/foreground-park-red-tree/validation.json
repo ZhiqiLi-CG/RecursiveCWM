@@ -1,0 +1,19 @@
+{
+  "components": 45,
+  "crown_closed_edge_incidence": {
+    "2": 186
+  },
+  "crown_world_extents": [
+    0.6836121460000002,
+    1.367565762,
+    0.33999999999999986
+  ],
+  "anchor_projection_max_error_px": 7.105427357601002e-13,
+  "output_size": [
+    222,
+    390
+  ],
+  "camera_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "renderer_errors": [],
+  "visual_review": "final-compare.png, personally inspected at equal 6x scale; accepted owned prototype geometry; surrounding pond absent in parent base remains outside ownership."
+}

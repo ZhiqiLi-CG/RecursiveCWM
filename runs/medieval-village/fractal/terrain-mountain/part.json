@@ -1,0 +1,26 @@
+{
+  "id": "terrain-mountain",
+  "parent": "terrain",
+  "status": "complete",
+  "type": "threejs-component",
+  "module": "mountain.js",
+  "export": "build",
+  "interface": "synchronous build(ctx) returns THREE.Group",
+  "dependencies": ["topology.js", "../scene/common.js"],
+  "children": [],
+  "camera_contract": "../../camera-contract.json",
+  "view": "view.json",
+  "ownership": ["snow massif", "underlying rock", "gullies", "rear slopes", "closed foundation"],
+  "bounds_world": {"min":[1.486003,0.015,-9.95],"max":[12.38,3.968447,-0.257671]},
+  "integration": {
+    "replace": "mountain cone in inherited blockout",
+    "western_source_root_px": [500,200],
+    "eastern_source_notch_root_px": [593,180],
+    "eastern_source_notch_width_px": 16,
+    "water_and_vegetation": "Supplied by sibling components; parent settles waterfall and forest junctions",
+    "central_village_clearance": "Mountain geometry remains above the root Y=280 village/road window"
+  },
+  "validation": {"compass_views":[0,1,2,3],"open_edges":0,"nonmanifold_edges":0,"inconsistent_winding_edges":0,"within_tile_bounds":true},
+  "evidence": ["evidence/final-pair.png", "evidence/final-ridge-4x.png", "evidence/final-cliff-source-4x.png", "evidence/final-compass-contact.png", "evidence/geometry-check.json"],
+  "account": "account.md"
+}

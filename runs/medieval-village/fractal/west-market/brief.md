@@ -1,0 +1,19 @@
+The market furnishings and path lamps as an arranged group, across the grassy square and immediate lane edges. Own the little cream tent behind the western tall house (rough ground center root 215,423); the small pale northern stall (409,416); the low brown cart/goods near (410,434); the courtyard covered cart near (332,462); the cream canopy near (348,475); the gray covered stall near (373,486); the cream awning/goods near (405,479); the blue striped upright awning near (410,461); the white covered wagon near (447,455); small barrels/sacks and tiny people where visible; and lamps distributed along the lanes. Those anchors are provisional estimates: derive accurate ground foot placements from your own target. The three architectural children own all houses. Keep the central green open, with no random scatter. Every tent/awning must have dimensional cloth thickness, poles/frame and plausible rear structure; carts have bodies, axles and wheels. If a tiny ambiguous detail can be represented by one simple volumetric prop, do that here. No vegetation, water, through-roads, pins or graphic overlays.
+
+Approximate ROOT ground-foot anchors: []. These locate foundation feet, not roofs; verify against your own target. Roof heights must rise from these ground positions.
+
+Style: detailed faceted medieval strategy-map miniature. Dark structural timber, warm pale plaster, stone foundations, rusty tile or straw/slate roofs calibrated to the target. Buildings need full gables and ridges, roof overhang/thickness, four exterior walls, doors and windows, volumetric chimneys and plausible hidden sides. Complete beneath occlusions without moving visible silhouettes.
+
+Integration contract:
+- Your write scope is only your own fractal directory (and child material directories if descending). No git. Do not modify camera, inherited manifest, parents or siblings.
+- Deliver component.js exporting synchronous build(ctx) => THREE.Group. Import THREE, mat, box etc. from ../scene/common.js. ctx exposes THREE, camera, contract, pixelToWorld(rootX,rootY,height=0), worldToPixel(Vector3). Ground foundations start near Y=0.06 with depth below this for terrain contact.
+- Parent settlements owns through-roads/bridges; terrain owns ground/water/trees/cacti; root owns pins/graphics. Do not duplicate them. You may add tiny attached doorstep paths only. Report route changes in account.md.
+- All three other west children appear in the target for context only: do not construct their owned objects. Group ownership is explicit above.
+- preview.js adds the parent road network and your module. Create evidence/ and render using:
+  ./.render-tools/node/bin/node runs/final-medieval-village/fractal/scene/render.cjs runs/final-medieval-village/fractal/west-market/evidence/current.png '?settlements=../west-market/preview.js&no-ui'
+- Renderer uses locked root camera and terrain blockout. Missing sibling buildings and greenery in your preview are expected. Match crop_root_px / target_size exactly before comparing side by side. Inspect by eye at magnification.
+- Render all four compass views with &compass=0 through &compass=3 before finishing; roofs, backs, props and attachments must have full volume. Return to locked reference view after completion.
+- If a real internal subproblem needs descent, prepare child materials, write children.json and END for runner dispatch. Do not spawn agents.
+- Only when complete, write part.json identifying module component.js, export build, children, ground_y and integration notes; write account.md with calibrated mental image and round-by-round visual evidence.
+
+whole-context.png is the parent reference at 3×, root bounds [196,374,536,565]. Use it for outlying street lamps beyond your primary crop. Mapping: root_x=196+local_x/3, root_y=374+local_y/3. Your primary matched comparison remains target.png/view.json.

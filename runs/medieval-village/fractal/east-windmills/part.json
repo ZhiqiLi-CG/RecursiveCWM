@@ -1,0 +1,18 @@
+{
+  "name": "east-windmills",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "ground_y": 0.06,
+  "notes": [
+    "Two complete volumetric timber tower mills with masonry bases and lattice rotors.",
+    "Ground-foot anchors: western (1169,387), eastern (1233.5,372), in locked root pixels.",
+    "Four compass directions and final matched crop visually checked; browser reported zero page errors.",
+    "Road, lamps, terrain and vegetation remain owned by parent/sibling components; see account.md for integration notes."
+  ],
+  "evidence": {
+    "matched_comparison": "evidence/final-paired.png",
+    "compass": "evidence/final-compass-sheet.png",
+    "validation": "evidence/validation.json"
+  }
+}

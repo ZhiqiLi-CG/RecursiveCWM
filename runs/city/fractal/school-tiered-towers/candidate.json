@@ -1,0 +1,1621 @@
+{
+  "node": "school-tiered-towers",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "components": [
+    {
+      "id": "school-tiered-towers/rear-tower-base",
+      "type": "box",
+      "position": [
+        3.091028117705057,
+        0.5800000000000001,
+        0.8226947843717207
+      ],
+      "size": [
+        0.71,
+        0.92,
+        1.0
+      ],
+      "colors": [
+        "#c9d6bd",
+        "#a2b494",
+        "#b9cab5"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-upper",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.7574999999999998,
+        0.7826947843717207
+      ],
+      "size": [
+        0.71,
+        1.515,
+        0.99
+      ],
+      "colors": [
+        "#c3d2bc",
+        "#96ae97",
+        "#b8cab6"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-shelf-0",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        2.301,
+        0.7826947843717207
+      ],
+      "size": [
+        0.91,
+        0.098,
+        1.19
+      ],
+      "colors": [
+        "#d1dfce",
+        "#8da58d",
+        "#bbcfbc"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-shadow-0",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        2.221,
+        0.7826947843717207
+      ],
+      "size": [
+        0.78,
+        0.062,
+        1.06
+      ],
+      "colors": [
+        "#b2c4a5",
+        "#839d83",
+        "#a3bba3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-ledge-reveal-0",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        2.372,
+        0.7826947843717207
+      ],
+      "size": [
+        0.75,
+        0.032,
+        1.03
+      ],
+      "colors": [
+        "#d0dec9",
+        "#b7c9b4",
+        "#c4d5c3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-shelf-1",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.994,
+        0.7826947843717207
+      ],
+      "size": [
+        0.91,
+        0.098,
+        1.19
+      ],
+      "colors": [
+        "#d1dfce",
+        "#8da58d",
+        "#bbcfbc"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-shadow-1",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.9140000000000001,
+        0.7826947843717207
+      ],
+      "size": [
+        0.78,
+        0.062,
+        1.06
+      ],
+      "colors": [
+        "#b2c4a5",
+        "#839d83",
+        "#a3bba3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-ledge-reveal-1",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        2.065,
+        0.7826947843717207
+      ],
+      "size": [
+        0.75,
+        0.032,
+        1.03
+      ],
+      "colors": [
+        "#d0dec9",
+        "#b7c9b4",
+        "#c4d5c3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-shelf-2",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.687,
+        0.7826947843717207
+      ],
+      "size": [
+        0.91,
+        0.098,
+        1.19
+      ],
+      "colors": [
+        "#d1dfce",
+        "#8da58d",
+        "#bbcfbc"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-shadow-2",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.6070000000000002,
+        0.7826947843717207
+      ],
+      "size": [
+        0.78,
+        0.062,
+        1.06
+      ],
+      "colors": [
+        "#b2c4a5",
+        "#839d83",
+        "#a3bba3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-ledge-reveal-2",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.7580000000000002,
+        0.7826947843717207
+      ],
+      "size": [
+        0.75,
+        0.032,
+        1.03
+      ],
+      "colors": [
+        "#d0dec9",
+        "#b7c9b4",
+        "#c4d5c3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-shelf-3",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.38,
+        0.7826947843717207
+      ],
+      "size": [
+        0.91,
+        0.098,
+        1.19
+      ],
+      "colors": [
+        "#d1dfce",
+        "#8da58d",
+        "#bbcfbc"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-shadow-3",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.3,
+        0.7826947843717207
+      ],
+      "size": [
+        0.78,
+        0.062,
+        1.06
+      ],
+      "colors": [
+        "#b2c4a5",
+        "#839d83",
+        "#a3bba3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-ledge-reveal-3",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.451,
+        0.7826947843717207
+      ],
+      "size": [
+        0.75,
+        0.032,
+        1.03
+      ],
+      "colors": [
+        "#d0dec9",
+        "#b7c9b4",
+        "#c4d5c3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-shelf-4",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.073,
+        0.7826947843717207
+      ],
+      "size": [
+        0.91,
+        0.098,
+        1.19
+      ],
+      "colors": [
+        "#d1dfce",
+        "#8da58d",
+        "#bbcfbc"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-shadow-4",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        0.9930000000000001,
+        0.7826947843717207
+      ],
+      "size": [
+        0.78,
+        0.062,
+        1.06
+      ],
+      "colors": [
+        "#b2c4a5",
+        "#839d83",
+        "#a3bba3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-ledge-reveal-4",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        1.1440000000000001,
+        0.7826947843717207
+      ],
+      "size": [
+        0.75,
+        0.032,
+        1.03
+      ],
+      "colors": [
+        "#d0dec9",
+        "#b7c9b4",
+        "#c4d5c3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-roof",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        2.6025,
+        0.7826947843717207
+      ],
+      "size": [
+        0.81,
+        0.025,
+        1.1
+      ],
+      "color": "#4e7351"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-rim-zback",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        2.63,
+        0.2741947843717206
+      ],
+      "size": [
+        0.81,
+        0.14,
+        0.083
+      ],
+      "colors": [
+        "#ceddca",
+        "#829b7e",
+        "#8aa483"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-rim-xback",
+      "type": "box",
+      "position": [
+        2.682528117705057,
+        2.63,
+        0.7826947843717207
+      ],
+      "size": [
+        0.083,
+        0.14,
+        1.1
+      ],
+      "colors": [
+        "#ceddca",
+        "#829b7e",
+        "#8aa483"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-rim-zfront",
+      "type": "box",
+      "position": [
+        3.046028117705057,
+        2.63,
+        1.2911947843717206
+      ],
+      "size": [
+        0.81,
+        0.14,
+        0.083
+      ],
+      "colors": [
+        "#ceddca",
+        "#94ad91",
+        "#bed0b8"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-rim-xfront",
+      "type": "box",
+      "position": [
+        3.409528117705057,
+        2.63,
+        0.7826947843717207
+      ],
+      "size": [
+        0.083,
+        0.14,
+        1.1
+      ],
+      "colors": [
+        "#ceddca",
+        "#94ad91",
+        "#bed0b8"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-clerestory-0-frame",
+      "type": "box",
+      "position": [
+        2.831028117705057,
+        0.8949999999999999,
+        1.3286947843717207
+      ],
+      "size": [
+        0.18,
+        0.185,
+        0.018
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-clerestory-0-glass",
+      "type": "box",
+      "position": [
+        2.831028117705057,
+        0.9089999999999999,
+        1.3406947843717207
+      ],
+      "size": [
+        0.125,
+        0.15,
+        0.009
+      ],
+      "color": "#d5c58c"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-clerestory-0-shade",
+      "type": "box",
+      "position": [
+        2.784778117705057,
+        0.9089999999999999,
+        1.3466947843717207
+      ],
+      "size": [
+        0.03125,
+        0.15,
+        0.009
+      ],
+      "color": "#bec8c5"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-clerestory-1-frame",
+      "type": "box",
+      "position": [
+        3.091028117705057,
+        0.8949999999999999,
+        1.3286947843717207
+      ],
+      "size": [
+        0.18,
+        0.185,
+        0.018
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-clerestory-1-glass",
+      "type": "box",
+      "position": [
+        3.091028117705057,
+        0.9089999999999999,
+        1.3406947843717207
+      ],
+      "size": [
+        0.125,
+        0.15,
+        0.009
+      ],
+      "color": "#d5c58c"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-clerestory-1-shade",
+      "type": "box",
+      "position": [
+        3.044778117705057,
+        0.9089999999999999,
+        1.3466947843717207
+      ],
+      "size": [
+        0.03125,
+        0.15,
+        0.009
+      ],
+      "color": "#bec8c5"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-clerestory-2-frame",
+      "type": "box",
+      "position": [
+        3.3510281177050567,
+        0.8949999999999999,
+        1.3286947843717207
+      ],
+      "size": [
+        0.18,
+        0.185,
+        0.018
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-clerestory-2-glass",
+      "type": "box",
+      "position": [
+        3.3510281177050567,
+        0.9089999999999999,
+        1.3406947843717207
+      ],
+      "size": [
+        0.125,
+        0.15,
+        0.009
+      ],
+      "color": "#d5c58c"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-clerestory-2-shade",
+      "type": "box",
+      "position": [
+        3.3047781177050566,
+        0.9089999999999999,
+        1.3466947843717207
+      ],
+      "size": [
+        0.03125,
+        0.15,
+        0.009
+      ],
+      "color": "#bec8c5"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-door-frame",
+      "type": "box",
+      "position": [
+        3.126028117705057,
+        0.33499999999999996,
+        1.3286947843717207
+      ],
+      "size": [
+        0.365,
+        0.46499999999999997,
+        0.018
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-door-glass",
+      "type": "box",
+      "position": [
+        3.126028117705057,
+        0.349,
+        1.3406947843717207
+      ],
+      "size": [
+        0.31,
+        0.43,
+        0.009
+      ],
+      "color": "#e0e5d9"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-door-recess",
+      "type": "box",
+      "position": [
+        3.014428117705057,
+        0.33499999999999996,
+        1.3486947843717207
+      ],
+      "size": [
+        0.0682,
+        0.43,
+        0.008
+      ],
+      "color": "#769775"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-side-window-0-frame",
+      "type": "box",
+      "position": [
+        3.4520281177050567,
+        0.615,
+        0.5326947843717207
+      ],
+      "size": [
+        0.018,
+        0.345,
+        0.195
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-side-window-0-glass",
+      "type": "box",
+      "position": [
+        3.4640281177050567,
+        0.629,
+        0.5326947843717207
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.14
+      ],
+      "color": "#d2c38b"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-side-window-0-shade",
+      "type": "box",
+      "position": [
+        3.4700281177050565,
+        0.629,
+        0.5844947843717206
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.035
+      ],
+      "color": "#bfc8c4"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-side-window-1-frame",
+      "type": "box",
+      "position": [
+        3.4520281177050567,
+        0.615,
+        0.9526947843717207
+      ],
+      "size": [
+        0.018,
+        0.345,
+        0.195
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-side-window-1-glass",
+      "type": "box",
+      "position": [
+        3.4640281177050567,
+        0.629,
+        0.9526947843717207
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.14
+      ],
+      "color": "#d2c38b"
+    },
+    {
+      "id": "school-tiered-towers/rear-tower-side-window-1-shade",
+      "type": "box",
+      "position": [
+        3.4700281177050565,
+        0.629,
+        1.0044947843717207
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.035
+      ],
+      "color": "#bfc8c4"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-base",
+      "type": "box",
+      "position": [
+        4.703596925044506,
+        0.5800000000000001,
+        0.7085969250445043
+      ],
+      "size": [
+        0.71,
+        0.92,
+        1.0
+      ],
+      "colors": [
+        "#c9d6bd",
+        "#a2b494",
+        "#b9cab5"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-upper",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.7349999999999999,
+        0.6685969250445043
+      ],
+      "size": [
+        0.71,
+        1.47,
+        0.99
+      ],
+      "colors": [
+        "#c3d2bc",
+        "#96ae97",
+        "#b8cab6"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-shelf-0",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        2.2560000000000002,
+        0.6685969250445043
+      ],
+      "size": [
+        0.91,
+        0.098,
+        1.19
+      ],
+      "colors": [
+        "#d1dfce",
+        "#8da58d",
+        "#bbcfbc"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-shadow-0",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        2.176,
+        0.6685969250445043
+      ],
+      "size": [
+        0.78,
+        0.062,
+        1.06
+      ],
+      "colors": [
+        "#b2c4a5",
+        "#839d83",
+        "#a3bba3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-ledge-reveal-0",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        2.327,
+        0.6685969250445043
+      ],
+      "size": [
+        0.75,
+        0.032,
+        1.03
+      ],
+      "colors": [
+        "#d0dec9",
+        "#b7c9b4",
+        "#c4d5c3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-shelf-1",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.949,
+        0.6685969250445043
+      ],
+      "size": [
+        0.91,
+        0.098,
+        1.19
+      ],
+      "colors": [
+        "#d1dfce",
+        "#8da58d",
+        "#bbcfbc"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-shadow-1",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.8690000000000002,
+        0.6685969250445043
+      ],
+      "size": [
+        0.78,
+        0.062,
+        1.06
+      ],
+      "colors": [
+        "#b2c4a5",
+        "#839d83",
+        "#a3bba3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-ledge-reveal-1",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        2.02,
+        0.6685969250445043
+      ],
+      "size": [
+        0.75,
+        0.032,
+        1.03
+      ],
+      "colors": [
+        "#d0dec9",
+        "#b7c9b4",
+        "#c4d5c3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-shelf-2",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.6420000000000001,
+        0.6685969250445043
+      ],
+      "size": [
+        0.91,
+        0.098,
+        1.19
+      ],
+      "colors": [
+        "#d1dfce",
+        "#8da58d",
+        "#bbcfbc"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-shadow-2",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.5620000000000003,
+        0.6685969250445043
+      ],
+      "size": [
+        0.78,
+        0.062,
+        1.06
+      ],
+      "colors": [
+        "#b2c4a5",
+        "#839d83",
+        "#a3bba3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-ledge-reveal-2",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.7130000000000003,
+        0.6685969250445043
+      ],
+      "size": [
+        0.75,
+        0.032,
+        1.03
+      ],
+      "colors": [
+        "#d0dec9",
+        "#b7c9b4",
+        "#c4d5c3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-shelf-3",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.335,
+        0.6685969250445043
+      ],
+      "size": [
+        0.91,
+        0.098,
+        1.19
+      ],
+      "colors": [
+        "#d1dfce",
+        "#8da58d",
+        "#bbcfbc"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-shadow-3",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.2550000000000001,
+        0.6685969250445043
+      ],
+      "size": [
+        0.78,
+        0.062,
+        1.06
+      ],
+      "colors": [
+        "#b2c4a5",
+        "#839d83",
+        "#a3bba3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-ledge-reveal-3",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.4060000000000001,
+        0.6685969250445043
+      ],
+      "size": [
+        0.75,
+        0.032,
+        1.03
+      ],
+      "colors": [
+        "#d0dec9",
+        "#b7c9b4",
+        "#c4d5c3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-shelf-4",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.0280000000000002,
+        0.6685969250445043
+      ],
+      "size": [
+        0.91,
+        0.098,
+        1.19
+      ],
+      "colors": [
+        "#d1dfce",
+        "#8da58d",
+        "#bbcfbc"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-shadow-4",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        0.9480000000000002,
+        0.6685969250445043
+      ],
+      "size": [
+        0.78,
+        0.062,
+        1.06
+      ],
+      "colors": [
+        "#b2c4a5",
+        "#839d83",
+        "#a3bba3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-ledge-reveal-4",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        1.0990000000000002,
+        0.6685969250445043
+      ],
+      "size": [
+        0.75,
+        0.032,
+        1.03
+      ],
+      "colors": [
+        "#d0dec9",
+        "#b7c9b4",
+        "#c4d5c3"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-roof",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        2.5575,
+        0.6685969250445043
+      ],
+      "size": [
+        0.81,
+        0.025,
+        1.1
+      ],
+      "color": "#4e7351"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-rim-zback",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        2.585,
+        0.16009692504450426
+      ],
+      "size": [
+        0.81,
+        0.14,
+        0.083
+      ],
+      "colors": [
+        "#ceddca",
+        "#829b7e",
+        "#8aa483"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-rim-xback",
+      "type": "box",
+      "position": [
+        4.295096925044506,
+        2.585,
+        0.6685969250445043
+      ],
+      "size": [
+        0.083,
+        0.14,
+        1.1
+      ],
+      "colors": [
+        "#ceddca",
+        "#829b7e",
+        "#8aa483"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-rim-zfront",
+      "type": "box",
+      "position": [
+        4.658596925044506,
+        2.585,
+        1.1770969250445042
+      ],
+      "size": [
+        0.81,
+        0.14,
+        0.083
+      ],
+      "colors": [
+        "#ceddca",
+        "#94ad91",
+        "#bed0b8"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-rim-xfront",
+      "type": "box",
+      "position": [
+        5.022096925044506,
+        2.585,
+        0.6685969250445043
+      ],
+      "size": [
+        0.083,
+        0.14,
+        1.1
+      ],
+      "colors": [
+        "#ceddca",
+        "#94ad91",
+        "#bed0b8"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/front-tower-clerestory-0-frame",
+      "type": "box",
+      "position": [
+        4.443596925044506,
+        0.8949999999999999,
+        1.2145969250445043
+      ],
+      "size": [
+        0.18,
+        0.185,
+        0.018
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-clerestory-0-glass",
+      "type": "box",
+      "position": [
+        4.443596925044506,
+        0.9089999999999999,
+        1.2265969250445043
+      ],
+      "size": [
+        0.125,
+        0.15,
+        0.009
+      ],
+      "color": "#d5c58c"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-clerestory-0-shade",
+      "type": "box",
+      "position": [
+        4.3973469250445065,
+        0.9089999999999999,
+        1.2325969250445044
+      ],
+      "size": [
+        0.03125,
+        0.15,
+        0.009
+      ],
+      "color": "#bec8c5"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-clerestory-1-frame",
+      "type": "box",
+      "position": [
+        4.703596925044506,
+        0.8949999999999999,
+        1.2145969250445043
+      ],
+      "size": [
+        0.18,
+        0.185,
+        0.018
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-clerestory-1-glass",
+      "type": "box",
+      "position": [
+        4.703596925044506,
+        0.9089999999999999,
+        1.2265969250445043
+      ],
+      "size": [
+        0.125,
+        0.15,
+        0.009
+      ],
+      "color": "#d5c58c"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-clerestory-1-shade",
+      "type": "box",
+      "position": [
+        4.657346925044506,
+        0.9089999999999999,
+        1.2325969250445044
+      ],
+      "size": [
+        0.03125,
+        0.15,
+        0.009
+      ],
+      "color": "#bec8c5"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-clerestory-2-frame",
+      "type": "box",
+      "position": [
+        4.963596925044506,
+        0.8949999999999999,
+        1.2145969250445043
+      ],
+      "size": [
+        0.18,
+        0.185,
+        0.018
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-clerestory-2-glass",
+      "type": "box",
+      "position": [
+        4.963596925044506,
+        0.9089999999999999,
+        1.2265969250445043
+      ],
+      "size": [
+        0.125,
+        0.15,
+        0.009
+      ],
+      "color": "#d5c58c"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-clerestory-2-shade",
+      "type": "box",
+      "position": [
+        4.917346925044506,
+        0.9089999999999999,
+        1.2325969250445044
+      ],
+      "size": [
+        0.03125,
+        0.15,
+        0.009
+      ],
+      "color": "#bec8c5"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-door-frame",
+      "type": "box",
+      "position": [
+        4.738596925044506,
+        0.33499999999999996,
+        1.2145969250445043
+      ],
+      "size": [
+        0.365,
+        0.46499999999999997,
+        0.018
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-door-glass",
+      "type": "box",
+      "position": [
+        4.738596925044506,
+        0.349,
+        1.2265969250445043
+      ],
+      "size": [
+        0.31,
+        0.43,
+        0.009
+      ],
+      "color": "#e0e5d9"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-door-recess",
+      "type": "box",
+      "position": [
+        4.626996925044506,
+        0.33499999999999996,
+        1.2345969250445044
+      ],
+      "size": [
+        0.0682,
+        0.43,
+        0.008
+      ],
+      "color": "#769775"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-side-window-0-frame",
+      "type": "box",
+      "position": [
+        5.064596925044506,
+        0.615,
+        0.41859692504450435
+      ],
+      "size": [
+        0.018,
+        0.345,
+        0.195
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-side-window-0-glass",
+      "type": "box",
+      "position": [
+        5.076596925044505,
+        0.629,
+        0.41859692504450435
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.14
+      ],
+      "color": "#d2c38b"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-side-window-0-shade",
+      "type": "box",
+      "position": [
+        5.0825969250445056,
+        0.629,
+        0.47039692504450437
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.035
+      ],
+      "color": "#bfc8c4"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-side-window-1-frame",
+      "type": "box",
+      "position": [
+        5.064596925044506,
+        0.615,
+        0.8385969250445043
+      ],
+      "size": [
+        0.018,
+        0.345,
+        0.195
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-side-window-1-glass",
+      "type": "box",
+      "position": [
+        5.076596925044505,
+        0.629,
+        0.8385969250445043
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.14
+      ],
+      "color": "#d2c38b"
+    },
+    {
+      "id": "school-tiered-towers/front-tower-side-window-1-shade",
+      "type": "box",
+      "position": [
+        5.0825969250445056,
+        0.629,
+        0.8903969250445043
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.035
+      ],
+      "color": "#bfc8c4"
+    },
+    {
+      "id": "school-tiered-towers/annex-base",
+      "type": "box",
+      "position": [
+        5.2091473837601034,
+        0.5800000000000001,
+        0.30581405042676924
+      ],
+      "size": [
+        0.7,
+        0.92,
+        0.78
+      ],
+      "colors": [
+        "#c9d6bd",
+        "#a2b494",
+        "#b9cab5"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/annex-roof",
+      "type": "box",
+      "position": [
+        5.2091473837601034,
+        1.0975,
+        0.30581405042676924
+      ],
+      "size": [
+        0.81,
+        0.025,
+        0.89
+      ],
+      "color": "#4e7351"
+    },
+    {
+      "id": "school-tiered-towers/annex-rim-zback",
+      "type": "box",
+      "position": [
+        5.2091473837601034,
+        1.125,
+        -0.09768594957323076
+      ],
+      "size": [
+        0.81,
+        0.14,
+        0.083
+      ],
+      "colors": [
+        "#ceddca",
+        "#829b7e",
+        "#8aa483"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/annex-rim-xback",
+      "type": "box",
+      "position": [
+        4.845647383760103,
+        1.125,
+        0.30581405042676924
+      ],
+      "size": [
+        0.083,
+        0.14,
+        0.89
+      ],
+      "colors": [
+        "#ceddca",
+        "#829b7e",
+        "#8aa483"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/annex-rim-zfront",
+      "type": "box",
+      "position": [
+        5.2091473837601034,
+        1.125,
+        0.7093140504267693
+      ],
+      "size": [
+        0.81,
+        0.14,
+        0.083
+      ],
+      "colors": [
+        "#ceddca",
+        "#94ad91",
+        "#bed0b8"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/annex-rim-xfront",
+      "type": "box",
+      "position": [
+        5.572647383760104,
+        1.125,
+        0.30581405042676924
+      ],
+      "size": [
+        0.083,
+        0.14,
+        0.89
+      ],
+      "colors": [
+        "#ceddca",
+        "#94ad91",
+        "#bed0b8"
+      ]
+    },
+    {
+      "id": "school-tiered-towers/annex-x-window-0-frame",
+      "type": "box",
+      "position": [
+        5.565147383760103,
+        0.575,
+        0.12581405042676924
+      ],
+      "size": [
+        0.018,
+        0.345,
+        0.195
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/annex-x-window-0-glass",
+      "type": "box",
+      "position": [
+        5.577147383760103,
+        0.589,
+        0.12581405042676924
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.14
+      ],
+      "color": "#d2c38b"
+    },
+    {
+      "id": "school-tiered-towers/annex-x-window-0-shade",
+      "type": "box",
+      "position": [
+        5.583147383760103,
+        0.589,
+        0.17761405042676925
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.035
+      ],
+      "color": "#bfc8c4"
+    },
+    {
+      "id": "school-tiered-towers/annex-x-window-1-frame",
+      "type": "box",
+      "position": [
+        5.565147383760103,
+        0.575,
+        0.48581405042676923
+      ],
+      "size": [
+        0.018,
+        0.345,
+        0.195
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/annex-x-window-1-glass",
+      "type": "box",
+      "position": [
+        5.577147383760103,
+        0.589,
+        0.48581405042676923
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.14
+      ],
+      "color": "#d2c38b"
+    },
+    {
+      "id": "school-tiered-towers/annex-x-window-1-shade",
+      "type": "box",
+      "position": [
+        5.583147383760103,
+        0.589,
+        0.5376140504267692
+      ],
+      "size": [
+        0.009,
+        0.31,
+        0.035
+      ],
+      "color": "#bfc8c4"
+    },
+    {
+      "id": "school-tiered-towers/annex-z-window-frame",
+      "type": "box",
+      "position": [
+        5.259147383760103,
+        0.575,
+        0.7018140504267693
+      ],
+      "size": [
+        0.255,
+        0.345,
+        0.018
+      ],
+      "color": "#d9e1d0"
+    },
+    {
+      "id": "school-tiered-towers/annex-z-window-glass",
+      "type": "box",
+      "position": [
+        5.259147383760103,
+        0.589,
+        0.7138140504267693
+      ],
+      "size": [
+        0.2,
+        0.31,
+        0.009
+      ],
+      "color": "#d5c58c"
+    },
+    {
+      "id": "school-tiered-towers/annex-z-window-shade",
+      "type": "box",
+      "position": [
+        5.185147383760103,
+        0.589,
+        0.7198140504267693
+      ],
+      "size": [
+        0.05,
+        0.31,
+        0.009
+      ],
+      "color": "#bec8c5"
+    }
+  ],
+  "children": [],
+  "child_refs": []
+}

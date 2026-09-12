@@ -1,0 +1,11 @@
+{
+  "style": "Detailed faceted miniature strategy-map landscape with olive plains, warm sandy relief, light-blue drainage and vivid round conifers below a snow massif",
+  "camera_contract": "../../camera-contract.json",
+  "assembly": [
+    {"child":"terrain-ground","owns":"Closed tile terrain, grass/sand relief and color, connected water network and ponds, banks and tiny ground mottling","interface":"build(ctx); heightAt(x,z); optional surfaceAt(x,z)"},
+    {"child":"terrain-mountain","owns":"Complete snowy crag massif, underlying rock, gullies and rear/side continuation","interface":"build(ctx)"},
+    {"child":"terrain-vegetation","owns":"All volumetric conifers, cacti, bushes and discrete natural rocks","interface":"build(ctx); use ctx.heightAt(x,z) when supplied"}
+  ],
+  "integration": {"assembly_order":["terrain-ground","terrain-mountain","terrain-vegetation"],"ground_baseline_y":0,"architecture_base_y":0.06,"road_corridor_y":0.04,"water_y":-0.035,"shore_height_range":[0.015,0.13],"max_general_relief":0.26,"sand_relief_max_away_from_roads":0.38},
+  "continuity_checks":["Mountain sources emerge from rock at roots of gullies","Tree roots follow ground and remain outside water and roads","River outflows meet exact tile boundary","Sand and grass meet with irregular graded banks","Villages and paths remain near baseline","No backside gaps or thin overhanging ground sheets"]
+}

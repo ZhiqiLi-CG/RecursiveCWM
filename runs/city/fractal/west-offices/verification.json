@@ -1,0 +1,23 @@
+{
+  "status": "verified",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "own_components": 89,
+  "child_components": 24,
+  "total_components": 113,
+  "children": [
+    "west-offices-annex"
+  ],
+  "child_part_sha256": "1e2656d7cd2a1734e44baa64572c308949a2d1699a3c9eefcc27f3b9e0d67016",
+  "candidate_sha256": "c8d097192378e434fda5cf3440e59455ec89ffbad0beffd8e3ad1b0c3681fa97",
+  "render_errors": [],
+  "render_size": [
+    580,
+    676
+  ],
+  "visual_evidence": "resume-round4-compare.png",
+  "visual_review": "Personally reviewed equal-scale whole-node comparison: annex roof/tower occlusion, wall-to-ground connection and left clipping are coherent; residual sharpness and neighboring road alignment retained.",
+  "parent_context_excluded": true,
+  "child_flattened_once": true,
+  "immutable_inputs_verified": true,
+  "part_sha256": "c8d097192378e434fda5cf3440e59455ec89ffbad0beffd8e3ad1b0c3681fa97"
+}

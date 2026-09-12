@@ -1,0 +1,53 @@
+# Terrain solve account
+
+## Calibrated complete instance
+This is a detailed faceted miniature strategy-map landscape: olive grassy plains and softly rolling sand, winding pale-blue water, dense green pine groves, and a broad white crag massif. A complete landscape of this kind has solid terrain and banks, drainage connected to mountain sources and boundary exits, round trees rooted in soil, and mountain relief continuing around its hidden back. The reference calibrates the surfaces toward irregular small facets, mottled ground, clustered rather than uniformly scattered trees, shallow sandy hummocks, and warm lit ridges with cool shaded gullies.
+
+## Round 1 — inherited whole
+Read the immutable manifest and camera contract, terrain brief/view, root common.js/blockout.js/render harness, and the worldgen-techniques skill. The inherited scene is a placement blockout only. Rendered the actual locked viewport to evidence/round1-root.png, cropped root [68,12,1308,904] and magnified 1.25 times to the exact 1550 by 1115 terrain target dimensions in evidence/round1-matched.png. Inspected evidence/round1-paired.png side by side by eye; no image-distance metric was used to select repairs.
+
+Conspicuous residuals: the mountain's apex is low, its footprint and front silhouette too simple, with none of the multiple ridges/gullies; all groves and cacti are absent; the land is a uniform flat olive sheet; sand is an angular overhanging patch; water has pale uniform color, low-sided lake outlines, and detached-looking surface strips. Architectural placeholders are outside terrain scope and remain visible solely to judge relations.
+
+## Round 1 — magnified part test
+Inspected evidence/detail-mountain.png: the snow massif is a complex object with many attached crags, cool recesses, vertical front cliffs and irregular rock/snow termination. This merits its own target and solve.
+Inspected evidence/detail-west-grove.png: the missing grove is a collection of fully shaped trees with important density, age, spacing and clearing relations. The other groves share this asset vocabulary and collectively define the forest pattern. This merits its own assembly solve; southern cacti are included as sparse natural detail.
+Inspected evidence/detail-water-banks.png and detail-sand.png: the lakes, outlets, streams, shoreline coves and sand/grass islands form a connected terrain system. Merely thickening the old ribbons cannot repair their relationship to surrounding relief. This merits a ground-and-drainage solve.
+
+## Rotated inspection — unfinished
+Rendered fresh compass 1 and compass 3 views into this node and examined both in evidence/rotated-paired.png. The cone has volume, but its rear silhouette is a bare geometric pyramid. The terrain remains a flat sheet, with sand and blue strips extending beyond its edges and sources ending without mountain attachment. These are real residuals, not acceptable hidden geometry. The contact sheet originally used generic comparison labels; labels have been corrected to COMPASS 1 and COMPASS 3. All four compass views will be required after child integration before completion.
+
+## Preparation and interface work
+Recorded ownership, levels, assembly order and continuity checks in specification.json. Added preview.js, a synchronous build(ctx) wrapper with top-level component loading, so each child can replace its own blockout portion inside the exact parent lighting/camera/settlement context. It removes only the mountain for a mountain review, removes all low-ground blockout for a ground review, and adds vegetation over the blockout for a vegetation review. This is a review harness, not a finished component. Parent files and manifest/camera are untouched.
+
+Prepared the following three recursive packages, cut only from this node's target image with explicit root-coordinate mappings:
+- terrain-mountain: root crop [492,12,1124,312], 2x magnification; owns snow and rock massif only.
+- terrain-ground: root crop [68,184,1308,904], 1.25x; owns closed base relief, grass/sand materials, banks, all water and small ground mottling. Delivers a height sampler for rooted vegetation and integration.
+- terrain-vegetation: root crop [180,140,1244,716], 1.5x, plus southern cactus view [216,500,852,904], 1.5x; owns volumetric trees, cacti, bushes and discrete natural stones.
+
+Children have detailed briefs, module interfaces, preview instructions, source/shore/perimeter anchors, architecture clearances and volume-completion requirements. children.json lists all three for the runner. This is a descent boundary: no part.json is written because the natural landscape is not finished.
+
+## On wake — whole again
+Read every child part.json and integrate ground, mountain, then vegetation with ctx.heightAt. Re-render the matched whole and magnified difficult junctions; settle source openings, tree roots and forest/shore/road clearances, material transitions, water outflows and exact tile boundaries. Inspect all four compass directions, repair any back-face, flatness or floating-object residual, then recheck the reference window before final part.json delivery with child references.
+
+## Round 2 — whole again after all three deliveries
+Read terrain-ground/part.json, terrain-mountain/part.json, and terrain-vegetation/part.json, including vegetation's three completed forest descendants. Integrated their synchronous modules in terrain.js, in ground/mountain/vegetation order, with the ground heightAt and surfaceAt samplers passed into every natural asset build. Applied the vegetation child's 17 forest-floor polygons as blended vertex colors on the existing ground mesh; no extra floating ground sheets were introduced. Children and the locked camera remain unchanged.
+
+Rendered evidence/round2-root.png in the inherited lighting and settlement-blockout context, and inspected an exact crop/magnification comparison plus enlarged source, cliff, sand and lake-bank windows. All primary natural assemblies are now present with their layout relations: complete mountain relief, two source streams entering the central lake, southern and eastern exits, eastern lake and smaller ponds, irregular sandy foreground and grass islands, distinct forest groves and sparse cacti. The inherited architecture and roads still visible in this harness belong to the settlements sibling/root integration; they are not the final architectural result.
+
+The ground/vegetation relation now uses actual sampled terrain heights, including buried roots. The forest floor is brown beneath the wooded footprints and feathers into olive ground without filling road corridors. The southern river and eastern outlet terminate precisely at the closed tile boundary, with blue cross-sections instead of water ribbons overhanging the edge. Sand undulations, shore depth and small puddles continue around their boundaries. The original unresolved natural groups have been produced; no additional grouped subproblem requiring another descent was identified.
+
+## Round 3 — local continuity repair
+The magnified eastern source still read as a narrow flat strip ending at the rock. Added a short closed sloping water body in continuity.js, from the existing mountain chute through the source bed, joining the ground child's connected water. It has side and bottom faces and remains within the tile. The western source is a boundary-fed channel beside the mountain, with its natural continuation hidden beyond this map's edge.
+
+The front snow escarpment retained broad flat spans. Added shallow vertical fluting to its interior cliff vertices, preserving each vertex's locked-camera pixel position. Coincident rock/snow seam vertices receive the identical transform; the top silhouette, mountain footprint and closed shell remain intact. Recomputed normals give the front modest convex/concave light variation instead of entirely planar cliff strips. This is a local surface repair of the delivered complete massif, not a substitute for a missing subassembly.
+
+## Final visual completion inspection
+Rendered final-root.png and final-compass-0.png through final-compass-3.png with inspect.cjs; inspected the four directions together in final-compass-contact.png. The rear mountain slopes and end caps form a complete mass with ground contact, all groves have round crowns/trunks, cacti have solid branched arms, and banks/terrain have depth. No empty backs, billboard crowns, floating trees, or overhanging sand/water sheets were visible. Roads in the contextual settlement sketch are not delivered by terrain and remain a root/settlements responsibility.
+
+After compass inspection, rechecked final-matched.png at exactly 1550 by 1115 against this node's target; also inspected final-paired.png and enlarged final-detail-sources.png, final-detail-mountain-front.png, final-detail-sand.png and final-detail-banks.png. The visible scene retains calibrated natural silhouettes and drainage/biome placement after completion of hidden sides. Remaining visual approximations are individual crag and tree-crown contours, more angular snow tongues, fine river edge scalloping, and softer/shorter inherited lighting/shadows than the reference. These are recorded as fidelity limits rather than a claim of exact pixel equality. No new assembly is missing.
+
+## Recorded validation (supporting evidence, not the visual decision)
+final-audit.json records 545 conifers, 30 cacti, 22 natural rocks and 3 shrubs; 545 audited tree roots, zero water roots, zero outside-tile roots, maximum sampled root error 1.39e-17, no non-finite positions, no out-of-bounds ground vertices and no browser errors. Both the integrated snow/rock shell and source cascade have zero open edges, zero nonmanifold edges and zero inconsistent winding edges. Mesh topology remained closed after the local cliff edit. Ground's independent child audit also records closed perimeter/underside construction and exact clipped outlets. These checks support the visual inspection; no similarity metric was used to declare completion.
+
+## Final delivery
+part.json identifies terrain.js with all three child references and local continuity.js. Build(ctx) is synchronous and returns one THREE.Group with no lights, cameras, UI or architecture. heightAt(x,z) and surfaceAt(x,z) are re-exported and provided on group.userData; these query the low ground/riverbed, not the mountain top. Parent should replace its entire terrain blockout by this module once, retain the immutable camera while building, and rotate only after construction. The root is responsible for final settlement road/bridge seating and global light reconciliation. This terrain level is complete.

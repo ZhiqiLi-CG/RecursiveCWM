@@ -1,0 +1,37 @@
+{
+  "kind": "Faceted miniature medieval settlement network",
+  "districts": [
+    {
+      "child": "west-village",
+      "assets": "11\u201312 timber houses, market stalls, lamps and courtyard props"
+    },
+    {
+      "child": "east-village",
+      "assets": "farmstead and lakeside houses, sheep enclosure, well, stalls, 3 timber windmills"
+    },
+    {
+      "child": "adobe-village",
+      "assets": "6 parapeted adobe houses with awnings and courtyard props"
+    }
+  ],
+  "retained_here": [
+    "through-roads",
+    "crossing bridges",
+    "cross-district continuity and terrain attachment"
+  ],
+  "ground_y": 0.06,
+  "materials": [
+    "warm plaster",
+    "dark structural timber",
+    "red clay tile",
+    "light/dark thatch",
+    "blue slate",
+    "pale adobe",
+    "beige earth lanes"
+  ],
+  "relations": [
+    "western market enclosed by irregular house/street loop",
+    "east farms west of pond, paired timber mills east of pond",
+    "adobe homes on both river banks connected by crossing"
+  ]
+}

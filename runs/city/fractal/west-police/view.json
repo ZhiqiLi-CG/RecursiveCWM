@@ -1,0 +1,25 @@
+{
+  "camera_contract": "../../camera-contract.json",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "crop_px": [
+    87,
+    245,
+    159,
+    105
+  ],
+  "output_size": [
+    636,
+    420
+  ],
+  "scale": 4,
+  "coordinate_space": "full_reference_pixels",
+  "parent_node": "west-civic",
+  "source_target": "../west-civic/target.png",
+  "source_crop_px_xyxy": [
+    174,
+    230,
+    492,
+    440
+  ],
+  "source_scale": 2
+}

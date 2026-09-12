@@ -1,0 +1,79 @@
+{
+  "node": "foreground-park",
+  "coordinate_space": "full_reference_pixels",
+  "anchor_definition": "trunk-ground contact at world y=0; initial estimates for parent visual refinement",
+  "instances": [
+    {
+      "prototype": "foreground-park-red-tree",
+      "anchors_px": [
+        [
+          242.5,
+          379.5
+        ],
+        [
+          344,
+          354.5
+        ],
+        [
+          340,
+          440.5
+        ],
+        [
+          226,
+          487
+        ]
+      ]
+    },
+    {
+      "prototype": "foreground-park-cone-tree",
+      "anchors_px": [
+        [
+          184.5,
+          393.5
+        ],
+        [
+          224,
+          422.0
+        ]
+      ],
+      "scales": [
+        [
+          0.99,
+          0.99,
+          0.99
+        ],
+        [
+          0.97,
+          1,
+          0.97
+        ]
+      ]
+    },
+    {
+      "prototype": "foreground-park-spread-tree",
+      "anchors_px": [
+        [
+          293,
+          342
+        ],
+        [
+          309,
+          371.5
+        ],
+        [
+          379,
+          395
+        ],
+        [
+          146.5,
+          438.5
+        ],
+        [
+          282.5,
+          456
+        ]
+      ]
+    }
+  ],
+  "refinement_note": "Integrated round0 visual review: cone tree contacts slightly low; left instance moved 0.5 root pixel left and both moved 1.5 root pixels up; second crown narrowed 3 percent."
+}

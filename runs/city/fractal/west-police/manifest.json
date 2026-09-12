@@ -1,0 +1,9 @@
+{
+  "interface_version": 1,
+  "reference_sha256": "8299dcc022e4",
+  "source_reference_sha256": "39586cac37564d033ab4ef0d500bddc225afb08262cd032731a1bc8baa4a965a",
+  "camera_hash": "07ef728c04f7",
+  "parent_snapshot": "west-civic/base.json:5a9576da3b70",
+  "solver_hash": "37375ae59bf5",
+  "parent_node": "west-civic"
+}

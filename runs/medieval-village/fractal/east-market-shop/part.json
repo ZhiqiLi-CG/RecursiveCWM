@@ -1,0 +1,24 @@
+{
+  "interface_version": 1,
+  "id": "east-market-shop",
+  "status": "complete",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "ground_y": 0.06,
+  "camera_contract": "../../camera-contract.json",
+  "objects": ["joined shop roof", "enclosed rear store", "ochre front gable", "open timber porch", "attached counter and goods", "foundation"],
+  "notes": [
+    "Synchronous build(ctx) returns an already positioned THREE.Group; integrate without further transforms.",
+    "Complete thick roof and wall panels, enclosed rear storage, supported porch bays, grounded goods and finished rear elevations.",
+    "Uses inherited locked camera mapping and leaves parent-owned court objects and terrain to their owners.",
+    "Residual differences: regular slate pattern and simplified surface weathering; inherited ground and lighting remain visible in preview."
+  ],
+  "evidence": {
+    "reference_comparison": "evidence/final-paired.png",
+    "locked_render": "evidence/final-root.png",
+    "compass": "evidence/compass-montage.png",
+    "account": "account.md",
+    "specification": "specification.json"
+  }
+}

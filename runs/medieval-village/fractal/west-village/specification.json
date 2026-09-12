@@ -1,0 +1,108 @@
+{
+  "name": "west-village",
+  "style": "faceted medieval miniature",
+  "ground_y": 0.06,
+  "buildings": 11,
+  "parts": {
+    "west-north-houses": {
+      "crop": [
+        200,
+        381,
+        368,
+        482
+      ],
+      "anchors": [
+        [
+          220,
+          471
+        ],
+        [
+          300,
+          429
+        ],
+        [
+          352,
+          420
+        ]
+      ],
+      "description": "Three buildings forming the north/west boundary: the tall, dark moss-thatched timber house at the left; the northern pale straw gable cottage; and the small blue-gray/slate building partly occluded by the green map pin. Match their different orientations, heights, footprints and distances. Own these three buildings only; the little cream tent behind the left house belongs to west-market. Preserve the open lane between buildings. Complete the pin-occluded building with solid walls and a full slate roof; do not construct the pin."
+    },
+    "west-south-houses": {
+      "crop": [
+        262,
+        449,
+        408,
+        559
+      ],
+      "anchors": [
+        [
+          288,
+          492
+        ],
+        [
+          317,
+          511
+        ],
+        [
+          345,
+          533
+        ],
+        [
+          385,
+          548
+        ]
+      ],
+      "description": "The four-house arc along the south edge of the market lane: a squat rusty-tile house at upper left; the neighboring dark brown roof house; the red-roof front-gabled timber house; and the pale thatched southernmost house. These are four distinct complete buildings, with visibly different ridge directions, roof lengths, wall heights and chimney positions. Match the diagonal spacing and keep their entrances attached to the lane. Own these four buildings only, excluding street lamps and goods (west-market)."
+    },
+    "west-east-houses": {
+      "crop": [
+        399,
+        374,
+        532,
+        510
+      ],
+      "anchors": [
+        [
+          425,
+          501
+        ],
+        [
+          481,
+          495
+        ],
+        [
+          506,
+          460
+        ],
+        [
+          505,
+          418
+        ]
+      ],
+      "description": "Four eastern buildings: the red-tiled two-story house facing the market square at lower left; the pale weathered thatched house near the little pond at lower right; the long straw-roof barn along the lane at middle right; and the dark red tiled long two-story house at upper right. Match the four different orientations, gable/ridge profiles, stone/plaster/timber wall patterns and the open spaces between them. Own the buildings and attached steps only; nearby awnings/goods belong to west-market. Do not build water or roads."
+    },
+    "west-market": {
+      "crop": [
+        200,
+        398,
+        461,
+        542
+      ],
+      "anchors": [],
+      "description": "The market furnishings and path lamps as an arranged group, across the grassy square and immediate lane edges. Own the little cream tent behind the western tall house (rough ground center root 215,423); the small pale northern stall (409,416); the low brown cart/goods near (410,434); the courtyard covered cart near (332,462); the cream canopy near (348,475); the gray covered stall near (373,486); the cream awning/goods near (405,479); the blue striped upright awning near (410,461); the white covered wagon near (447,455); small barrels/sacks and tiny people where visible; and lamps distributed along the lanes. Those anchors are provisional estimates: derive accurate ground foot placements from your own target. The three architectural children own all houses. Keep the central green open, with no random scatter. Every tent/awning must have dimensional cloth thickness, poles/frame and plausible rear structure; carts have bodies, axles and wheels. If a tiny ambiguous detail can be represented by one simple volumetric prop, do that here. No vegetation, water, through-roads, pins or graphic overlays."
+    }
+  },
+  "relations": [
+    "North/west boundary has three separate houses",
+    "Four southern houses follow the curved lane",
+    "Four eastern houses face square/pond/lane",
+    "Market green retains broad open center"
+  ],
+  "parent_road_residuals": [
+    "west-entry branch is an angular widening beside the upper southern house",
+    "west-loop and south create duplicate parallel segments at the east turn of the courtyard",
+    "Bare west-loop start root (267,470) needs continuity with west-entry rather than an exposed interior endpoint"
+  ],
+  "next": "Integrate component.js into settlements; settle shared route and final terrain context there.",
+  "status": "complete"
+}

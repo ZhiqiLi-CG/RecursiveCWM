@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "owned_components": 7,
+  "owned_triangles": 4558,
+  "context_components": 435,
+  "output_size": [
+    864,
+    752
+  ],
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "target_hash_verified": true,
+  "parent_snapshot_hash_verified": true,
+  "render_errors": [],
+  "evidence": "final-compare.png"
+}

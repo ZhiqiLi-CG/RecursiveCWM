@@ -6,7 +6,7 @@
   <meta name="description" content="Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world.">
   <meta name="theme-color" content="#ffffff">
   <title>Explore a run · Recursive Code World Models</title>
-  <!-- Set ARXIV_URL in config.js when the arXiv page is available. -->
+  <!-- Publication URL is configured in config.js. -->
   <script src="config.js">
 </script>
   <meta property="og:type" content="website">
@@ -21,6 +21,7 @@
   <meta name="twitter:image:alt" content="Recursive reconstruction from whole scene to village, house cluster, and house, with the delivered 3D program viewed from multiple cameras.">
   <link rel="icon" href="images/delivered.webp">
   <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="playback.css">
   <script type="module" src="app.js">
 </script>
 </head>
@@ -30,6 +31,7 @@
 <a href="index.html">Overview</a>
 <a href="explore.html" aria-current="page">Explore a run</a>
 <a href="results.html">Results</a>
+<a href="method.html">Method</a>
 <a href="index.html#paper-header" data-paper-link>Paper</a>
 </nav>
 <main id="top">
@@ -39,11 +41,12 @@
 <p>Choose a program to find its place in the world, then inspect its target, reconstruction, and code.</p>
 </header>
 <section class="explorer media-column" aria-label="Interactive recursion explorer">
+<div class="scene-switcher" data-scene-switcher></div>
 <div class="explore-stage" id="explore-stage">
 <div class="explorer-surface">
 <div class="tree-toolbar">
 <h2>The scene program</h2>
-<div class="depth-legend" aria-label="Recursion depths">
+<div class="depth-legend" aria-label="Recursion depths" data-depth-legend>
 <span>Depth</span>
 <i class="depth-0">0</i>
 <i class="depth-1">1</i>
@@ -54,7 +57,7 @@
 </div>
 <div class="tree-scroll" id="explore-tree" aria-label="Recursion tree">
 </div>
-<p class="tree-foot">Hover or select a node to highlight it. Scroll sideways for more. Keyboard: ↑ parent · ↓ child · ← → previous / next.</p>
+<p class="tree-foot">Hover or select a node to highlight it. Scroll sideways for more. Keyboard: ↑ parent · ↓ child · ← → siblings.</p>
 </div>
 <aside class="explore-world" aria-labelledby="explore-world-title">
 <h2 id="explore-world-title">The selected program in 3D</h2>
@@ -81,7 +84,7 @@
 <p id="world-depth-note">All five levels, down to individual building programs.</p>
 </div>
 <div id="viewer-frame">
-<iframe id="world-viewer" title="Interactive 3D reconstruction of the medieval village" src="fractal/scene/index.html" loading="lazy" allow="fullscreen">
+<iframe id="world-viewer" title="Interactive 3D reconstruction of the medieval village" loading="lazy" allow="fullscreen">
 </iframe>
 <div class="world-selection" aria-live="polite">
 <span>
@@ -99,7 +102,7 @@
 </div>
       <div class="viewer-caption">
 <p id="viewer-gestures">Drag to orbit · Scroll or pinch to zoom</p>
-<a href="fractal/scene/component.js" target="_blank" rel="noopener">Open the root program ↗</a>
+<a data-root-program href="fractal/scene/component.js" target="_blank" rel="noopener">Open the root program ↗</a>
 </div>
       <div class="fallback" id="viewer-fallback" hidden>
 <p id="fallback-caption" role="status">The live viewer could not load in this browser. These five saved renders show the delivered scene from other cameras.</p>
@@ -134,7 +137,7 @@
 <p class="breadcrumb" id="breadcrumb">scene</p>
 <h2 id="node-name">scene</h2>
 </div>
-<span id="node-depth">Depth 0</span>
+<div class="detail-metrics"><span id="node-depth">Depth 0</span><span id="node-tokens"></span></div>
 </div>
 <div class="matched-pair">
 <figure>
@@ -152,14 +155,18 @@
 </div>
 <p class="image-note" id="image-note">
 </p>
+<div class="parent-context" id="parent-context" hidden>
+<figure><div class="parent-image"><img id="parent-render" alt=""><div class="crop-outline" id="crop-outline"></div></div></figure>
+<div><h3>Within the parent</h3><p id="parent-caption"></p><p id="crop-coordinates"></p></div>
+</div>
 <div class="node-text">
 <div class="node-brief-block">
 <div class="brief-heading">
 <h3>The brief</h3>
 <a id="brief-link" target="_blank" rel="noopener">Full brief ↗</a>
 </div>
-<p id="node-brief">
-</p>
+<p id="node-brief"></p>
+<div class="node-account-block"><div class="brief-heading"><h3>What it did</h3><a id="account-link" target="_blank" rel="noopener">Full account ↗</a></div><blockquote id="node-account"></blockquote></div>
 </div>
 <div class="node-code-block">
 <div class="code-heading">
@@ -182,13 +189,10 @@
 <p class="section-action text-column">
 <a class="text-link" href="index.html#world">Look around the live world →</a>
 </p>
+<section class="section media-column" id="build" aria-labelledby="build-title"><h2 id="build-title">Watch it build</h2><p class="section-intro">Follow the recorded construction: the whole, its parts, and the whole again.</p><div id="playback"></div></section>
 </main>
 <footer class="footer text-column">
-  <details class="instruction">
-<summary>The recursive solver instruction</summary>
-<pre id="solver-instruction">The complete instruction is available below.</pre>
-<a href="data/solver-instruction.md">Download the instruction ↗</a>
-</details>
+  <p><a href="method.html">The solver instruction</a></p>
   <p>Reference image: <em>WorldClaw</em>, Fig. 9. Used only as input to the reconstruction.</p>
   <p class="template-credit">Page template inspired by the <a href="https://nerfies.github.io/">Nerfies project page</a>.</p>
   <a class="back-top" href="#top">Back to top ↑</a>

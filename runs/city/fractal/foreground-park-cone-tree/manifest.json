@@ -1,0 +1,11 @@
+{
+  "interface_version": 1,
+  "reference_sha256": "391627e5e927",
+  "source_reference_sha256": "56f53d3813661fd39e39efae9e2be81d375e112a0afbcd456ab11df69833c254",
+  "camera_hash": "07ef728c04f7",
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "parent_snapshot": "scene/base.json:5a9576da3b70",
+  "parent_layout_sha256": "ba6740ea63df7a5d653b5003b4bc37d6826f15fa0967d4d5bea9bf6f45f35971",
+  "solver_hash": "37375ae59bf5",
+  "parent_node": "foreground-park"
+}

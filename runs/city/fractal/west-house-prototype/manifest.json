@@ -1,0 +1,9 @@
+{
+  "interface_version": 1,
+  "reference_sha256": "94cf757d432b",
+  "source_reference_sha256": "1fe051e25634015965ffd2a82754a23a175923f7547e0bc291377afde661ba08",
+  "camera_hash": "07ef728c04f7",
+  "parent_snapshot": "west-houses/base.json:c20ddb4945f2",
+  "solver_hash": "37375ae59bf5",
+  "parent_node": "west-houses"
+}

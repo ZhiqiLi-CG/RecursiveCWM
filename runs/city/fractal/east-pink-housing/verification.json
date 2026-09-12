@@ -1,0 +1,12 @@
+{
+  "components": 82,
+  "camera_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "target_sha256": "bd03a46e4f0410d877148567c0ae692d82d66f4870d68d80f3dfe25e77221145",
+  "part_sha256": "1e2f90fef6d9ff178198645e33759645c00a95f6cadf90d837492258d1bee7fb",
+  "render_errors": [],
+  "children": [],
+  "parent_components_in_part": 0,
+  "final_evidence": "resume-round7-compare.png",
+  "final_render_triangles_including_context": 4265,
+  "resumed_child_integration": "Archived child list was empty; no child components to integrate."
+}

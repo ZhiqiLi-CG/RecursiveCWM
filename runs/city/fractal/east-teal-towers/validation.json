@@ -1,0 +1,27 @@
+{
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "target_sha256": "e638268c27a640d11f472328094f7702c91cc72cfb03f5f5ace9cc26cfa271de",
+  "components": 100,
+  "towers": 3,
+  "floor_slabs": 18,
+  "trees": 3,
+  "children": [],
+  "output_size": [
+    948,
+    808
+  ],
+  "render_errors": [],
+  "equal_scale_visual_evidence": "round2-compare.png",
+  "context_excluded": true,
+  "manifest_sha256": "acdb5627a7de78a399b63ce8fe55f6713f55ffb10e52c1f9ae6830e432121896",
+  "source_sha256": "7b5984267a8cb705f442ea450a79c2b5c8d752263054a6268db5a677b1383f2b",
+  "resume_review": {
+    "round": "resume-round3",
+    "consumed_children": [],
+    "descendant_manifests": [],
+    "render_errors": [],
+    "equal_scale_visual_evidence": "resume-round3-compare.png",
+    "same_pixels_as_round2": true,
+    "decision": "complete; no further descent"
+  }
+}

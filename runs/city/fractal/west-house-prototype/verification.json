@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "components": 44,
+  "camera_contract_sha256": "07ef728c04f7a76056295d3b6d46c35363569f6d6389de555926e19bea85263c",
+  "parent_snapshot_sha256": "c20ddb4945f2a64421539b782c13fd0cca6a9d7e46dd2e5c9b034de7637f82dd",
+  "unique_owned_ids": true,
+  "no_parent_geometry": true,
+  "finite_supported_geometry": true,
+  "render_errors": [],
+  "output_size": [
+    792,
+    768
+  ],
+  "visual_evidence": "reintegration-compare.png",
+  "visual_review": "Personally reviewed fresh reintegration render at 12x alongside target: main roof/porch seam, posts/platform contact, dormer spacing and wall openings accepted. Existing residuals retained in account.md.",
+  "reentry_child_count": 0,
+  "generator_matches_delivery": true
+}

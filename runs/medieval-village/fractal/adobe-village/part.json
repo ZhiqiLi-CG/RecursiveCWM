@@ -1,0 +1,22 @@
+{
+  "name": "adobe-village",
+  "module": "component.js",
+  "export": "build",
+  "children": [],
+  "coordinate_system": "Inherited THREE world, Y up; ROOT 1400x963 pixel anchors converted through ctx.pixelToWorld at physical elevation using the immutable camera",
+  "ground_y": 0.035,
+  "foundation_bottom_y": -0.025,
+  "assets": {"houses":6,"awnings":2,"shade_cart":1,"lamps":11,"traveler":1},
+  "evidence": {
+    "matched_comparison": "evidence/final-paired.png",
+    "four_compass_views": "evidence/final-compass-contact.png",
+    "browser_audit": "evidence/audit.json"
+  },
+  "notes": [
+    "Import component.js directly; preview.js adds parent roads and must not be used as the delivered component.",
+    "All six buildings have four thick walls, complete roofs, parapets, inset openings and hidden rear surfaces; the tower roof has a deep enclosed recess.",
+    "Owns district architecture and human props only; no river, terrain, vegetation, through-road or graphic-pin geometry.",
+    "Parent should blend the southern causeway approaches into final terrain; terrain should replace the triangular green blockout intrusion behind the tower without moving the district.",
+    "Matched original viewport and all four final compass views inspected; see account.md for round-by-round judgments and remaining reference-style differences."
+  ]
+}

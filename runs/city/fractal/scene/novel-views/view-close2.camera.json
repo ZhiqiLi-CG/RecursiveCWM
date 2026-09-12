@@ -1,0 +1,36 @@
+{
+  "projection": "orthographic",
+  "resolution": [
+    1400,
+    900
+  ],
+  "target": [
+    -4.221517473359095,
+    0.7878286762600757,
+    4.8710405352288175
+  ],
+  "position": [
+    45.6248351383401,
+    44.38782867626008,
+    49.752898020298964
+  ],
+  "up": [
+    0,
+    1,
+    0
+  ],
+  "left": -5.395521660838618,
+  "right": 5.395521660838618,
+  "top": 3.46854963911054,
+  "bottom": -3.46854963911054,
+  "near": 0.1,
+  "far": 500,
+  "render": {
+    "background": "#ffffff"
+  },
+  "azimuth_degrees": 48,
+  "elevation_degrees": 33.02466363166587,
+  "source_part_sha256": "d5a19515bac9ea87cadb81a1bd01cfb34f3d5dd0163997c808129ec8cb64ccaf",
+  "fit": "west subject bounds; substrate retained without affecting framing",
+  "margin": 1.13
+}
