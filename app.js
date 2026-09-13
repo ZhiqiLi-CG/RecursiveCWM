@@ -2,9 +2,10 @@ import {setupWorld} from './world-ui.js';
 import {loadScene,loadRun,read,cropInParent} from './scenes.js';
 const $=id=>document.getElementById(id);
 const paperURL=typeof ARXIV_URL==='string'?ARXIV_URL:'#';
+const codeURL=typeof CODE_URL==='string'?CODE_URL:'#';
 document.querySelectorAll('[data-paper-link]').forEach(link=>{if(paperURL!=='#')link.href=paperURL;});
 if($('arxiv-link'))$('arxiv-link').href=paperURL;
-$('code-link')?.addEventListener('click',event=>event.preventDefault());
+if($('code-link'))$('code-link').href=codeURL;
 $('copy-bibtex')?.addEventListener('click',async()=>{
   const citation=$('bibtex-code');
   try{await navigator.clipboard.writeText(citation.textContent);$('copy-status').textContent='Copied to clipboard.';}

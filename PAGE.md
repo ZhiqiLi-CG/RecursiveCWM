@@ -10,7 +10,7 @@ python3 -m http.server 8000 --directory /data/zhiqi/rcwm-project-page/site
 
 Open `http://localhost:8000/`. JavaScript modules require HTTP. Publish the contents of `site/` unchanged; local assets use relative paths and verification also covers a nested `/site/` deployment.
 
-The author's arXiv URL in `config.js` and BibTeX in `index.html` are preserved byte-for-byte. Author links remain placeholders; Code remains visibly disabled.
+The author's arXiv URL in `config.js` and BibTeX in `index.html` are preserved byte-for-byte. Author links remain placeholders; Code links to the [public repository](https://github.com/ZhiqiLi-CG/RecursiveCWM_code), configured by `CODE_URL` in `config.js`.
 
 ## Pages
 
